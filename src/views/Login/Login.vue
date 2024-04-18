@@ -1,6 +1,5 @@
 <template>
-  <div>App router</div>
-  <router-view></router-view>
+  <div class="text-red">Login</div>
 </template>
 
 <script setup lang="ts"></script>

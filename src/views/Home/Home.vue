@@ -1,8 +1,5 @@
 <template>
-  <div>App router</div>
-  <router-view></router-view>
+  <div>home</div>
 </template>
-
 <script setup lang="ts"></script>
-
 <style scoped lang="scss"></style>
