@@ -8,9 +8,29 @@
     />
   </div>
 
-  <div class="text-white">Loading</div>
+  <div>{{ $t('language') }}</div>
+
+  <!-- switch -->
+  <div class="fixed right-10 top-5 flex items-center justify-center gap-5">
+    <el-switch
+      v-model="settingTheme"
+      style="--el-switch-on-color: #ffffff4d; --el-switch-off-color: #0000004d"
+      :active-icon="Sunny"
+      :inactive-icon="Moon"
+      inline-prompt
+    ></el-switch>
+    <!-- setting language -->
+    <SettingLanguage></SettingLanguage>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue';
+import { Sunny, Moon } from '@element-plus/icons-vue';
+import SettingLanguage from '@/components/SettingLanguage.vue';
+
+// setting theme
+const settingTheme = ref(true);
+</script>
 
 <style scoped lang="scss"></style>

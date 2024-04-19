@@ -4,13 +4,14 @@ import zh from './zh';
 import en from './en';
 
 // judge if it is English
-export const isEn = navigator.language.includes('en') === true;
+export const isEn =
+  localStorage.getItem('text-vue-pure-admin-lang') === 'en' ? true : false;
 
 // restraint all lang object to typeof zh
-const i18n = createI18n<[typeof zh], 'zh' | 'en'>({
+const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: isEn ? 'en' : 'zh',
+  locale: localStorage.getItem('text-vue-pure-admin-lang') || 'en',
   messages: {
     zh,
     en,

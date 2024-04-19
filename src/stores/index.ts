@@ -9,6 +9,6 @@ pinia.use(persist);
 export default pinia;
 
 // 统一导出，代码简洁，入口唯一
-// export * from './modules/consult';
+export * from './modules/item.ts';
 
 // -- append store here --
