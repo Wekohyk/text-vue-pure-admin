@@ -1,6 +1,9 @@
 <template>
   <!-- backgroundImg -->
-  <div class="fixed left-0 top-0 -z-1 h-100vh w-100vw">
+  <div
+    class="fixed left-0 top-0 -z-1 h-100vh w-100vw duration-500 ease-in transition-all"
+    :class="settingTheme ? '' : 'filter-brightness-[0.6]'"
+  >
     <img
       src="/backgroundImg.webp"
       alt="this is backgroundImg"
@@ -18,6 +21,7 @@
       :active-icon="Sunny"
       :inactive-icon="Moon"
       inline-prompt
+      @change="dataThemeChange"
     ></el-switch>
     <!-- setting language -->
     <SettingLanguage></SettingLanguage>
@@ -31,6 +35,9 @@ import SettingLanguage from '@/components/SettingLanguage.vue';
 
 // setting theme
 const settingTheme = ref(true);
+const dataThemeChange = () => {
+  console.log(settingTheme.value);
+};
 </script>
 
 <style scoped lang="scss"></style>
