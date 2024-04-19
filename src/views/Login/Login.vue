@@ -21,7 +21,6 @@
       :active-icon="Sunny"
       :inactive-icon="Moon"
       inline-prompt
-      @change="dataThemeChange"
     ></el-switch>
     <!-- setting language -->
     <SettingLanguage></SettingLanguage>
@@ -35,9 +34,6 @@ import SettingLanguage from '@/components/SettingLanguage.vue';
 
 // setting theme
 const settingTheme = ref(true);
-const dataThemeChange = () => {
-  console.log(settingTheme.value);
-};
 </script>
 
 <style scoped lang="scss"></style>
