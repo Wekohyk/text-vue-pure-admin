@@ -25,9 +25,7 @@
   </div>
 
   <!-- login container -->
-  <div
-    class="login-container w-100vw h-100vh max-w-100% grid grid-cols-2 gap-18rem px-2"
-  >
+  <div class="login-container w-100vw h-100vh max-w-100% grid gap-18rem px-2">
     <transition
       enter-from-class="opacity-0"
       enter-to-class="opacity-100"
@@ -36,10 +34,10 @@
     >
       <div
         v-if="visible"
-        class="flex items-center justify-center flex-col duration-500 ease-in"
+        class="login-form flex items-center justify-center flex-col duration-500 ease-in"
       >
         <!-- avatar -->
-        <div class="h-7rem mb-18px">
+        <div class="avatar mb-18px">
           <img
             src="/avatar.webp"
             alt="avatar"
@@ -48,7 +46,14 @@
         </div>
 
         <!-- form -->
-        <el-form :model="form" label-width="auto">
+        <el-form
+          v-if="currentPage === 0"
+          ref="ruleFormRef"
+          :model="form"
+          style="min-width: 290px"
+          label-width="auto"
+          :rules="loginRules"
+        >
           <el-form-item
             :rules="[
               {
@@ -65,6 +70,7 @@
               clearable
             />
           </el-form-item>
+
           <el-form-item
             :rules="[
               {
@@ -104,6 +110,17 @@
               </el-button>
             </div>
           </el-form-item>
+
+          <el-form-item>
+            <el-button
+              type="primary"
+              size="default"
+              class="w-full"
+              @click="submitForm(ruleFormRef)"
+            >
+              {{ $t('login.login') }}
+            </el-button>
+          </el-form-item>
         </el-form>
       </div>
     </transition>
@@ -115,11 +132,15 @@ import { ref } from 'vue';
 import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage.vue';
 import { reactive } from 'vue';
+import type { FormInstance } from 'element-plus';
+import { loginRules } from './utils/rule';
+import { $t } from '@/lang/index';
+import { message } from '@/utils/message';
 
 const visible = ref(false);
 setTimeout(() => {
   visible.value = true;
-}, 1000);
+}, 200);
 
 // setting theme
 const settingTheme = ref(true);
@@ -129,13 +150,48 @@ const form = reactive({
   accountNumber: '',
   cipher: '',
 });
+
+const ruleFormRef = ref<FormInstance>();
 const checked = ref(false);
+const currentPage = ref(0);
+
+const submitForm = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      console.log(111);
+      message($t('login.loginOk'), { type: 'success' });
+    } else {
+      console.log(222);
+      message($t('login.loginNo'), { type: 'error' });
+      console.log(fields);
+    }
+  });
+};
 </script>
 
 <style scoped lang="scss">
+.login-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.login-form {
+  min-width: 360px;
+}
+
+.avatar {
+  height: 80px;
+}
+
 @media screen and (max-width: 1180px) {
   .login-container {
     grid-gap: 9rem;
+  }
+  .login-form {
+    min-width: 290px;
+  }
+  .avatar {
+    height: 80px;
   }
 }
 
