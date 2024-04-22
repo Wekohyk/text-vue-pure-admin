@@ -57,7 +57,7 @@
                 trigger: 'blur',
               },
             ]"
-            prop="from.accountNumber"
+            prop="accountNumber"
           >
             <el-input
               v-model="form.accountNumber"
@@ -73,13 +73,36 @@
                 trigger: 'blur',
               },
             ]"
-            prop="from.cipher"
+            prop="cipher"
           >
             <el-input
               v-model="form.cipher"
               :placeholder="$t('login.cipher')"
-              clearable
+              show-password
             />
+          </el-form-item>
+
+          <el-form-item>
+            <div class="w-full h-20 flex justify-between items-center gap-20">
+              <el-checkbox v-model="checked">
+                {{ $t('login.pureRemember') }}
+                <el-popover
+                  placement="top"
+                  :width="300"
+                  trigger="hover"
+                  :content="$t('login.pureRememberInfo')"
+                >
+                  <template #reference>
+                    <el-icon class="translate-y-2">
+                      <InfoFilled />
+                    </el-icon>
+                  </template>
+                </el-popover>
+              </el-checkbox>
+              <el-button type="primary" link>
+                {{ $t('login.pureForget') }}
+              </el-button>
+            </div>
           </el-form-item>
         </el-form>
       </div>
@@ -89,7 +112,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Sunny, Moon } from '@element-plus/icons-vue';
+import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage.vue';
 import { reactive } from 'vue';
 
@@ -106,6 +129,7 @@ const form = reactive({
   accountNumber: '',
   cipher: '',
 });
+const checked = ref(false);
 </script>
 
 <style scoped lang="scss">
