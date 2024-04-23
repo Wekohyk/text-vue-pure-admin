@@ -151,9 +151,7 @@
                 :key="index"
                 :title="$t(item.title)"
                 class="w-1.5rem cursor-pointer"
-              >
-                <Weko-Icon icon="user-secret" color="#fff"></Weko-Icon>
-              </span>
+              ></span>
             </div>
           </el-form-item>
         </el-form>
