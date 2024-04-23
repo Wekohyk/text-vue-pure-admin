@@ -33,7 +33,7 @@
       leave-to-class="opacity-0"
     >
       <div
-        v-if="visible"
+        v-if="store.visible"
         class="login-form flex items-center justify-center flex-col duration-500 ease-in"
       >
         <!-- avatar -->
@@ -44,7 +44,6 @@
             class="h-full rounded-[50%_50%_50%_50%_/_19%_19%_81%_81%]"
           />
         </div>
-
         <!-- form -->
         <el-form
           v-if="currentPage === 0"
@@ -108,7 +107,7 @@
                   </el-popover>
                 </span>
               </el-checkbox>
-              <el-button type="primary" link>
+              <el-button type="primary" link @click="switchForm(1)">
                 {{ $t('login.pureForget') }}
               </el-button>
             </div>
@@ -164,11 +163,13 @@
         </el-form>
       </div>
     </transition>
+    <!-- pure forget form -->
+    <PureForget v-if="currentPage === 1"></PureForget>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage.vue';
 import { reactive } from 'vue';
@@ -178,11 +179,16 @@ import { $t } from '@/lang/index';
 import { message } from '@/utils/message';
 import { loginWay, thirdParty } from './utils/enums';
 import { Icon } from '@iconify/vue';
+import PureForget from './components/PureForget.vue';
+import { loginStore } from '@/stores/index';
+import { currentPage, switchForm } from './utils/switch';
+import '@/assets/styles/login.scss';
 
-const visible = ref(false);
-setTimeout(() => {
-  visible.value = true;
-}, 200);
+const store = loginStore();
+
+onMounted(() => {
+  store.visible = true;
+});
 
 // setting theme
 const settingTheme = ref(true);
@@ -195,7 +201,6 @@ const form = reactive({
 
 const ruleFormRef = ref<FormInstance>();
 const checked = ref(false);
-const currentPage = ref(0);
 
 const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
@@ -210,34 +215,4 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 };
 </script>
 
-<style scoped lang="scss">
-.login-container {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.login-form {
-  min-width: 360px;
-}
-
-.avatar {
-  height: 6rem;
-}
-
-@media screen and (max-width: 1180px) {
-  .login-container {
-    grid-gap: 9rem;
-  }
-  .login-form {
-    min-width: 290px;
-  }
-  .avatar {
-    height: 5.5rem;
-  }
-}
-
-@media screen and (max-width: 968px) {
-  .login-container {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+<style scoped lang="scss"></style>

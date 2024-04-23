@@ -1,0 +1,29 @@
+.login-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.login-form {
+  min-width: 360px;
+}
+
+.avatar {
+  height: 6rem;
+}
+
+@media screen and (max-width: 1180px) {
+  .login-container {
+    grid-gap: 9rem;
+  }
+  .login-form {
+    min-width: 290px;
+  }
+  .avatar {
+    height: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+}

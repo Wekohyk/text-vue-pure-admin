@@ -10,5 +10,6 @@ export default pinia;
 
 // 统一导出，代码简洁，入口唯一
 export * from './modules/item.ts';
+export * from './modules/login.ts';
 
 // -- append store here --
