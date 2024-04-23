@@ -159,10 +159,8 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      console.log(111);
       message($t('login.loginOk'), { type: 'success' });
     } else {
-      console.log(222);
       message($t('login.loginNo'), { type: 'error' });
       console.log(fields);
     }
