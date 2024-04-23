@@ -18,5 +18,13 @@ export default {
     login: 'Login',
     loginOk: 'Login Success',
     loginNo: 'Login Fail',
+    phoneLogin: 'Phone Login',
+    dimensionalLogin: 'QR Code Login',
+    signIn: 'Sign In',
+    thirdPartyLogin: 'Third Party Login',
+    pureWeChatLogin: 'WeChat Login',
+    pureAlipayLogin: 'Alipay Login',
+    pureQQLogin: 'QQ Login',
+    pureWeiBoLogin: 'WeiBo Login',
   },
 };

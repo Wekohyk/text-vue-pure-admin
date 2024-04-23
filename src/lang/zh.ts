@@ -16,5 +16,13 @@ export default {
     login: '登录',
     loginOk: '登录成功',
     loginNo: '登录失败',
+    phoneLogin: '手机登录',
+    dimensionalLogin: '二维码登录',
+    signIn: '注册',
+    thirdPartyLogin: '第三方登录',
+    pureWeChatLogin: '微信登录',
+    pureAlipayLogin: '支付宝登录',
+    pureQQLogin: 'QQ登录',
+    pureWeiBoLogin: '微博登录',
   },
 };

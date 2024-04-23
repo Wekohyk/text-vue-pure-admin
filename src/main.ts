@@ -14,12 +14,16 @@ import './assets/styles/index.scss';
 import 'uno.css';
 // element-plus
 import 'element-plus/dist/index.css';
+// component-library-js
+import componentLibraryJs from 'component-library-js';
+import 'component-library-js/style.css';
 // App
 import App from './App.vue';
 
 const app = createApp(App);
 
 app.use(pinia);
+app.use(componentLibraryJs);
 app.use(i18n);
 app.use(router);
 app.mount('#app');

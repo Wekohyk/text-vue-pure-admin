@@ -92,19 +92,21 @@
           <el-form-item>
             <div class="w-full h-20 flex justify-between items-center gap-20">
               <el-checkbox v-model="checked">
-                {{ $t('login.pureRemember') }}
-                <el-popover
-                  placement="top"
-                  :width="300"
-                  trigger="hover"
-                  :content="$t('login.pureRememberInfo')"
-                >
-                  <template #reference>
-                    <el-icon class="translate-y-2">
-                      <InfoFilled />
-                    </el-icon>
-                  </template>
-                </el-popover>
+                <span class="flex">
+                  {{ $t('login.pureRemember') }}
+                  <el-popover
+                    placement="top"
+                    :width="300"
+                    trigger="hover"
+                    :content="$t('login.pureRememberInfo')"
+                  >
+                    <template #reference>
+                      <el-icon class="ml-2">
+                        <InfoFilled />
+                      </el-icon>
+                    </template>
+                  </el-popover>
+                </span>
               </el-checkbox>
               <el-button type="primary" link>
                 {{ $t('login.pureForget') }}
@@ -122,6 +124,38 @@
               {{ $t('login.login') }}
             </el-button>
           </el-form-item>
+          <!-- login options -->
+          <el-form-item
+            class="flex justify-between items-center text-center w-full space-x-4"
+          >
+            <el-button
+              v-for="(item, index) in loginWay"
+              :key="index"
+              size="default"
+              class="flex-grow"
+            >
+              {{ $t(item.title) }}
+            </el-button>
+          </el-form-item>
+
+          <!-- third party login -->
+          <el-form-item>
+            <el-divider>
+              <p class="text-gray-500 text-xs">
+                {{ $t('login.thirdPartyLogin') }}
+              </p>
+            </el-divider>
+            <div class="flex justify-between items-center text-center w-full">
+              <span
+                v-for="(item, index) in thirdParty"
+                :key="index"
+                :title="$t(item.title)"
+                class="w-1.5rem cursor-pointer"
+              >
+                <Weko-Icon icon="user-secret" color="#fff"></Weko-Icon>
+              </span>
+            </div>
+          </el-form-item>
         </el-form>
       </div>
     </transition>
@@ -137,6 +171,7 @@ import type { FormInstance } from 'element-plus';
 import { loginRules } from './utils/rule';
 import { $t } from '@/lang/index';
 import { message } from '@/utils/message';
+import { loginWay, thirdParty } from './utils/enums';
 
 const visible = ref(false);
 setTimeout(() => {
