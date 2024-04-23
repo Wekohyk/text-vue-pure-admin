@@ -4,11 +4,11 @@
     class="fixed left-0 top-0 -z-1 h-100vh w-100vw duration-500 ease-in transition-all"
     :class="settingTheme ? '' : 'filter-brightness-[0.6]'"
   >
-    <img
+    <!-- <img
       src="/backgroundImg.webp"
       alt="this is backgroundImg"
       class="w-full h-full object-cover"
-    />
+    /> -->
   </div>
 
   <!-- switch -->
@@ -126,7 +126,7 @@
           </el-form-item>
           <!-- login options -->
           <el-form-item
-            class="flex justify-between items-center text-center w-full space-x-4"
+            class="flex justify-between items-center text-center w-full"
           >
             <el-button
               v-for="(item, index) in loginWay"
@@ -145,13 +145,20 @@
                 {{ $t('login.thirdPartyLogin') }}
               </p>
             </el-divider>
-            <div class="flex justify-between items-center text-center w-full">
+            <div
+              class="flex justify-between items-center text-center w-full px-2.5rem"
+            >
               <span
                 v-for="(item, index) in thirdParty"
                 :key="index"
                 :title="$t(item.title)"
-                class="w-1.5rem cursor-pointer"
-              ></span>
+                class="cursor-pointer"
+              >
+                <Icon
+                  :icon="item.icon"
+                  class="text-1.5rem text-gray-500 hover:color-#409eff"
+                />
+              </span>
             </div>
           </el-form-item>
         </el-form>
@@ -170,6 +177,7 @@ import { loginRules } from './utils/rule';
 import { $t } from '@/lang/index';
 import { message } from '@/utils/message';
 import { loginWay, thirdParty } from './utils/enums';
+import { Icon } from '@iconify/vue';
 
 const visible = ref(false);
 setTimeout(() => {
@@ -212,7 +220,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 }
 
 .avatar {
-  height: 80px;
+  height: 6rem;
 }
 
 @media screen and (max-width: 1180px) {
@@ -223,7 +231,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     min-width: 290px;
   }
   .avatar {
-    height: 80px;
+    height: 5.5rem;
   }
 }
 
