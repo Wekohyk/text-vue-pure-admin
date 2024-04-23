@@ -6,9 +6,17 @@ export const loginStore = defineStore(
   () => {
     // is show login dialog
     const visible = ref(false);
+    // toggle login form container
+    const currentPage = ref(0);
+
+    const switchForm = (index: number) => {
+      currentPage.value = index;
+    };
 
     return {
       visible,
+      currentPage,
+      switchForm,
     };
   },
   {

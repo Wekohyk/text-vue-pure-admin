@@ -46,7 +46,7 @@
         </div>
         <!-- form -->
         <el-form
-          v-if="currentPage === 0"
+          v-if="store.currentPage === 0"
           ref="ruleFormRef"
           :model="form"
           style="min-width: 290px"
@@ -107,7 +107,7 @@
                   </el-popover>
                 </span>
               </el-checkbox>
-              <el-button type="primary" link @click="switchForm(1)">
+              <el-button type="primary" link @click="store.switchForm(1)">
                 {{ $t('login.pureForget') }}
               </el-button>
             </div>
@@ -161,10 +161,10 @@
             </div>
           </el-form-item>
         </el-form>
+        <PureForget v-if="store.currentPage === 1"></PureForget>
       </div>
     </transition>
     <!-- pure forget form -->
-    <PureForget v-if="currentPage === 1"></PureForget>
   </div>
 </template>
 
@@ -181,7 +181,7 @@ import { loginWay, thirdParty } from './utils/enums';
 import { Icon } from '@iconify/vue';
 import PureForget from './components/PureForget.vue';
 import { loginStore } from '@/stores/index';
-import { currentPage, switchForm } from './utils/switch';
+// import { switchForm } from './utils/switch';
 import '@/assets/styles/login.scss';
 
 const store = loginStore();
