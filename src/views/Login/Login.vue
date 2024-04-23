@@ -54,6 +54,7 @@
           label-width="auto"
           :rules="loginRules"
         >
+          <!-- admin -->
           <el-form-item
             :rules="[
               {
@@ -70,7 +71,7 @@
               clearable
             />
           </el-form-item>
-
+          <!-- password -->
           <el-form-item
             :rules="[
               {
@@ -87,7 +88,7 @@
               show-password
             />
           </el-form-item>
-
+          <!-- checkout -->
           <el-form-item>
             <div class="w-full h-20 flex justify-between items-center gap-20">
               <el-checkbox v-model="checked">
@@ -110,7 +111,7 @@
               </el-button>
             </div>
           </el-form-item>
-
+          <!-- login button -->
           <el-form-item>
             <el-button
               type="primary"
