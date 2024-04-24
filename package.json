@@ -26,8 +26,10 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@vueuse/motion": "^2.1.0",
+    "axios": "^1.6.8",
     "component-library-js": "^1.0.1",
     "element-plus": "^2.7.0",
+    "mockjs": "^1.1.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "sass": "^1.72.0",
@@ -37,6 +39,7 @@
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.2",
+    "@types/mockjs": "^1.0.10",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",

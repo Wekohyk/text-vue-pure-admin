@@ -16,6 +16,8 @@ import 'uno.css';
 import 'element-plus/dist/index.css';
 // @vueUse/motion
 import { MotionPlugin } from '@vueuse/motion';
+// import mock
+import './mock/mock';
 
 // App
 import App from './App.vue';
