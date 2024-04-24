@@ -120,7 +120,7 @@
               type="primary"
               size="default"
               class="w-full"
-              @click="submitForm(ruleFormRef)"
+              @click="loginApp"
             >
               {{ $t('login.login') }}
             </el-button>
@@ -202,6 +202,10 @@ const form = reactive({
 
 const ruleFormRef = ref<FormInstance>();
 const checked = ref(false);
+
+const loginApp = () => {
+  submitForm(ruleFormRef.value);
+};
 
 const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
