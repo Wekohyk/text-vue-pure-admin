@@ -27,4 +27,6 @@ const loginRules = reactive<FormRules>({
   ],
 });
 
-export { loginRules };
+const updateRules = reactive<FormRules>({});
+
+export { loginRules, updateRules };
