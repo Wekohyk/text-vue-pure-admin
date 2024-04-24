@@ -13,7 +13,7 @@ export default {
     pleaseVerifyCodeSixReg: '请输入6位数字验证码',
     pureRemember: '7天内自动登录',
     pureForget: '忘记密码?',
-    pureRememberInfo: '勾选并登录后, 7天数内无需输入用户名和密码会自动登入系统',
+    pureRememberInfo: '勾选并登录后, 7天内无需输入用户名和密码会自动登入系统',
     login: '登录',
     loginOk: '登录成功',
     loginNo: '登录失败',
