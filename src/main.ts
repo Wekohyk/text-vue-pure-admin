@@ -14,6 +14,9 @@ import './assets/styles/index.scss';
 import 'uno.css';
 // element-plus
 import 'element-plus/dist/index.css';
+// @vueUse/motion
+import { MotionPlugin } from '@vueuse/motion';
+
 // App
 import App from './App.vue';
 
@@ -21,5 +24,6 @@ const app = createApp(App);
 
 app.use(pinia);
 app.use(i18n);
+app.use(MotionPlugin);
 app.use(router);
 app.mount('#app');

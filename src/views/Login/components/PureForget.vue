@@ -4,20 +4,16 @@
     style="min-width: 290px"
     label-width="auto"
   >
-    <el-form-item>123</el-form-item>
-    <el-form-item>123</el-form-item>
-    <el-form-item>123</el-form-item>
-    <el-form-item>123</el-form-item>
-    <el-form-item>123</el-form-item>
-    <el-form-item>123</el-form-item>
-    <el-form-item>123</el-form-item>
-    <el-form-item>123</el-form-item>
+    <Motion :delay="100">
+      <el-form-item>123</el-form-item>
+    </Motion>
   </el-form>
 </template>
 <script setup lang="ts">
 import { loginStore } from '@/stores/index';
 import { onMounted } from 'vue';
 import '@/assets/styles/login.scss';
+import Motion from '../utils/motion';
 
 const store = loginStore();
 

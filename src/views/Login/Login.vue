@@ -37,13 +37,15 @@
         class="login-form flex items-center justify-center flex-col duration-500 ease-in"
       >
         <!-- avatar -->
-        <div class="avatar mb-18px">
-          <img
-            src="/avatar.webp"
-            alt="avatar"
-            class="h-full rounded-[50%_50%_50%_50%_/_19%_19%_81%_81%]"
-          />
-        </div>
+        <Motion :delay="50">
+          <div class="avatar mb-18px">
+            <img
+              src="/avatar.webp"
+              alt="avatar"
+              class="h-full rounded-[50%_50%_50%_50%_/_19%_19%_81%_81%]"
+            />
+          </div>
+        </Motion>
         <!-- form -->
         <el-form
           v-if="store.currentPage === 0"
@@ -181,6 +183,7 @@ import { loginWay, thirdParty } from './utils/enums';
 import { Icon } from '@iconify/vue';
 import PureForget from './components/PureForget.vue';
 import { loginStore } from '@/stores/index';
+import Motion from './utils/motion';
 // import { switchForm } from './utils/switch';
 import '@/assets/styles/login.scss';
 
