@@ -26,36 +26,30 @@
 
   <!-- login container -->
   <div class="login-container w-100vw h-100vh max-w-100% grid gap-18rem px-2">
-    <transition
-      enter-from-class="opacity-0"
-      enter-to-class="opacity-100"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0"
+    <div
+      class="login-form flex items-center justify-center flex-col duration-500 ease-in"
     >
-      <div
-        v-if="store.visible"
-        class="login-form flex items-center justify-center flex-col duration-500 ease-in"
+      <!-- avatar -->
+      <Motion :delay="50">
+        <div class="avatar mb-18px">
+          <img
+            src="/avatar.webp"
+            alt="avatar"
+            class="h-full rounded-[50%_50%_50%_50%_/_19%_19%_81%_81%]"
+          />
+        </div>
+      </Motion>
+      <!-- form -->
+      <el-form
+        v-if="store.currentPage === 0"
+        ref="ruleFormRef"
+        :model="form"
+        style="min-width: 290px"
+        label-width="auto"
+        :rules="loginRules"
       >
-        <!-- avatar -->
-        <Motion :delay="50">
-          <div class="avatar mb-18px">
-            <img
-              src="/avatar.webp"
-              alt="avatar"
-              class="h-full rounded-[50%_50%_50%_50%_/_19%_19%_81%_81%]"
-            />
-          </div>
-        </Motion>
-        <!-- form -->
-        <el-form
-          v-if="store.currentPage === 0"
-          ref="ruleFormRef"
-          :model="form"
-          style="min-width: 290px"
-          label-width="auto"
-          :rules="loginRules"
-        >
-          <!-- admin -->
+        <!-- admin -->
+        <Motion :delay="100">
           <el-form-item
             :rules="[
               {
@@ -72,7 +66,9 @@
               clearable
             />
           </el-form-item>
-          <!-- password -->
+        </Motion>
+        <!-- password -->
+        <Motion :delay="150">
           <el-form-item
             :rules="[
               {
@@ -89,7 +85,9 @@
               show-password
             />
           </el-form-item>
-          <!-- checkout -->
+        </Motion>
+        <!-- checkout -->
+        <Motion :delay="200">
           <el-form-item>
             <div class="w-full h-20 flex justify-between items-center gap-20">
               <el-checkbox v-model="checked">
@@ -114,7 +112,9 @@
               </el-button>
             </div>
           </el-form-item>
-          <!-- login button -->
+        </Motion>
+        <!-- login button -->
+        <Motion :delay="250">
           <el-form-item>
             <el-button
               type="primary"
@@ -125,7 +125,9 @@
               {{ $t('login.login') }}
             </el-button>
           </el-form-item>
-          <!-- login options -->
+        </Motion>
+        <!-- login options -->
+        <Motion :delay="300">
           <el-form-item
             class="flex justify-between items-center text-center w-full"
           >
@@ -138,8 +140,9 @@
               {{ $t(item.title) }}
             </el-button>
           </el-form-item>
-
-          <!-- third party login -->
+        </Motion>
+        <!-- third party login -->
+        <Motion :delay="350">
           <el-form-item>
             <el-divider>
               <p class="text-gray-500 text-xs">
@@ -162,16 +165,16 @@
               </span>
             </div>
           </el-form-item>
-        </el-form>
-        <PureForget v-if="store.currentPage === 1"></PureForget>
-      </div>
-    </transition>
+        </Motion>
+      </el-form>
+      <PureForget v-if="store.currentPage === 1"></PureForget>
+    </div>
     <!-- pure forget form -->
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage.vue';
 import { reactive } from 'vue';
@@ -188,10 +191,6 @@ import Motion from './utils/motion';
 import '@/assets/styles/login.scss';
 
 const store = loginStore();
-
-onMounted(() => {
-  store.visible = true;
-});
 
 // setting theme
 const settingTheme = ref(true);

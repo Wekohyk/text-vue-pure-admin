@@ -4,8 +4,6 @@ import { ref } from 'vue';
 export const loginStore = defineStore(
   'loginStore',
   () => {
-    // is show login dialog
-    const visible = ref(false);
     // toggle login form container
     const currentPage = ref(0);
 
@@ -14,7 +12,6 @@ export const loginStore = defineStore(
     };
 
     return {
-      visible,
       currentPage,
       switchForm,
     };
