@@ -167,9 +167,9 @@
           </el-form-item>
         </Motion>
       </el-form>
+      <!-- pure forget form -->
       <PureForget v-if="store.currentPage === 1"></PureForget>
     </div>
-    <!-- pure forget form -->
   </div>
 </template>
 

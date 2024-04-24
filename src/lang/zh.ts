@@ -34,6 +34,7 @@ export default {
     purePassWordUpdateReg: '修改密码成功',
     purePassWordReg: '请输入确认密码',
     pleaseAgainPasswordReg: '两次密码输入不一致',
+    verify: '确认',
     return: '返回',
   },
 };

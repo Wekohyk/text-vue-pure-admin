@@ -93,7 +93,7 @@
           class="w-full"
           @click="onUpdate(ruleFormRef)"
         >
-          {{ $t('login.login') }}
+          {{ $t('login.verify') }}
         </el-button>
       </el-form-item>
     </Motion>

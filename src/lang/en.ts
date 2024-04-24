@@ -36,6 +36,7 @@ export default {
     purePassWordUpdateReg: 'Password update success',
     purePassWordReg: 'Please enter confirmation password',
     pleaseAgainPasswordReg: 'The two passwords entered do not match',
+    verify: 'Verify',
     return: 'Return',
   },
 };
