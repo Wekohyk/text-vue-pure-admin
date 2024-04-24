@@ -2,7 +2,7 @@
   <el-form
     class="flex items-center justify-center flex-col duration-500 ease-in"
     ref="ruleFormRef"
-    label-width="auto"
+    label-width="full"
     :model="rulesForm"
     :rules="updateRules"
   >
@@ -89,7 +89,7 @@
       <el-form-item class="min-w-290">
         <el-button
           type="primary"
-          size="primary"
+          size="default"
           class="w-full"
           @click="onUpdate(ruleFormRef)"
         >

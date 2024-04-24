@@ -45,7 +45,7 @@
         ref="ruleFormRef"
         :model="form"
         style="min-width: 290px"
-        label-width="auto"
+        label-width="full"
         :rules="loginRules"
       >
         <!-- admin -->
