@@ -179,7 +179,7 @@ import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage.vue';
 import { reactive } from 'vue';
 import type { FormInstance } from 'element-plus';
-import { loginRules } from './utils/rule';
+import { loginRules } from './utils/rules';
 import { $t } from '@/lang/index';
 import { message } from '@/utils/message';
 import { loginWay, thirdParty } from './utils/enums';
@@ -187,7 +187,6 @@ import { Icon } from '@iconify/vue';
 import PureForget from './components/PureForget.vue';
 import { loginStore } from '@/stores/index';
 import Motion from './utils/motion';
-// import { switchForm } from './utils/switch';
 import '@/assets/styles/login.scss';
 
 const store = loginStore();

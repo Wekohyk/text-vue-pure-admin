@@ -2,8 +2,8 @@ import type { VNode } from 'vue';
 // import { isFunction } from '@pureadmin/utils';
 import { type MessageHandler, ElMessage } from 'element-plus';
 
-type messageStyle = 'el' | 'antd';
-type messageTypes = 'info' | 'success' | 'warning' | 'error';
+export type messageStyle = 'el' | 'antd';
+export type messageTypes = 'info' | 'success' | 'warning' | 'error';
 
 interface MessageParams {
   /** 消息类型，可选 `info` 、`success` 、`warning` 、`error` ，默认 `info` */

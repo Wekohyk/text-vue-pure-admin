@@ -11,6 +11,7 @@ export default {
       'The password format should be any two combinations of 8-18 digits, letters, and symbols',
     verificationCode: 'Verification Code',
     pleaseVerificationCode: 'Please enter verification code',
+    pleaseVerifyCodeSixReg: 'Please enter a 6-digit numeric code',
     pureRemember: 'Auto login within 7 days',
     pureForget: 'Forget password?',
     pureRememberInfo:
@@ -26,5 +27,15 @@ export default {
     pureAlipayLogin: 'Alipay Login',
     pureQQLogin: 'QQ Login',
     pureWeiBoLogin: 'WeiBo Login',
+    phone: 'Phone Number',
+    pleasePhone: 'Please enter phone number',
+    pleasePhoneCorrectReg: 'Please enter the correct phone number',
+    getVisible: 'Get Verification Code',
+    againPassword: 'Confirm Password',
+    pleaseAgainPassword: 'Please enter password again',
+    purePassWordUpdateReg: 'Password update success',
+    purePassWordReg: 'Please enter confirmation password',
+    pleaseAgainPasswordReg: 'The two passwords entered do not match',
+    return: 'Return',
   },
 };
