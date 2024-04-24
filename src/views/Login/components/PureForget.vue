@@ -1,110 +1,118 @@
 <template>
-  <el-form
-    class="flex items-center justify-center flex-col duration-500 ease-in"
-    ref="ruleFormRef"
-    label-width="full"
-    :model="rulesForm"
-    :rules="updateRules"
+  <div
+    class="flex items-center justify-center flex-col duration-500 ease-in min-w-290"
   >
-    <!-- phone -->
-    <Motion :delay="100">
-      <el-form-item
-        class="min-w-290"
-        :rules="[
-          {
-            required: true,
-            message: $t('login.pleasePhone'),
-            trigger: 'blur',
-          },
-        ]"
-        prop="phone"
-      >
-        <el-input
-          v-model="rulesForm.phone"
-          :placeholder="$t('login.phone')"
-          clearable
-        />
-      </el-form-item>
-    </Motion>
-    <!-- Verification Code -->
-    <Motion :delay="150">
-      <el-form-item
-        class="min-w-290"
-        :rules="[
-          {
-            required: true,
-            message: $t('login.pleaseVerificationCode'),
-            trigger: 'blur',
-          },
-        ]"
-        prop="verifyCode"
-      >
-        <div class="flex justify-center items-center text-center gap-5 w-full">
-          <el-input
-            v-model="rulesForm.verifyCode"
-            :placeholder="$t('login.verificationCode')"
-          />
-          <el-button type="default">{{ $t('login.getVisible') }}</el-button>
-        </div>
-      </el-form-item>
-    </Motion>
-    <!-- cipher -->
-    <Motion :delay="200">
-      <el-form-item
-        class="min-w-290"
-        :rules="[
-          {
-            required: true,
-            message: $t('login.pleaseCipher'),
-            trigger: 'blur',
-          },
-        ]"
-        prop="password"
-      >
-        <el-input
-          v-model="rulesForm.password"
-          :placeholder="$t('login.cipher')"
-          clearable
-          show-password
-        />
-      </el-form-item>
-    </Motion>
-    <!-- again cipher -->
-    <Motion :delay="250">
-      <el-form-item
-        class="min-w-290"
-        :rules="repeatPasswordRule"
-        prop="repeatPassword"
-      >
-        <el-input
-          v-model="rulesForm.repeatPassword"
-          :placeholder="$t('login.againPassword')"
-          clearable
-          show-password
-        />
-      </el-form-item>
-    </Motion>
-    <!-- button -->
-    <Motion :delay="300">
-      <el-form-item class="min-w-290">
-        <el-button
-          type="primary"
-          size="default"
-          class="w-full"
-          @click="onUpdate(ruleFormRef)"
+    <el-form
+      ref="ruleFormRef"
+      label-width="full"
+      :model="rulesForm"
+      :rules="updateRules"
+    >
+      <!-- phone -->
+      <Motion :delay="100">
+        <el-form-item
+          :rules="[
+            {
+              required: true,
+              message: $t('login.pleasePhone'),
+              trigger: 'blur',
+            },
+          ]"
+          prop="phone"
         >
-          {{ $t('login.verify') }}
-        </el-button>
-      </el-form-item>
-    </Motion>
-    <Motion :delay="350">
-      <el-form-item class="min-w-290">
-        <el-button size="default" class="w-full" @click="store.switchForm(0)">
-          {{ $t('login.return') }}
-        </el-button>
-      </el-form-item>
-    </Motion>
-  </el-form>
+          <el-input
+            v-model="rulesForm.phone"
+            :placeholder="$t('login.phone')"
+            clearable
+          />
+        </el-form-item>
+      </Motion>
+      <!-- Verification Code -->
+      <Motion :delay="150">
+        <el-form-item
+          :rules="[
+            {
+              required: true,
+              message: $t('login.pleaseVerificationCode'),
+              trigger: 'blur',
+            },
+          ]"
+          prop="verifyCode"
+        >
+          <div
+            class="flex justify-center items-center text-center gap-5 w-full"
+          >
+            <el-input
+              v-model="rulesForm.verifyCode"
+              :placeholder="$t('login.verificationCode')"
+            />
+            <el-button
+              :disabled="isDisabled"
+              @click="useVerifyCode().start(ruleFormRef, 'phone')"
+              type="default"
+            >
+              {{
+                text.length > 0
+                  ? text + $t('login.pureInfo')
+                  : $t('login.getVisible')
+              }}
+            </el-button>
+          </div>
+        </el-form-item>
+      </Motion>
+      <!-- cipher -->
+      <Motion :delay="200">
+        <el-form-item
+          :rules="[
+            {
+              required: true,
+              message: $t('login.pleaseCipher'),
+              trigger: 'blur',
+            },
+          ]"
+          prop="password"
+        >
+          <el-input
+            v-model="rulesForm.password"
+            :placeholder="$t('login.cipher')"
+            clearable
+            show-password
+          />
+        </el-form-item>
+      </Motion>
+      <!-- again cipher -->
+      <Motion :delay="250">
+        <el-form-item :rules="repeatPasswordRule" prop="repeatPassword">
+          <el-input
+            v-model="rulesForm.repeatPassword"
+            :placeholder="$t('login.againPassword')"
+            clearable
+            show-password
+          />
+        </el-form-item>
+      </Motion>
+      <!-- button -->
+      <Motion :delay="300">
+        <el-form-item>
+          <el-button
+            type="primary"
+            size="default"
+            class="w-full"
+            @click="onUpdate(ruleFormRef)"
+          >
+            {{ $t('login.verify') }}
+          </el-button>
+        </el-form-item>
+      </Motion>
+      <Motion :delay="350">
+        <el-form-item>
+          <el-button size="default" class="w-full" @click="store.switchForm(0)">
+            {{ $t('login.return') }}
+          </el-button>
+        </el-form-item>
+      </Motion>
+    </el-form>
+  </div>
 </template>
 <script setup lang="ts">
 import '@/assets/styles/login.scss';
@@ -117,6 +125,7 @@ import { $t } from '@/lang/index';
 import { debounce } from '@/utils/Throttling_And_AntiShake';
 import type { messageTypes } from '@/utils/message';
 import { loginStore } from '@/stores/index';
+import { useVerifyCode } from '@/utils/verifyCode';
 
 const store = loginStore();
 
@@ -166,5 +175,6 @@ const repeatPasswordRule = [
     trigger: 'blur',
   },
 ];
+const { isDisabled, text } = useVerifyCode();
 </script>
 <style scoped lang="scss"></style>

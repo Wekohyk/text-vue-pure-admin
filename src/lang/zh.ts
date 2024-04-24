@@ -2,6 +2,8 @@ export default {
   language: '中文',
   useEn: 'English',
   useZh: '简体中文',
+  openControlConsole: '请打开控制台',
+  joker: '嘿嘿, 被骗到了吧, 没有验证码',
   login: {
     accountNumber: '账号',
     pleaseEnterAccountNumber: '请输入账号',
@@ -36,5 +38,6 @@ export default {
     pleaseAgainPasswordReg: '两次密码输入不一致',
     verify: '确认',
     return: '返回',
+    pureInfo: '秒后重新获取',
   },
 };

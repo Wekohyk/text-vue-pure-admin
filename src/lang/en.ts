@@ -2,6 +2,8 @@ export default {
   language: 'English',
   useEn: 'English',
   useZh: '简体中文',
+  openControlConsole: 'Please Open Control Console',
+  joker: 'Hey, fooled, no verification code',
   login: {
     accountNumber: 'Account Number',
     pleaseEnterAccountNumber: 'Please enter account number',
@@ -38,5 +40,6 @@ export default {
     pleaseAgainPasswordReg: 'The two passwords entered do not match',
     verify: 'Verify',
     return: 'Return',
+    pureInfo: ' Seconds',
   },
 };
