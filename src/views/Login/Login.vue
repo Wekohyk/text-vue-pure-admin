@@ -208,6 +208,7 @@ import SignIn from './components/SignIn.vue';
 import { userStore } from '@/stores/index';
 import Motion from './utils/motion';
 import '@/assets/styles/login.scss';
+import router from '@/router';
 
 // setting theme
 const settingTheme = ref(true);
@@ -226,6 +227,7 @@ const form = reactive({
 
 const loginApp = () => {
   submitForm(ruleFormRef.value);
+  router.push('/home');
 };
 
 const submitForm = async (formEl: FormInstance | undefined) => {
