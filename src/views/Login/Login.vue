@@ -41,7 +41,7 @@
       </Motion>
       <!-- form -->
       <el-form
-        v-if="store.currentPage === 0"
+        v-if="currentPage === 0"
         ref="ruleFormRef"
         :model="form"
         style="min-width: 290px"
@@ -86,7 +86,7 @@
             />
           </el-form-item>
         </Motion>
-        <!-- checkout -->
+        <!-- pure remember -->
         <Motion :delay="200">
           <el-form-item>
             <div class="w-full h-20 flex justify-between items-center gap-20">
@@ -107,7 +107,12 @@
                   </el-popover>
                 </span>
               </el-checkbox>
-              <el-button type="primary" link @click="store.switchForm(1)">
+              <!-- pure forget -->
+              <el-button
+                type="primary"
+                link
+                @click="userStore().SET_CURRENTPAGE(4)"
+              >
                 {{ $t('login.pureForget') }}
               </el-button>
             </div>
@@ -168,13 +173,13 @@
         </Motion>
       </el-form>
       <!-- pure forget form -->
-      <PureForget v-if="store.currentPage === 1"></PureForget>
+      <PureForget v-if="currentPage === 4"></PureForget>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage.vue';
 import { reactive } from 'vue';
@@ -185,23 +190,24 @@ import { message } from '@/utils/message';
 import { loginWay, thirdParty } from './utils/enums';
 import { Icon } from '@iconify/vue';
 import PureForget from './components/PureForget.vue';
-import { loginStore } from '@/stores/index';
+import { userStore } from '@/stores/index';
 import Motion from './utils/motion';
 import '@/assets/styles/login.scss';
 
-const store = loginStore();
-
 // setting theme
 const settingTheme = ref(true);
+const ruleFormRef = ref<FormInstance>();
+const checked = ref(false);
+const loginDay = ref(7);
+const currentPage = computed(() => {
+  return userStore().currentPage;
+});
 
 // do not use same name with ref
 const form = reactive({
   accountNumber: '',
   cipher: '',
 });
-
-const ruleFormRef = ref<FormInstance>();
-const checked = ref(false);
 
 const loginApp = () => {
   submitForm(ruleFormRef.value);
@@ -218,6 +224,13 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     }
   });
 };
+
+watch(checked, bool => {
+  userStore().SET_ISREMEMBERED(bool);
+});
+watch(loginDay, value => {
+  userStore().SET_LOGINDAY(value);
+});
 </script>
 
 <style scoped lang="scss"></style>

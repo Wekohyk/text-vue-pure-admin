@@ -106,7 +106,11 @@
       </Motion>
       <Motion :delay="350">
         <el-form-item>
-          <el-button size="default" class="w-full" @click="store.switchForm(0)">
+          <el-button
+            size="default"
+            class="w-full"
+            @click="userStore().SET_CURRENTPAGE(0)"
+          >
             {{ $t('login.return') }}
           </el-button>
         </el-form-item>
@@ -124,10 +128,8 @@ import { message } from '@/utils/message';
 import { $t } from '@/lang/index';
 import { debounce } from '@/utils/Throttling_And_AntiShake';
 import type { messageTypes } from '@/utils/message';
-import { loginStore } from '@/stores/index';
 import { useVerifyCode } from '@/utils/verifyCode';
-
-const store = loginStore();
+import { userStore } from '@/stores/index';
 
 const rulesForm = reactive({
   phone: '',
