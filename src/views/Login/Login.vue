@@ -1,31 +1,35 @@
 <template>
   <!-- backgroundImg -->
   <div
-    class="fixed left-0 top-0 -z-1 h-100vh w-100vw duration-500 ease-in transition-all"
+    class="fixed left-0 top-0 -z-999 h-100vh w-100vw duration-500 ease-in transition-all"
     :class="settingTheme ? '' : 'filter-brightness-[0.6]'"
   >
-    <!-- <img
+    <img
       src="/backgroundImg.webp"
       alt="this is backgroundImg"
       class="w-full h-full object-cover"
-    /> -->
+    />
   </div>
 
   <!-- switch -->
-  <div class="fixed right-10 top-5 flex items-center justify-center gap-5">
-    <el-switch
+  <div
+    class="fixed right-10 top-5 flex items-center justify-center gap-5 z-999"
+  >
+    <!-- <el-switch
       v-model="settingTheme"
-      style="--el-switch-on-color: #ffffff4d; --el-switch-off-color: #0000004d"
+      style="--el-switch-on-color: #0000004d; --el-switch-off-color: #0000004d"
       :active-icon="Sunny"
       :inactive-icon="Moon"
       inline-prompt
-    ></el-switch>
+    ></el-switch> -->
     <!-- setting language -->
     <SettingLanguage></SettingLanguage>
   </div>
 
   <!-- login container -->
   <div class="login-container w-100vw h-100vh max-w-100% grid gap-18rem px-2">
+    <!-- placeholder container -->
+    <div></div>
     <div
       class="login-form flex items-center justify-center flex-col duration-500 ease-in"
     >
@@ -187,7 +191,8 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
-import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
+import { InfoFilled } from '@element-plus/icons-vue';
+// import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage.vue';
 import { reactive } from 'vue';
 import type { FormInstance } from 'element-plus';
