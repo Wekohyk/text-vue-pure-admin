@@ -123,7 +123,7 @@
               {{ $t('login.pureReadAccept') }}
             </el-checkbox>
             <!-- pure forget -->
-            <el-button type="primary" link>
+            <el-button type="primary" link @click="isPurePrivacyPolicy()">
               {{ $t('login.purePrivacyPolicy') }}
             </el-button>
           </div>
@@ -170,6 +170,7 @@ import { updateRules } from '../utils/rules';
 import { useVerifyCode } from '@/utils/verifyCode';
 
 const ruleFormRef = ref<FormInstance>();
+const isOpenPurePrivacyPolicy = ref(false);
 const checked = ref(false);
 const rulesForm = reactive({
   accountNumber: '',
@@ -184,7 +185,7 @@ const debouncedMessage = debounce(
   (msg: string, options: { type: messageTypes }) => {
     message(msg, options);
   },
-  2000,
+  1000,
 );
 
 const onUpdate = async (formEl: FormInstance | undefined) => {
@@ -217,6 +218,11 @@ const repeatPasswordRule = [
     trigger: 'blur',
   },
 ];
+
+const isPurePrivacyPolicy = () => {
+  isOpenPurePrivacyPolicy.value != isOpenPurePrivacyPolicy.value;
+  debouncedMessage($t('login.isOpenPurePrivacyPolicy'), { type: 'success' });
+};
 
 watch(checked, bool => {
   userStore().SET_ISREMEMBERED(bool);
