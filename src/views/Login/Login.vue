@@ -141,6 +141,7 @@
               :key="index"
               size="default"
               class="flex-grow"
+              @click="userStore().SET_CURRENTPAGE(index + 1)"
             >
               {{ $t(item.title) }}
             </el-button>
@@ -172,6 +173,8 @@
           </el-form-item>
         </Motion>
       </el-form>
+      <!-- phone login -->
+      <PhoneLogin v-if="currentPage === 1"></PhoneLogin>
       <!-- pure forget form -->
       <PureForget v-if="currentPage === 4"></PureForget>
     </div>
@@ -190,6 +193,7 @@ import { message } from '@/utils/message';
 import { loginWay, thirdParty } from './utils/enums';
 import { Icon } from '@iconify/vue';
 import PureForget from './components/PureForget.vue';
+import PhoneLogin from './components/PhoneLogin.vue';
 import { userStore } from '@/stores/index';
 import Motion from './utils/motion';
 import '@/assets/styles/login.scss';
