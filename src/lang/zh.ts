@@ -40,5 +40,7 @@ export default {
     return: '返回',
     pureInfo: '秒后重新获取',
     pureTip: '扫码后点击"确认"，即可完成登录',
+    pureReadAccept: '我已仔细阅读并接受',
+    purePrivacyPolicy: '《隐私政策》',
   },
 };

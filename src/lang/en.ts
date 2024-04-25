@@ -42,5 +42,7 @@ export default {
     return: 'Return',
     pureInfo: ' Seconds',
     pureTip: 'After scanning the code, click "Confirm" to complete the login',
+    pureReadAccept: 'I have read and accept',
+    purePrivacyPolicy: '《Privacy Policy》',
   },
 };

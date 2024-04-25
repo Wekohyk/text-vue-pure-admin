@@ -177,6 +177,8 @@
       <PhoneLogin v-if="currentPage === 1"></PhoneLogin>
       <!-- dimensional code -->
       <DimensionalCode v-if="currentPage === 2"></DimensionalCode>
+      <!-- Sign In login -->
+      <SignIn v-if="currentPage === 3"></SignIn>
       <!-- pure forget form -->
       <PureForget v-if="currentPage === 4"></PureForget>
     </div>
@@ -197,6 +199,7 @@ import { Icon } from '@iconify/vue';
 import PureForget from './components/PureForget.vue';
 import PhoneLogin from './components/PhoneLogin.vue';
 import DimensionalCode from './components/DimensionalCode.vue';
+import SignIn from './components/SignIn.vue';
 import { userStore } from '@/stores/index';
 import Motion from './utils/motion';
 import '@/assets/styles/login.scss';

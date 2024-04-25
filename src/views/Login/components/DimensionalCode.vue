@@ -4,7 +4,6 @@
       class="flex justify-center items-center flex-col"
       ref="ruleFormRef"
       label-width="full"
-      :model="rulesForm"
     >
       <!-- dimensionalImg -->
       <Motion :delay="50">
@@ -42,13 +41,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { reactive } from 'vue';
 import Motion from '../utils/motion';
 import { userStore } from '@/stores/index';
-
-const rulesForm = reactive({
-  phone: '',
-  verifyCode: '',
-});
 </script>
 <style scoped lang="scss"></style>
