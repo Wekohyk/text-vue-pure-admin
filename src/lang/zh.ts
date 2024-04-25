@@ -39,5 +39,6 @@ export default {
     verify: '确认',
     return: '返回',
     pureInfo: '秒后重新获取',
+    pureTip: '扫码后点击"确认"，即可完成登录',
   },
 };

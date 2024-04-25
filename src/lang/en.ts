@@ -41,5 +41,6 @@ export default {
     verify: 'Verify',
     return: 'Return',
     pureInfo: ' Seconds',
+    pureTip: 'After scanning the code, click "Confirm" to complete the login',
   },
 };

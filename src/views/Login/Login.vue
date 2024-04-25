@@ -175,6 +175,8 @@
       </el-form>
       <!-- phone login -->
       <PhoneLogin v-if="currentPage === 1"></PhoneLogin>
+      <!-- dimensional code -->
+      <DimensionalCode v-if="currentPage === 2"></DimensionalCode>
       <!-- pure forget form -->
       <PureForget v-if="currentPage === 4"></PureForget>
     </div>
@@ -194,6 +196,7 @@ import { loginWay, thirdParty } from './utils/enums';
 import { Icon } from '@iconify/vue';
 import PureForget from './components/PureForget.vue';
 import PhoneLogin from './components/PhoneLogin.vue';
+import DimensionalCode from './components/DimensionalCode.vue';
 import { userStore } from '@/stores/index';
 import Motion from './utils/motion';
 import '@/assets/styles/login.scss';
