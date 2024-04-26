@@ -29,7 +29,7 @@
   <!-- login container -->
   <div class="login-container w-100vw h-100vh max-w-100% grid gap-18rem px-2">
     <!-- placeholder container -->
-    <div></div>
+    <div class="compatible"></div>
     <div
       class="login-form flex items-center justify-center flex-col duration-500 ease-in"
     >
