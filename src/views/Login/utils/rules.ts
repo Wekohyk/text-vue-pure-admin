@@ -18,6 +18,8 @@ const loginRules = reactive<FormRules>({
     {
       validator: (rule, value, callback) => {
         if (value === '') {
+          console.log(rule);
+
           return callback(new Error($t('login.purePassWordReg')));
         }
         if (!REGEXP_PWD.test(value)) {
@@ -35,6 +37,8 @@ const updateRules = reactive<FormRules>({
     {
       validator: (rule, value, callback) => {
         if (value === '') {
+          console.log(rule);
+
           return callback(new Error($t('login.pleasePhone')));
         }
         if (!REGEXP_PHONE.test(value)) {
@@ -49,6 +53,8 @@ const updateRules = reactive<FormRules>({
     {
       validator: (rule, value, callback) => {
         if (value === '') {
+          console.log(rule);
+
           return callback(new Error($t('login.pleaseVerificationCode')));
         }
         if (!REGEXP_SIX.test(value)) {
@@ -63,6 +69,8 @@ const updateRules = reactive<FormRules>({
     {
       validator: (rule, value, callback) => {
         if (value === '') {
+          console.log(rule);
+
           return callback(new Error($t('login.purePassWordReg')));
         }
         if (!REGEXP_PWD.test(value)) {

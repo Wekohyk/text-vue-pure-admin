@@ -214,6 +214,8 @@ const repeatPasswordRule = [
       callback: (error?: Error) => void,
     ) => {
       if (value === '') {
+        console.log(rule);
+
         return callback(new Error($t('login.purePassWordReg')));
       }
       if (rulesForm.password !== value) {
