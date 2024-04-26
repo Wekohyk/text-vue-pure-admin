@@ -1,11 +1,13 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
+import { pinia } from '../index';
+import { userKey } from '@/utils/auth';
 
 export const userStore = defineStore(
   'userStore',
   () => {
     // 头像
-    const avatar = ref<string>('');
+    const avatar = ref(localStorage.getItem(userKey)) ?? ref<string>('');
     // 用户名
     const username = ref<string>('');
     // 昵称
@@ -81,3 +83,7 @@ export const userStore = defineStore(
     },
   },
 );
+
+export function useUserStoreHook() {
+  return userStore(pinia);
+}

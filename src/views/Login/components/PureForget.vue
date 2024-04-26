@@ -109,7 +109,7 @@
           <el-button
             size="default"
             class="w-full"
-            @click="userStore().SET_CURRENTPAGE(0)"
+            @click="useUserStoreHook().SET_CURRENTPAGE(0)"
           >
             {{ $t('login.return') }}
           </el-button>
@@ -129,7 +129,7 @@ import { $t } from '@/lang/index';
 import { debounce } from '@/utils/Throttling_And_AntiShake';
 import type { messageTypes } from '@/utils/message';
 import { useVerifyCode } from '@/utils/verifyCode';
-import { userStore } from '@/stores/index';
+import { useUserStoreHook } from '@/stores/index';
 
 const rulesForm = reactive({
   phone: '',
@@ -143,8 +143,9 @@ const ruleFormRef = ref<FormInstance>();
 const debouncedMessage = debounce(
   (msg: string, options: { type: messageTypes }) => {
     message(msg, options);
+    useUserStoreHook().currentPage = 0;
   },
-  2000,
+  1000,
 );
 
 const onUpdate = async (formEl: FormInstance | undefined) => {

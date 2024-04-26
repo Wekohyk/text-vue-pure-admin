@@ -115,7 +115,7 @@
               <el-button
                 type="primary"
                 link
-                @click="userStore().SET_CURRENTPAGE(4)"
+                @click="useUserStoreHook().SET_CURRENTPAGE(4)"
               >
                 {{ $t('login.pureForget') }}
               </el-button>
@@ -129,7 +129,7 @@
               type="primary"
               size="default"
               class="w-full"
-              @click="loginApp"
+              @click="submitForm(ruleFormRef)"
             >
               {{ $t('login.login') }}
             </el-button>
@@ -145,7 +145,7 @@
               :key="index"
               size="default"
               class="flex-grow"
-              @click="userStore().SET_CURRENTPAGE(index + 1)"
+              @click="useUserStoreHook().SET_CURRENTPAGE(index + 1)"
             >
               {{ $t(item.title) }}
             </el-button>
@@ -205,7 +205,7 @@ import PureForget from './components/PureForget.vue';
 import PhoneLogin from './components/PhoneLogin.vue';
 import DimensionalCode from './components/DimensionalCode.vue';
 import SignIn from './components/SignIn.vue';
-import { userStore } from '@/stores/index';
+import { useUserStoreHook } from '@/stores/index';
 import Motion from './utils/motion';
 import '@/assets/styles/login.scss';
 import router from '@/router';
@@ -216,7 +216,7 @@ const ruleFormRef = ref<FormInstance>();
 const checked = ref(false);
 const loginDay = ref(7);
 const currentPage = computed(() => {
-  return userStore().currentPage;
+  return useUserStoreHook().currentPage;
 });
 
 // do not use same name with ref
@@ -225,16 +225,12 @@ const form = reactive({
   cipher: '',
 });
 
-const loginApp = () => {
-  submitForm(ruleFormRef.value);
-  router.push('/home');
-};
-
 const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
       message($t('login.loginOk'), { type: 'success' });
+      router.push('/home');
     } else {
       message($t('login.loginNo'), { type: 'error' });
       console.log(fields);
@@ -243,10 +239,10 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 };
 
 watch(checked, bool => {
-  userStore().SET_ISREMEMBERED(bool);
+  useUserStoreHook().SET_ISREMEMBERED(bool);
 });
 watch(loginDay, value => {
-  userStore().SET_LOGINDAY(value);
+  useUserStoreHook().SET_LOGINDAY(value);
 });
 </script>
 

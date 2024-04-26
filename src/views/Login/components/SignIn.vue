@@ -148,7 +148,7 @@
           <el-button
             size="default"
             class="w-full"
-            @click="userStore().SET_CURRENTPAGE(0)"
+            @click="useUserStoreHook().SET_CURRENTPAGE(0)"
           >
             {{ $t('login.return') }}
           </el-button>
@@ -165,7 +165,7 @@ import { reactive, ref, watch } from 'vue';
 import type { messageTypes } from '@/utils/message';
 import { message } from '@/utils/message';
 import { $t } from '@/lang/index';
-import { userStore } from '@/stores/index';
+import { useUserStoreHook } from '@/stores/index';
 import { updateRules } from '../utils/rules';
 import { useVerifyCode } from '@/utils/verifyCode';
 
@@ -184,6 +184,7 @@ const { isDisabled, text } = useVerifyCode();
 const debouncedMessage = debounce(
   (msg: string, options: { type: messageTypes }) => {
     message(msg, options);
+    useUserStoreHook().currentPage = 0;
   },
   1000,
 );
@@ -192,8 +193,13 @@ const onUpdate = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
+      if (!checked.value) {
+        return message($t('login.pleaseCheckPurePrivacyPolicy'), {
+          type: 'error',
+        });
+      }
       // Simulate request, need to be modified according to actual development
-      debouncedMessage($t('login.purePassWordUpdateReg'), { type: 'success' });
+      debouncedMessage($t('login.registered'), { type: 'success' });
     }
     return fields;
   });
@@ -225,7 +231,7 @@ const isPurePrivacyPolicy = () => {
 };
 
 watch(checked, bool => {
-  userStore().SET_ISREMEMBERED(bool);
+  useUserStoreHook().SET_ISREMEMBERED(bool);
 });
 </script>
 <style scoped lang="scss"></style>

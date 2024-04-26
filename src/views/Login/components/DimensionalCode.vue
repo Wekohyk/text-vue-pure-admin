@@ -31,7 +31,7 @@
           <el-button
             size="default"
             class="w-full"
-            @click="userStore().SET_CURRENTPAGE(0)"
+            @click="useUserStoreHook().SET_CURRENTPAGE(0)"
           >
             {{ $t('login.return') }}
           </el-button>
@@ -42,6 +42,6 @@
 </template>
 <script setup lang="ts">
 import Motion from '../utils/motion';
-import { userStore } from '@/stores/index';
+import { useUserStoreHook } from '@/stores/index';
 </script>
 <style scoped lang="scss"></style>

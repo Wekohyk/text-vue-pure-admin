@@ -42,6 +42,8 @@ export default {
     pureTip: '扫码后点击"确认"，即可完成登录',
     pureReadAccept: '我已仔细阅读并接受',
     purePrivacyPolicy: '《隐私政策》',
+    pleaseCheckPurePrivacyPolicy: '请勾选《隐私政策》',
     isOpenPurePrivacyPolicy: '隐私? 你还想要隐私? 你是不是傻?',
+    registered: '注册成功',
   },
 };

@@ -95,11 +95,10 @@ import { updateRules } from '../utils/rules';
 import Motion from '../utils/motion';
 import { useVerifyCode } from '@/utils/verifyCode';
 import { FormInstance } from 'element-plus';
-import { debounce } from '@/utils/Throttling_And_AntiShake';
-import type { messageTypes } from '@/utils/message';
 import { message } from '@/utils/message';
 import { $t } from '@/lang/index';
 import { userStore } from '@/stores/index';
+import router from '@/router';
 
 const { isDisabled, text } = useVerifyCode();
 const ruleFormRef = ref<FormInstance>();
@@ -109,21 +108,16 @@ const rulesForm = reactive({
   verifyCode: '',
 });
 
-const debouncedMessage = debounce(
-  (msg: string, options: { type: messageTypes }) => {
-    message(msg, options);
-  },
-  2000,
-);
-
 const onUpdate = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      // Simulate request, need to be modified according to actual development
-      debouncedMessage($t('login.purePassWordUpdateReg'), { type: 'success' });
+      message($t('login.loginOk'), { type: 'success' });
+      router.push('/home');
+    } else {
+      message($t('login.loginNo'), { type: 'error' });
+      console.log(fields);
     }
-    return fields;
   });
 };
 </script>

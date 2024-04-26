@@ -44,5 +44,8 @@ export default {
     pureTip: 'After scanning the code, click "Confirm" to complete the login',
     pureReadAccept: 'I have read and accept',
     purePrivacyPolicy: '《Privacy Policy》',
+    pleaseCheckPurePrivacyPolicy: 'Please check "Privacy Policy"',
+    isOpenPurePrivacyPolicy: 'Privacy? And you want privacy? Are you stupid?',
+    registered: 'Registered successfully',
   },
 };
