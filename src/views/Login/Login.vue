@@ -230,6 +230,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   await formEl.validate((valid, fields) => {
     if (valid) {
       message($t('login.loginOk'), { type: 'success' });
+      useUserStoreHook().SET_TOKEN(Date.now().toString());
       router.push('/home');
     } else {
       message($t('login.loginNo'), { type: 'error' });

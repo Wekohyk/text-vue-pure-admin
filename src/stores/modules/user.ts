@@ -22,6 +22,8 @@ export const userStore = defineStore(
     const isRemembered = ref<boolean>(false);
     // 登录页的免登录存储几天，默认7天
     const loginDay = ref<number>(7);
+    // token
+    const token = ref<string>('');
 
     // 存储头像
     const SET_AVATAR = (newAvatar: string) => {
@@ -55,6 +57,10 @@ export const userStore = defineStore(
     const SET_LOGINDAY = (newLoginDay: number) => {
       loginDay.value = newLoginDay;
     };
+    // 修改token
+    const SET_TOKEN = (newToken: string) => {
+      token.value = newToken;
+    };
 
     return {
       avatar,
@@ -65,6 +71,7 @@ export const userStore = defineStore(
       currentPage,
       isRemembered,
       loginDay,
+      token,
 
       SET_AVATAR,
       SET_USERNAME,
@@ -74,6 +81,7 @@ export const userStore = defineStore(
       SET_CURRENTPAGE,
       SET_ISREMEMBERED,
       SET_LOGINDAY,
+      SET_TOKEN,
     };
   },
   {
