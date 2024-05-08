@@ -233,7 +233,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       useUserStoreHook().SET_TOKEN(Date.now().toString());
       router.push('/home');
     } else {
-      message($t('login.loginNo'), { type: 'error' });
+      // message($t('login.loginNo'), { type: 'error' });
       console.log(fields);
     }
   });
