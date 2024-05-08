@@ -12,11 +12,15 @@ const router = createRouter({
     },
     {
       path: '/',
-      component: () => import('@/views/Home/Home.vue'),
-      redirect: '/home',
+      name: 'layout',
+      component: () => import('@/layout/appMain.vue'),
+      redirect: '/layout',
       children: [
         {
-          path: '/home',
+          path: '/layout',
+          meta: {
+            isShow: true,
+          },
           component: () => import('@/views/Home/Home.vue'),
         },
       ],
