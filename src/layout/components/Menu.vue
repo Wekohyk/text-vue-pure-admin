@@ -11,7 +11,7 @@
       :index="item.path"
       :key="item.path"
     >
-      <span>{{ item.meta.title }}</span>
+      <span>{{ $t(item.meta.title as string) }}</span>
     </el-menu-item>
   </el-menu>
 </template>

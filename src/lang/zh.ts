@@ -4,6 +4,7 @@ export default {
   useZh: '简体中文',
   openControlConsole: '请打开控制台',
   joker: '嘿嘿, 被骗到了吧, 没有验证码',
+  exitLogin: '退出登录',
   login: {
     accountNumber: '账号',
     pleaseEnterAccountNumber: '请输入账号',
@@ -45,5 +46,9 @@ export default {
     pleaseCheckPurePrivacyPolicy: '请勾选《隐私政策》',
     isOpenPurePrivacyPolicy: '隐私? 你还想要隐私? 你是不是傻?',
     registered: '注册成功',
+  },
+  home: {
+    home: '首页',
+    components: '组件',
   },
 };

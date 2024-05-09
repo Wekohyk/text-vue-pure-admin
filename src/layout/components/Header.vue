@@ -10,7 +10,8 @@
     </el-col>
     <el-col :span="12">
       <div class="flex justify-right items-center gap-10 text-center">
-        <div>退出登录</div>
+        <div><SettingLanguage></SettingLanguage></div>
+        <div>{{ $t('exitLogin') }}</div>
         <div class="h-50 flex items-center">
           <img src="/avatar.webp" alt="" class="w-30 rounded-50" />
         </div>
@@ -18,5 +19,7 @@
     </el-col>
   </el-row>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SettingLanguage from '@/components/SettingLanguage.vue';
+</script>
 <style scoped lang="scss"></style>

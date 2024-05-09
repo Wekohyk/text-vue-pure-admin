@@ -4,6 +4,7 @@ export default {
   useZh: '简体中文',
   openControlConsole: 'Please Open Control Console',
   joker: 'Hey, fooled, no verification code',
+  exitLogin: 'Exit Login',
   login: {
     accountNumber: 'Account Number',
     pleaseEnterAccountNumber: 'Please enter account number',
@@ -47,5 +48,9 @@ export default {
     pleaseCheckPurePrivacyPolicy: 'Please check "Privacy Policy"',
     isOpenPurePrivacyPolicy: 'Privacy? And you want privacy? Are you stupid?',
     registered: 'Registered successfully',
+  },
+  home: {
+    home: 'Home',
+    components: 'Components',
   },
 };

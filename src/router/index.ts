@@ -24,7 +24,7 @@ const router = createRouter({
           name: 'home',
           meta: {
             isShow: true,
-            title: '首页',
+            title: 'home.home', // 首页
           },
           component: () => import('@/views/Home/Home.vue'),
         },
@@ -33,7 +33,7 @@ const router = createRouter({
           name: 'components',
           meta: {
             isShow: true,
-            title: '组件',
+            title: 'home.components', // 组件
           },
           component: () => import('@/views/Components/index.vue'),
         },
