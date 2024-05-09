@@ -12,16 +12,30 @@ const router = createRouter({
     },
     {
       path: '/',
+      redirect: '/layout',
+    },
+    {
+      path: '/layout',
       name: 'layout',
       component: () => import('@/layout/appMain.vue'),
-      redirect: '/layout',
       children: [
         {
-          path: '/layout',
+          path: '',
+          name: 'home',
           meta: {
             isShow: true,
+            title: '首页',
           },
           component: () => import('@/views/Home/Home.vue'),
+        },
+        {
+          path: '/components',
+          name: 'components',
+          meta: {
+            isShow: true,
+            title: '组件',
+          },
+          component: () => import('@/views/Components/index.vue'),
         },
       ],
     },

@@ -2,13 +2,24 @@
   <el-menu
     background-color="#ffffff"
     class="el-menu-vertical-demo"
-    default-active="1"
+    default-active="/layout"
     text-color="#000"
+    router
   >
-    <el-menu-item index="1">
-      <span>Navigator Two</span>
+    <el-menu-item
+      v-for="item in routerList"
+      :index="item.path"
+      :key="item.path"
+    >
+      <span>{{ item.meta.title }}</span>
     </el-menu-item>
   </el-menu>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
+console.log(routerList);
+</script>
 <style scoped lang="scss"></style>

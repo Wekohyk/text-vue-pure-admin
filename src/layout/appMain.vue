@@ -17,11 +17,6 @@
 <script setup lang="ts">
 import Menu from './components/Menu.vue';
 import Header from './components/Header.vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
-console.log(routerList);
 </script>
 
 <style scoped lang="scss">
