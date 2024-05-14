@@ -49,8 +49,8 @@ export default {
     isOpenPurePrivacyPolicy: 'Privacy? And you want privacy? Are you stupid?',
     registered: 'Registered successfully',
   },
-  home: {
-    home: 'Home',
+  dashboard: {
+    dashboard: 'Dashboard',
     components: 'Components',
   },
 };

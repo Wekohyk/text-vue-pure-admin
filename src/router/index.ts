@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { useUserStoreHook } from '@/stores';
+import Layout from '@/layout/index.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -17,25 +18,16 @@ const router = createRouter({
     {
       path: '/layout',
       name: 'layout',
-      component: () => import('@/layout/appMain.vue'),
+      component: Layout,
       children: [
         {
           path: '',
-          name: 'home',
+          name: 'dashboard',
           meta: {
             isShow: true,
-            title: 'home.home', // 首页
+            title: 'dashboard.dashboard', // 首页
           },
-          component: () => import('@/views/Home/Home.vue'),
-        },
-        {
-          path: '/components',
-          name: 'components',
-          meta: {
-            isShow: true,
-            title: 'home.components', // 组件
-          },
-          component: () => import('@/views/Components/index.vue'),
+          component: () => import('@/views/Dashboard/index.vue'),
         },
       ],
     },

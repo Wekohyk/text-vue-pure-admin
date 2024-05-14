@@ -47,8 +47,8 @@ export default {
     isOpenPurePrivacyPolicy: '隐私? 你还想要隐私? 你是不是傻?',
     registered: '注册成功',
   },
-  home: {
-    home: '首页',
+  dashboard: {
+    dashboard: '仪表盘',
     components: '组件',
   },
 };
