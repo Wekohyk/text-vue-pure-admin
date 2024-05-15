@@ -3,6 +3,7 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { useUserStoreHook } from '@/stores';
 import Layout from '@/layout/index.vue';
+import { $t } from '@/lang/index';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -22,7 +23,16 @@ const router = createRouter({
           component: () => import('@/views/Dashboard/index.vue'),
           meta: {
             isShow: true,
-            title: 'dashboard.dashboard', // 首页
+            title: $t('dashboard.dashboard'), // 首页
+          },
+        },
+        {
+          path: 'components',
+          name: 'Components',
+          component: () => import('@/views/Components/index.vue'),
+          meta: {
+            isShow: true,
+            title: $t('dashboard.components'), // 首页
           },
         },
       ],

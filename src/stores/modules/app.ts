@@ -6,13 +6,13 @@ export const appStore = defineStore(
   'appStore',
   () => {
     const isShow = ref(true);
-    let collapse = true;
+    const collapse = ref(true);
 
     const isShowClick = () => {
       isShow.value != isShow.value;
     };
     const toggleCollapse = () => {
-      collapse = !collapse;
+      collapse.value = !collapse.value;
     };
     return {
       isShow,

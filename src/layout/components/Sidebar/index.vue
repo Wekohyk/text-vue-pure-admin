@@ -1,26 +1,40 @@
 <template>
   <div class="">
-    <SidebarLogo :collapse="appStore().collapse"></SidebarLogo>
-    <div
-      class="w-100px h-100px"
-      :class="showSidebar ? 'bg-red' : 'bg-green'"
-      @click="toggleColor"
-    ></div>
+    <SidebarLogo
+      :collapse="appStore().collapse"
+      class="b-b-1 b-b-solid b-b-#dcdfe6 b-r-1 b-r-solid b-r-#dcdfe6"
+    ></SidebarLogo>
+    <el-scrollbar wrap-class="scrollbar-wrapper">
+      <el-menu router class="el-menu-vertical-demo">
+        <el-menu-item
+          v-for="item in routerList"
+          :key="item.path"
+          :index="item.path"
+        >
+          <el-icon><setting /></el-icon>
+          <span>{{ item.meta.title }}</span>
+        </el-menu-item>
+      </el-menu>
+    </el-scrollbar>
   </div>
 </template>
+
 <script setup lang="ts">
 import SidebarLogo from './SidebarLogo.vue';
-import { appStore, settingStore } from '@/stores/index';
-import { storeToRefs } from 'pinia';
+import { appStore } from '@/stores/index';
+import { Setting } from '@element-plus/icons-vue';
+import router from '@/router';
 
-const { showSidebar } = storeToRefs(settingStore());
-const { collapse } = storeToRefs(appStore());
-
-console.log('collapse', collapse);
-console.log('showSidebar', settingStore().showSidebar);
-const toggleColor = () => {
-  settingStore().toggleShowSidebar();
-  console.log('showSidebar', settingStore().showSidebar);
-};
+const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
+console.log(routerList);
 </script>
-<style scoped lang="scss"></style>
+
+<style scoped lang="scss">
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
+.scrollbar-wrapper {
+  overflow-x: hidden !important;
+}
+</style>

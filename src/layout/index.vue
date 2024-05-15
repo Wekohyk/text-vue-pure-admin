@@ -15,6 +15,7 @@
             </el-col>
           </el-row>
         </el-header>
+        <!-- center container -->
         <el-main>
           <AppMain></AppMain>
         </el-main>
