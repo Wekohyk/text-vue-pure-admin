@@ -13,21 +13,17 @@ const router = createRouter({
     },
     {
       path: '/',
-      redirect: '/layout',
-    },
-    {
-      path: '/layout',
-      name: 'layout',
+      redirect: '/dashboard',
       component: Layout,
       children: [
         {
-          path: '',
-          name: 'dashboard',
+          path: 'dashboard',
+          name: 'Dashboard',
+          component: () => import('@/views/Dashboard/index.vue'),
           meta: {
             isShow: true,
             title: 'dashboard.dashboard', // 首页
           },
-          component: () => import('@/views/Dashboard/index.vue'),
         },
       ],
     },
