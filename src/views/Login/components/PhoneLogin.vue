@@ -113,7 +113,7 @@ const onUpdate = async (formEl: FormInstance | undefined) => {
   await formEl.validate((valid, fields) => {
     if (valid) {
       message($t('login.loginOk'), { type: 'success' });
-      router.push('/home');
+      router.push('/dashboard');
     } else {
       message($t('login.loginNo'), { type: 'error' });
       console.log(fields);

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-100% h-50 line-height-50px bg-#2b2f3a text-center overflow-hidden"
+    class="relative w-100% h-50 line-height-50px text-center overflow-hidden"
   >
     <transition name="sidebarLogoFade">
       <router-link
@@ -40,11 +40,11 @@ const logo = ref('/logo.webp');
   height: 32px;
   vertical-align: middle;
   margin-right: 12px;
+  border-radius: 50%;
 }
 .sidebar-title {
   display: inline-block;
   margin: 0;
-  color: #fff;
   font-weight: 600;
   line-height: 50px;
   font-size: 14px;

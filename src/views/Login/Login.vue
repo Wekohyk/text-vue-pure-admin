@@ -231,7 +231,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     if (valid) {
       message($t('login.loginOk'), { type: 'success' });
       useUserStoreHook().SET_TOKEN(Date.now().toString());
-      router.push('/home');
+      router.push('/dashboard');
     } else {
       // message($t('login.loginNo'), { type: 'error' });
       console.log(fields);

@@ -5,24 +5,31 @@ import { pinia } from '../index';
 export const appStore = defineStore(
   'appStore',
   () => {
-    const isShow = ref('true');
+    const isShow = ref(true);
+    let collapse = true;
 
     const isShowClick = () => {
       isShow.value != isShow.value;
     };
+    const toggleCollapse = () => {
+      collapse = !collapse;
+    };
     return {
       isShow,
+      collapse,
+
       isShowClick,
+      toggleCollapse,
     };
   },
   {
     persist: {
-      key: 'vue-pure-admin-userStore',
+      key: 'vue-pure-admin-appStore',
       storage: window.localStorage,
     },
   },
 );
 
-export function useUserStoreHook() {
+export function useAppStoreHook() {
   return appStore(pinia);
 }
