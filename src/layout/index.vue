@@ -6,14 +6,12 @@
       </el-aside>
       <el-container>
         <!-- header -->
-        <el-header>
-          <el-row>
-            <el-col :span="24">
-              <div class="grid-content ep-bg-purple-dark">
-                <Navbar></Navbar>
-              </div>
-            </el-col>
-          </el-row>
+        <el-header class="w-100%">
+          <div
+            class="h-50 flex justify-right items-center b-b-1 b-b-solid b-b-#dcdfe6"
+          >
+            <Navbar></Navbar>
+          </div>
         </el-header>
         <!-- center container -->
         <el-main>
@@ -37,9 +35,5 @@ import { AppMain, Navbar, Sidebar } from './components';
 }
 .el-col {
   border-radius: 4px;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
 }
 </style>

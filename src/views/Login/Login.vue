@@ -193,7 +193,7 @@
 import { computed, ref, watch } from 'vue';
 import { InfoFilled } from '@element-plus/icons-vue';
 // import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
-import SettingLanguage from '@/components/SettingLanguage.vue';
+import SettingLanguage from '@/components/SettingLanguage/index.vue';
 import { reactive } from 'vue';
 import type { FormInstance } from 'element-plus';
 import { loginRules } from './utils/rules';
