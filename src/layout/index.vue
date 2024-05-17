@@ -1,15 +1,15 @@
 <template>
-  <div class="relative h-100% w-100%">
+  <div class="relative h-100vh w-100vw">
     <el-container>
       <el-aside width="200px">
         <Sidebar></Sidebar>
       </el-aside>
       <el-container>
         <!-- header -->
-        <el-header class="w-100%">
-          <div
-            class="h-50 flex justify-right items-center b-b-1 b-b-solid b-b-#dcdfe6"
-          >
+        <el-header
+          class="w-100% h-50 b-b-1 b-b-solid b-b-#dcdfe6 flex h-50 justify-right items-center"
+        >
+          <div class="">
             <Navbar></Navbar>
           </div>
         </el-header>
