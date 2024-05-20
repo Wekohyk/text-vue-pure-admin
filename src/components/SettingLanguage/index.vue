@@ -1,5 +1,5 @@
 <template>
-  <el-dropdown trigger="click">
+  <el-dropdown>
     <div class="w-25 flex items-center justify-center">
       <Icon
         v-if="locale === 'zh'"
