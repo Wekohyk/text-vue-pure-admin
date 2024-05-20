@@ -9,3 +9,7 @@ export const setLocalStorage = <T>(key: string, value: T) => {
 export const removeLocalStorage = (key: string) => {
   return localStorage.removeItem(key);
 };
+
+export const clearLocalStorage = () => {
+  return localStorage.clear();
+};
