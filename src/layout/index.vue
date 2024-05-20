@@ -7,7 +7,8 @@
       <el-container>
         <!-- header -->
         <el-header
-          class="w-100% h-50 b-b-1 b-b-solid b-b-#dcdfe6 flex h-50 justify-right items-center"
+          class="w-100% b-b-1 b-b-solid b-b-#dcdfe6 flex justify-right items-center"
+          style="height: 50px"
         >
           <div class="">
             <Navbar></Navbar>
