@@ -25,9 +25,16 @@
   </el-dropdown>
 </template>
 <script setup lang="ts">
-import { selectLanguage } from '@/utils/settingLanguage';
 import { Icon } from '@iconify/vue';
-import { useI18n } from 'vue-i18n';
-const { locale } = useI18n();
+import i18n from '@/lang/index';
+
+type ToggleLanguage = 'zh' | 'en';
+
+const { locale } = i18n.global;
+const selectLanguage = (language: ToggleLanguage) => {
+  locale.value = language;
+  localStorage.setItem('text-vue-pure-admin-lang', language);
+  window.location.reload();
+};
 </script>
 <style scoped lang="scss"></style>
