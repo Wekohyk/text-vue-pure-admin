@@ -1,6 +1,7 @@
 <template>
-  <div class="flex justify-center items-center h-50 gap-10">
+  <div class="flex justify-center items-center h-50 gap-20">
     <Time></Time>
+    <MessagePrompt></MessagePrompt>
     <SettingLanguage></SettingLanguage>
     <el-dropdown>
       <Avatar
@@ -25,6 +26,7 @@ import SettingLanguage from '@/components/SettingLanguage/index.vue';
 import Avatar from '@/components/Avatar/index.vue';
 import { removeLocalStorage } from '@/utils/localStorage';
 import Time from '@/components/Time/index.vue';
+import MessagePrompt from '@/components/MessagePrompt/index.vue';
 import router from '@/router';
 
 const logOut = () => {
