@@ -15,13 +15,6 @@
   <div
     class="fixed right-10 top-5 flex items-center justify-center gap-5 z-999"
   >
-    <!-- <el-switch
-      v-model="settingTheme"
-      style="--el-switch-on-color: #0000004d; --el-switch-off-color: #0000004d"
-      :active-icon="Sunny"
-      :inactive-icon="Moon"
-      inline-prompt
-    ></el-switch> -->
     <!-- setting language -->
     <SettingLanguage></SettingLanguage>
   </div>
@@ -192,7 +185,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 import { InfoFilled } from '@element-plus/icons-vue';
-// import { Sunny, Moon, InfoFilled } from '@element-plus/icons-vue';
 import SettingLanguage from '@/components/SettingLanguage/index.vue';
 import { reactive } from 'vue';
 import type { FormInstance } from 'element-plus';
@@ -233,7 +225,6 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       useUserStoreHook().SET_TOKEN(Date.now().toString());
       router.push('/dashboard');
     } else {
-      // message($t('login.loginNo'), { type: 'error' });
       console.log(fields);
     }
   });
