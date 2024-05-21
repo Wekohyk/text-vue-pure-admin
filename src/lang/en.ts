@@ -12,6 +12,13 @@ export default {
   week4: 'Thursday',
   week5: 'Friday',
   week6: 'Saturday',
+  navbar: {
+    message1: 'Message1',
+    message2: 'Message2',
+    message3: 'Message3',
+    message4: 'Message4',
+    message5: 'Message5',
+  },
   login: {
     accountNumber: 'Account Number',
     pleaseEnterAccountNumber: 'Please enter account number',

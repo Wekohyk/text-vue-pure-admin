@@ -12,6 +12,13 @@ export default {
   week4: '星期四',
   week5: '星期五',
   week6: '星期六',
+  navbar: {
+    message1: '消息1',
+    message2: '消息2',
+    message3: '消息3',
+    message4: '消息4',
+    message5: '消息5',
+  },
   login: {
     accountNumber: '账号',
     pleaseEnterAccountNumber: '请输入账号',
