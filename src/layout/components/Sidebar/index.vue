@@ -26,7 +26,6 @@ import { Setting } from '@element-plus/icons-vue';
 import router from '@/router';
 
 const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
-console.log(routerList);
 </script>
 
 <style scoped lang="scss">
