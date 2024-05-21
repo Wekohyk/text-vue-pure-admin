@@ -3,14 +3,11 @@ export default {
     return {
       code: 200,
       data: {
-        tableData: [
-          {
-            a: 1,
-            b: 2,
-            c: 3,
-          },
-          {},
-        ],
+        user: {
+          avatar: '/avatar.webp',
+          username: 'Weko',
+          nickname: 'Weko',
+        },
       },
     };
   },
