@@ -5,6 +5,13 @@ export default {
   openControlConsole: '请打开控制台',
   joker: '嘿嘿, 被骗到了吧, 没有验证码',
   exitLogin: '退出登录',
+  week0: '星期日',
+  week1: '星期一',
+  week2: '星期二',
+  week3: '星期三',
+  week4: '星期四',
+  week5: '星期五',
+  week6: '星期六',
   login: {
     accountNumber: '账号',
     pleaseEnterAccountNumber: '请输入账号',

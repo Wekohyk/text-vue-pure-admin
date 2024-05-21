@@ -5,6 +5,13 @@ export default {
   openControlConsole: 'Please Open Control Console',
   joker: 'Hey, fooled, no verification code',
   exitLogin: 'Exit Login',
+  week0: 'Sunday',
+  week1: 'Monday',
+  week2: 'Tuesday',
+  week3: 'Wednesday',
+  week4: 'Thursday',
+  week5: 'Friday',
+  week6: 'Saturday',
   login: {
     accountNumber: 'Account Number',
     pleaseEnterAccountNumber: 'Please enter account number',
