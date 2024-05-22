@@ -1,7 +1,7 @@
 <template>
   <div class="relative h-100vh w-100vw">
     <el-container>
-      <el-aside width="200px">
+      <el-aside width="22%">
         <Sidebar></Sidebar>
       </el-aside>
       <el-container>
@@ -10,12 +10,10 @@
           class="w-100% b-b-1 b-b-solid b-b-#dcdfe6 flex justify-right items-center"
           style="height: 50px"
         >
-          <div class="">
-            <Navbar></Navbar>
-          </div>
+          <Navbar></Navbar>
         </el-header>
         <!-- center container -->
-        <el-main>
+        <el-main class="right-container" width="78%">
           <AppMain></AppMain>
         </el-main>
       </el-container>

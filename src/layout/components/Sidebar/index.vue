@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="left-sidebar">
     <SidebarLogo
       :collapse="appStore().collapse"
       class="b-b-1 b-b-solid b-b-#dcdfe6 b-r-1 b-r-solid b-r-#dcdfe6"
@@ -29,8 +29,13 @@ const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
 </script>
 
 <style scoped lang="scss">
+// add scrollbar effect
+.el-menu {
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+}
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
+  width: 100%;
   min-height: 400px;
 }
 .scrollbar-wrapper {
