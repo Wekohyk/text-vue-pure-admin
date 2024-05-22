@@ -21,5 +21,6 @@
   display: relative;
   top: 0;
   left: 0;
+  border-radius: 5px;
 }
 </style>
