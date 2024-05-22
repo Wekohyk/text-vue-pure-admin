@@ -3,7 +3,7 @@
     <SidebarLogo
       logo="/logo.webp"
       :collapse="appStore().collapse"
-      class="b-b-1 b-b-solid b-b-#dcdfe6 b-r-1 b-r-solid b-r-#dcdfe6"
+      class="b-b-1 b-b-solid b-b-#e4e7ed b-r-1 b-r-solid b-r-#e4e7ed"
     ></SidebarLogo>
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu router class="el-menu-vertical-demo">

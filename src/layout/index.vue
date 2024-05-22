@@ -7,7 +7,7 @@
       <el-container>
         <!-- header -->
         <el-header
-          class="w-100% b-b-1 b-b-solid b-b-#dcdfe6 flex justify-right items-center"
+          class="w-100% b-b-1 b-b-solid b-b-#e4e7ed flex justify-right items-center"
           style="height: 50px"
         >
           <Navbar></Navbar>
@@ -32,7 +32,7 @@ const store = settingStore();
 <style scoped lang="scss">
 .el-main {
   width: 100%;
-  background: #f3f3f3;
+  background: #e4e7ed;
   padding: 10px;
 }
 .el-row {
