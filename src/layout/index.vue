@@ -13,7 +13,7 @@
           <Navbar></Navbar>
         </el-header>
         <!-- center container -->
-        <el-main class="right-container" width="78%">
+        <el-main>
           <AppMain></AppMain>
         </el-main>
       </el-container>
@@ -26,6 +26,11 @@ import { AppMain, Navbar, Sidebar } from './components';
 </script>
 
 <style scoped lang="scss">
+.el-main {
+  width: 100%;
+  background: #f3f3f3;
+  padding: 10px;
+}
 .el-row {
   margin-bottom: 20px;
 }

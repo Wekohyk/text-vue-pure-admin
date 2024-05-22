@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[var(100vh-50px)] w-100% relative overflow-hidden">
+  <div class="center-container">
     <router-view :key="$route.path"></router-view>
   </div>
 </template>
@@ -12,5 +12,14 @@
   .fixed-header {
     padding-right: 15px;
   }
+}
+.center-container {
+  background: #ffffff;
+  width: 100%;
+  height: calc(100vh - 90px);
+  overflow: scroll;
+  display: relative;
+  top: 0;
+  left: 0;
 }
 </style>
