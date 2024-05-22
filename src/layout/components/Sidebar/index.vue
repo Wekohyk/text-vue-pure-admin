@@ -13,8 +13,19 @@
           :index="item.path"
           :class="!store.showSidebar ? 'flex justify-center' : ''"
         >
-          <font-awesome-icon :icon="item.meta.fontIcon as string" />
-          <span v-if="store.showSidebar">
+          <font-awesome-icon
+            :style="{
+              color: item.path === $route.path ? '#409EFF' : '#999999',
+            }"
+            :icon="item.meta.fontIcon as string"
+          />
+          <span
+            v-if="store.showSidebar"
+            class="pl-10"
+            :style="{
+              color: item.path === $route.path ? '#409EFF' : '#999999',
+            }"
+          >
             {{ item.meta.title }}
           </span>
         </el-menu-item>
