@@ -13,7 +13,7 @@
           :index="item.path"
           :class="!store.showSidebar ? 'flex justify-center' : ''"
         >
-          <el-icon><setting /></el-icon>
+          <font-awesome-icon :icon="item.meta.fontIcon as string" />
           <span v-if="store.showSidebar">
             {{ item.meta.title }}
           </span>
@@ -41,7 +41,7 @@
 <script setup lang="ts">
 import SidebarLogo from './SidebarLogo.vue';
 import { appStore } from '@/stores/index';
-import { Setting } from '@element-plus/icons-vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import router from '@/router';
 import { Expand, Fold } from '@element-plus/icons-vue';
 import { settingStore } from '@/stores/index';

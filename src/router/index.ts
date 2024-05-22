@@ -23,6 +23,7 @@ const router = createRouter({
           meta: {
             isShow: true,
             title: $t('dashboard.dashboard'), // 仪表盘
+            fontIcon: 'fa-solid fa-gear',
           },
         },
         {
@@ -32,6 +33,7 @@ const router = createRouter({
           meta: {
             isShow: true,
             title: $t('dashboard.components'), // 组件
+            fontIcon: 'fa-brands fa-microsoft',
           },
         },
       ],
