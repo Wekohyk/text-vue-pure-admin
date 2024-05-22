@@ -1,7 +1,10 @@
 <template>
   <div class="flex justify-center items-center h-50 gap-20">
     <Time></Time>
-    <MessagePrompt></MessagePrompt>
+    <MessagePrompt
+      :value="messageList.length"
+      :messageList="messageList"
+    ></MessagePrompt>
     <SettingLanguage></SettingLanguage>
     <div class="flex justify-center items-center h-50 gap-10">
       <div>
@@ -35,6 +38,7 @@ import MessagePrompt from '@/components/MessagePrompt/index.vue';
 import router from '@/router';
 import { login } from '@/api/user.ts';
 import { onMounted, ref } from 'vue';
+import { getMessageData } from '@/api/user.ts';
 import { User } from '@/types/user';
 
 const logOut = () => {
@@ -48,9 +52,16 @@ const userList = ref<User>({
   nickname: '',
 });
 
+const messageList = ref<string[]>([]);
+
 onMounted(() => {
+  // Get user information and message data
   login().then(res => {
     userList.value = res.data.data.user;
+  });
+  // Get message data
+  getMessageData().then(res => {
+    messageList.value = res.data.data.tableData;
   });
 });
 </script>
