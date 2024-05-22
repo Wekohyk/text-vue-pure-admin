@@ -1,16 +1,8 @@
 <template>
   <el-dropdown>
     <div class="w-25 flex items-center justify-center">
-      <Icon
-        v-if="locale === 'zh'"
-        icon="icon-park-outline:chinese"
-        class="color-#0000004d text-2rem"
-      />
-      <Icon
-        v-else
-        icon="icon-park-outline:english"
-        class="color-#0000004d text-2rem"
-      />
+      <img v-if="locale === 'en'" src="/svg/En.svg" alt="" />
+      <img v-else src="/svg/Zh.svg" alt="" />
     </div>
     <template #dropdown>
       <el-dropdown-menu>
@@ -25,7 +17,6 @@
   </el-dropdown>
 </template>
 <script setup lang="ts">
-import { Icon } from '@iconify/vue';
 import i18n from '@/lang/index';
 
 type ToggleLanguage = 'zh' | 'en';
