@@ -14,7 +14,9 @@
           :class="!store.showSidebar ? 'flex justify-center' : ''"
         >
           <el-icon><setting /></el-icon>
-          <span v-if="store.showSidebar">{{ item.meta.title }}</span>
+          <span v-if="store.showSidebar">
+            {{ item.meta.title }}
+          </span>
         </el-menu-item>
       </el-menu>
     </el-scrollbar>

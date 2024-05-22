@@ -44,4 +44,8 @@ const store = settingStore();
 .el-col {
   border-radius: 4px;
 }
+
+.el-aside {
+  transition: all 0.3s;
+}
 </style>
