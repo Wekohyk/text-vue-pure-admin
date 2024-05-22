@@ -1,38 +1,41 @@
 <template>
   <div
-    class="relative w-100% h-50 line-height-50px text-center overflow-hidden"
+    class="relative w-100% h-50 line-height-50px text-center overflow-hidden flex justify-center"
   >
     <transition name="sidebarLogoFade">
       <router-link
-        v-if="defineProps.collapse"
+        v-if="props.collapse"
         key="collapse"
         to="/"
         class="h-100% w-100%"
       >
-        <img v-if="logo" :src="logo" alt="logo" class="sidebar-logo" />
+        <img v-if="logo" :src="props.logo" alt="logo" class="sidebar-logo" />
         <h1 v-else class="sidebar-title">
-          {{ title }}
+          {{ props.title }}
         </h1>
       </router-link>
       <router-link v-else key="expend" to="/">
-        <img v-if="logo" :src="logo" alt="logo" class="sidebar-logo" />
+        <img v-if="logo" :src="props.logo" alt="logo" class="sidebar-logo" />
         <h1 v-else class="sidebar-title"></h1>
       </router-link>
     </transition>
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
-
-const defineProps = {
+const props = defineProps({
   collapse: {
     type: Boolean,
     default: true,
   },
-};
-
-const title = ref('Weko');
-const logo = ref('/logo.webp');
+  logo: {
+    type: String,
+    default: '',
+  },
+  title: {
+    type: String,
+    default: 'Weko',
+  },
+});
 </script>
 <style scoped lang="scss">
 .sidebar-logo {

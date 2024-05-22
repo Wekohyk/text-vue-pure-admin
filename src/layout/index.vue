@@ -1,7 +1,7 @@
 <template>
   <div class="relative h-100vh w-100vw">
     <el-container>
-      <el-aside width="22%">
+      <el-aside :width="store.showSidebar ? '150px' : '50px'">
         <Sidebar></Sidebar>
       </el-aside>
       <el-container>
@@ -23,6 +23,10 @@
 
 <script setup lang="ts">
 import { AppMain, Navbar, Sidebar } from './components';
+
+import { settingStore } from '@/stores/index';
+
+const store = settingStore();
 </script>
 
 <style scoped lang="scss">
