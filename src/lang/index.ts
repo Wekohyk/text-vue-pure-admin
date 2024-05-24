@@ -1,17 +1,18 @@
 // localStorage.getItem('lang');
 import { createI18n } from 'vue-i18n';
+import { getLocalStorage } from '@/utils/localStorage';
 import zh from './zh';
 import en from './en';
 
 // judge if it is English
 export const isEn =
-  localStorage.getItem('text-vue-pure-admin-lang') === 'en' ? true : false;
+  getLocalStorage('text-vue-pure-admin-lang') === 'en' ? true : false;
 
 // restraint all lang object to typeof zh
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: localStorage.getItem('text-vue-pure-admin-lang') || 'en',
+  locale: getLocalStorage('text-vue-pure-admin-lang') || 'en',
   messages: {
     zh,
     en,

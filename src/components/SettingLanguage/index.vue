@@ -18,13 +18,14 @@
 </template>
 <script setup lang="ts">
 import i18n from '@/lang/index';
+import { setLocalStorage } from '@/utils/localStorage';
 
 type ToggleLanguage = 'zh' | 'en';
 
 const { locale } = i18n.global;
 const selectLanguage = (language: ToggleLanguage) => {
   locale.value = language;
-  localStorage.setItem('text-vue-pure-admin-lang', language);
+  setLocalStorage('text-vue-pure-admin-lang', language);
   window.location.reload();
 };
 </script>
