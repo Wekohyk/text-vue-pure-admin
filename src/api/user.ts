@@ -1,7 +1,7 @@
 import request from './request';
 
 // 登录
-export const login = async () => {
+export const login = () => {
   return request({
     url: '/home/getData',
     method: 'get',
@@ -9,7 +9,7 @@ export const login = async () => {
 };
 
 // 获取消息提示
-export const getMessageData = async () => {
+export const getMessageData = () => {
   return request({
     url: '/navbar/getMessageData',
     method: 'get',

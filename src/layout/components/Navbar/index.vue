@@ -36,9 +36,8 @@ import { removeLocalStorage } from '@/utils/localStorage';
 import Time from '@/components/Time/index.vue';
 import MessagePrompt from '@/components/MessagePrompt/index.vue';
 import router from '@/router';
-import { login } from '@/api/user.ts';
+import { login, getMessageData } from '@/api/user.ts';
 import { onMounted, ref } from 'vue';
-import { getMessageData } from '@/api/user.ts';
 import { User } from '@/types/user';
 
 const logOut = () => {
