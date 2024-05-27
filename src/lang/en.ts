@@ -67,4 +67,10 @@ export default {
     dashboard: 'Dashboard',
     components: 'Components',
   },
+  echarts: {
+    accessNumber: 'Access Number',
+    everyDay: 'People per day',
+    today: "Today's number",
+    yesterday: "Yesterday's number",
+  },
 };

@@ -65,4 +65,10 @@ export default {
     dashboard: '仪表盘',
     components: '组件',
   },
+  echarts: {
+    accessNumber: '访问人数',
+    everyDay: '每天人数',
+    today: '今天人数',
+    yesterday: '昨天人数',
+  },
 };

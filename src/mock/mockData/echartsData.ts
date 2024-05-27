@@ -1,3 +1,5 @@
+import { $t } from '@/lang/index';
+
 export default {
   echartsData: () => {
     return {
@@ -5,69 +7,117 @@ export default {
       data: {
         option1: {
           title: {
-            text: '访问人数',
+            text: $t('echarts.accessNumber'),
+            left: 'center',
           },
           tooltip: {},
           xAxis: {
-            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+            data: [
+              $t('week0'),
+              $t('week1'),
+              $t('week2'),
+              $t('week3'),
+              $t('week4'),
+              $t('week5'),
+              $t('week6'),
+            ],
           },
           yAxis: {},
           series: [
             {
-              name: '销量',
+              name: $t('echarts.everyDay'),
               type: 'bar',
-              data: [5, 20, 36, 10, 10, 20],
+              data: [35, 120, 136, 210, 110, 210, 90],
+              itemStyle: {
+                color: '#91cc75',
+              },
+              barWidth: '30%',
             },
           ],
         },
         option2: {
           title: {
-            text: '访问人数',
+            text: $t('echarts.accessNumber'),
+            left: 'center',
           },
           tooltip: {},
           xAxis: {
-            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+            data: [
+              $t('week0'),
+              $t('week1'),
+              $t('week2'),
+              $t('week3'),
+              $t('week4'),
+              $t('week5'),
+              $t('week6'),
+            ],
           },
-          yAxis: {},
+          yAxis: {
+            type: 'value',
+          },
           series: [
             {
-              name: '销量',
-              type: 'bar',
-              data: [5, 20, 36, 10, 10, 20],
+              name: $t('echarts.today'),
+              type: 'line',
+              data: [35, 120, 136, 210, 110, 210, 90],
+              itemStyle: {
+                color: '#91cc75',
+              },
+            },
+            {
+              name: $t('echarts.yesterday'),
+              type: 'line',
+              data: [20, 146, 387, 111, 98, 278, 130],
             },
           ],
         },
         option3: {
           title: {
-            text: '访问人数',
+            text: $t('echarts.accessNumber'),
+            left: 'center',
           },
-          tooltip: {},
-          xAxis: {
-            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
-          },
-          yAxis: {},
           series: [
             {
-              name: '销量',
-              type: 'bar',
-              data: [5, 20, 36, 10, 10, 20],
+              type: 'pie',
+              data: [
+                { value: 35, name: $t('week0') },
+                { value: 120, name: $t('week1') },
+                { value: 136, name: $t('week2') },
+                { value: 210, name: $t('week3') },
+                { value: 110, name: $t('week4') },
+                { value: 210, name: $t('week5') },
+                { value: 90, name: $t('week6') },
+              ],
+              roseType: 'area',
             },
           ],
         },
         option4: {
           title: {
-            text: '访问人数',
+            text: $t('echarts.accessNumber'),
+            left: 'center',
           },
           tooltip: {},
           xAxis: {
-            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+            data: [
+              $t('week0'),
+              $t('week1'),
+              $t('week2'),
+              $t('week3'),
+              $t('week4'),
+              $t('week5'),
+              $t('week6'),
+            ],
           },
           yAxis: {},
           series: [
             {
-              name: '销量',
-              type: 'bar',
-              data: [5, 20, 36, 10, 10, 20],
+              name: $t('echarts.everyDay'),
+              type: 'scatter',
+              data: [35, 120, 136, 210, 110, 210, 90],
+              itemStyle: {
+                color: '#91cc75',
+              },
             },
           ],
         },
