@@ -5,9 +5,6 @@
     <div id="echarts3" style="height: 40vh"></div>
     <div id="echarts4" style="height: 40vh"></div>
   </div>
-  <!-- <div class="flex justify-center my-10">
-    <el-pagination background layout="prev, pager, next" :total="1000" />
-  </div> -->
 </template>
 
 <script setup lang="ts">
