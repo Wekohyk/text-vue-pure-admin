@@ -10,3 +10,11 @@
 - pinia and pinia-plugin-persistedstate
 - sass
 - unocss
+
+## 分页代码
+
+```vue
+<div class="flex justify-center my-10">
+  <el-pagination background layout="prev, pager, next" :total="1000" />
+</div>
+```
