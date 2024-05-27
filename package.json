@@ -33,6 +33,7 @@
     "@vueuse/motion": "^2.1.0",
     "axios": "^1.6.8",
     "component-library-js": "^1.0.1",
+    "echarts": "^5.5.0",
     "element-plus": "^2.7.0",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",

@@ -3,7 +3,10 @@ export const getLocalStorage = (key: string) => {
 };
 
 export const setLocalStorage = <T>(key: string, value: T) => {
-  return localStorage.setItem(key, JSON.stringify(value));
+  return localStorage.setItem(
+    key,
+    typeof value === 'string' ? value : JSON.stringify(value),
+  );
 };
 
 export const removeLocalStorage = (key: string) => {
