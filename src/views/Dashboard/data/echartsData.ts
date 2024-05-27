@@ -1,6 +1,6 @@
 export const option1 = {
   title: {
-    text: 'ECharts 入门示例',
+    text: '访问人数',
   },
   tooltip: {},
   xAxis: {
