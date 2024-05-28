@@ -17,7 +17,7 @@ const router = createRouter({
       component: () => import('@/layout/index.vue'),
       children: [
         {
-          path: 'dashboard',
+          path: '/dashboard',
           name: 'Dashboard',
           component: () => import('@/views/Dashboard/index.vue'),
           meta: {
@@ -27,7 +27,7 @@ const router = createRouter({
           },
         },
         {
-          path: 'components',
+          path: '/components',
           name: 'Components',
           component: () => import('@/views/Components/index.vue'),
           meta: {
@@ -35,6 +35,17 @@ const router = createRouter({
             title: $t('dashboard.components'), // 组件
             fontIcon: 'fa-brands fa-microsoft',
           },
+          children: [
+            {
+              path: '/dialog',
+              name: 'Dialog',
+              component: () => import('@/views/Components/dialog/index.vue'),
+              meta: {
+                isShow: true,
+                title: $t('dashboard.dialog'), // 对话框
+              },
+            },
+          ],
         },
       ],
     },
