@@ -43,6 +43,7 @@ const router = createRouter({
               meta: {
                 isShow: true,
                 title: $t('dashboard.dialog'), // 对话框
+                fontIcon: 'fa-solid fa-gear',
               },
             },
           ],
