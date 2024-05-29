@@ -1,7 +1,9 @@
 <template>
   <div>
     <nav class="nav">
-      <router-link to="/dialog">dialog</router-link>
+      <router-link v-for="item in routerList" :key="item.path" :to="item.path">
+        {{ item.name }}
+      </router-link>
     </nav>
     <div class="displayArea">
       <router-view></router-view>
@@ -9,7 +11,11 @@
   </div>
 </template>
 
-<script setup lang="js"></script>
+<script setup lang="ts">
+import router from '@/router';
+
+const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
+</script>
 
 <style scoped lang="scss">
 .title {

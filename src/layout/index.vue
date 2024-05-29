@@ -12,6 +12,35 @@
         >
           <Navbar></Navbar>
         </el-header>
+
+        <!-- breadcrumb -->
+        <el-breadcrumb separator="/" class="my-5 mx-15">
+          <!-- <el-breadcrumb-item
+            v-for="item in routerList"
+            :key="item.path"
+            :to="{ path: item.path }"
+          >
+            {{ item.meta.title }}
+          </el-breadcrumb-item> -->
+          <el-breadcrumb-item
+            v-for="(item, index) in routerList"
+            :key="item.path"
+            :to="{ path: item.path }"
+          >
+            <span
+              v-if="
+                item.redirect === 'noRedirect' || index == routerList.length - 1
+              "
+              class="no-redirect"
+            >
+              {{ item.meta.title }}
+            </span>
+            <a v-else>
+              {{ item.meta.title }}
+            </a>
+          </el-breadcrumb-item>
+        </el-breadcrumb>
+
         <!-- center container -->
         <el-main>
           <AppMain></AppMain>
@@ -23,8 +52,11 @@
 
 <script setup lang="ts">
 import { AppMain, Navbar, Sidebar } from './components';
-
+import router from '@/router';
 import { settingStore } from '@/stores/index';
+
+const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
+console.log(routerList);
 
 const store = settingStore();
 </script>
@@ -47,5 +79,10 @@ const store = settingStore();
 
 .el-aside {
   transition: all 0.3s;
+}
+
+.no-redirect {
+  color: #97a8be;
+  cursor: text;
 }
 </style>
