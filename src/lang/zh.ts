@@ -65,6 +65,7 @@ export default {
     dashboard: '仪表盘',
     components: '组件',
     dialog: '对话框',
+    icon: '图标',
   },
   echarts: {
     accessNumber: '访问人数',

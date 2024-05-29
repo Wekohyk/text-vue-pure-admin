@@ -41,8 +41,16 @@ const router = createRouter({
               name: 'Dialog',
               component: () => import('@/views/Components/dialog/index.vue'),
               meta: {
-                isShow: true,
                 title: $t('dashboard.dialog'), // 对话框
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
+            {
+              path: '/icon',
+              name: 'Icon',
+              component: () => import('@/views/Components/icon/index.vue'),
+              meta: {
+                title: $t('dashboard.icon'), // 对话框
                 fontIcon: 'fa-solid fa-gear',
               },
             },

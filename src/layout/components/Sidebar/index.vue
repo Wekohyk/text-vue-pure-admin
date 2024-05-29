@@ -5,30 +5,63 @@
       :collapse="appStore().collapse"
       class="b-b-1 b-b-solid b-b-#e4e7ed b-r-1 b-r-solid b-r-#e4e7ed"
     ></SidebarLogo>
+
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu router class="el-menu-vertical-demo">
-        <el-menu-item
-          v-for="item in routerList"
-          :key="item.path"
-          :index="item.path"
-          :class="!store.showSidebar ? 'flex justify-center' : ''"
-        >
-          <font-awesome-icon
-            :style="{
-              color: item.path === $route.path ? '#409EFF' : '#999999',
-            }"
-            :icon="item.meta.fontIcon as string"
-          />
-          <span
-            v-if="store.showSidebar"
-            class="pl-10"
-            :style="{
-              color: item.path === $route.path ? '#409EFF' : '#999999',
-            }"
+        <div v-for="item in routerList" :key="item.path">
+          <!-- Use el-sub-menu if the page has children -->
+          <el-sub-menu
+            v-if="item.children && item.children.length > 0"
+            :title="item.meta.name"
+            :index="item.path"
+            :class="!store.showSidebar ? 'flex justify-center' : ''"
           >
-            {{ item.meta.title }}
-          </span>
-        </el-menu-item>
+            <template #title>
+              <font-awesome-icon
+                :style="{
+                  color: item.path === $route.path ? '#409EFF' : '#000000',
+                }"
+                :icon="item.meta.fontIcon as string"
+              />
+              <span
+                v-if="store.showSidebar"
+                class="pl-10"
+                :style="{
+                  color: item.path === $route.path ? '#409EFF' : '#000000',
+                }"
+              >
+                {{ item.meta.title }}
+              </span>
+            </template>
+
+            <el-menu-item
+              v-for="itemChildren in item.children"
+              :key="itemChildren.path"
+              :index="itemChildren.path"
+              class="bg-#f5f7fa"
+            >
+              {{ itemChildren.meta?.title }}
+            </el-menu-item>
+          </el-sub-menu>
+          <!-- else hidden -->
+          <el-menu-item v-else :key="item.path" :index="item.path">
+            <font-awesome-icon
+              :style="{
+                color: item.path === $route.path ? '#409EFF' : '#000000',
+              }"
+              :icon="item.meta.fontIcon as string"
+            />
+            <span
+              v-if="store.showSidebar"
+              class="pl-10"
+              :style="{
+                color: item.path === $route.path ? '#409EFF' : '#000000',
+              }"
+            >
+              {{ item.meta.title }}
+            </span>
+          </el-menu-item>
+        </div>
       </el-menu>
     </el-scrollbar>
 

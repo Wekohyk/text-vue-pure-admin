@@ -67,6 +67,7 @@ export default {
     dashboard: 'Dashboard',
     components: 'Components',
     dialog: 'Dialog',
+    icon: 'Icon',
   },
   echarts: {
     accessNumber: 'Access Number',

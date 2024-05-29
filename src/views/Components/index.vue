@@ -1,8 +1,14 @@
 <template>
   <div>
-    <nav class="nav">
-      <router-link v-for="item in routerList" :key="item.path" :to="item.path">
-        {{ item.name }}
+    <nav class="nav" v-for="item in routerList" :key="item.path">
+      <router-link
+        v-for="itemChildren in item.children"
+        :key="itemChildren.path"
+        :to="itemChildren.path"
+      >
+        <span>
+          {{ itemChildren.name }}
+        </span>
       </router-link>
     </nav>
     <div class="displayArea">
@@ -23,7 +29,6 @@ const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
   font-weight: bold;
 }
 .nav {
-  margin-top: 20px;
   display: flex;
   height: 50px;
   justify-content: space-evenly;

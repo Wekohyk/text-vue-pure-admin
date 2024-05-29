@@ -56,7 +56,6 @@ import router from '@/router';
 import { settingStore } from '@/stores/index';
 
 const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
-console.log(routerList);
 
 const store = settingStore();
 </script>
