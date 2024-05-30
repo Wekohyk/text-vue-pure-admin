@@ -16,7 +16,7 @@
 .center-container {
   background: #ffffff;
   width: 100%;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 120px);
   overflow: scroll;
   display: relative;
   top: 0;
