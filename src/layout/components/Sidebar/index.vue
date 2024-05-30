@@ -15,12 +15,14 @@
             :title="item.meta.name"
             :index="item.path"
             :class="!store.showSidebar ? 'flex justify-center' : ''"
+            :id="!store.showSidebar ? 'one' : ''"
           >
             <template #title>
               <font-awesome-icon
                 :style="{
                   color: item.path === $route.path ? '#409EFF' : '#000000',
                 }"
+                :class="!store.showSidebar ? 'absolute pl-7' : ''"
                 :icon="item.meta.fontIcon as string"
               />
               <span
@@ -34,14 +36,21 @@
               </span>
             </template>
 
-            <el-menu-item
-              v-for="itemChildren in item.children"
-              :key="itemChildren.path"
-              :index="itemChildren.path"
-              class="bg-#f5f7fa"
-            >
-              {{ itemChildren.meta?.title }}
-            </el-menu-item>
+            <!-- Loop through the children of the page -->
+            <div v-if="store.showSidebar">
+              <el-menu-item
+                v-for="itemChildren in item.children"
+                :key="itemChildren.path"
+                :index="itemChildren.path"
+                class="bg-#f5f7fa"
+                :style="{
+                  color:
+                    itemChildren.path === $route.path ? '#409EFF' : '#000000',
+                }"
+              >
+                {{ itemChildren.meta?.title }}
+              </el-menu-item>
+            </div>
           </el-sub-menu>
           <!-- else hidden -->
           <el-menu-item v-else :key="item.path" :index="item.path">
@@ -107,5 +116,9 @@ const store = settingStore();
 }
 .scrollbar-wrapper {
   overflow-x: hidden !important;
+}
+
+::v-deep #one .el-icon {
+  display: none;
 }
 </style>

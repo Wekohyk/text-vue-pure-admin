@@ -15,13 +15,6 @@
 
         <!-- breadcrumb -->
         <el-breadcrumb separator="/" class="my-5 mx-15">
-          <!-- <el-breadcrumb-item
-            v-for="item in routerList"
-            :key="item.path"
-            :to="{ path: item.path }"
-          >
-            {{ item.meta.title }}
-          </el-breadcrumb-item> -->
           <el-breadcrumb-item
             v-for="(item, index) in routerList"
             :key="item.path"
