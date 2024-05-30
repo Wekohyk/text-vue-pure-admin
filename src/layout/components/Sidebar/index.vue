@@ -14,7 +14,7 @@
             v-if="item.children && item.children.length > 0"
             :title="item.meta.name"
             :index="item.path"
-            :class="!store.showSidebar ? 'flex justify-center' : ''"
+            :class="!store.showSidebar ? 'flex justify-center absolute' : ''"
             :id="!store.showSidebar ? 'one' : ''"
           >
             <template #title>
@@ -22,7 +22,6 @@
                 :style="{
                   color: item.path === $route.path ? '#409EFF' : '#000000',
                 }"
-                :class="!store.showSidebar ? 'absolute pl-7' : ''"
                 :icon="item.meta.fontIcon as string"
               />
               <span
