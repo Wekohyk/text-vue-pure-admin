@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <nav class="nav" v-for="item in routerList" :key="item.path">
+  <nav class="mt-10px b-b-1 b-b-solid b-b-#e5e7ec">
+    <div
+      class="flex justify-evenly items-center"
+      v-for="item in routerList"
+      :key="item.path"
+    >
       <router-link
         v-for="itemChildren in item.children"
         :key="itemChildren.path"
@@ -11,10 +15,10 @@
           {{ itemChildren.name }}
         </span>
       </router-link>
-    </nav>
-    <div class="displayArea">
-      <router-view></router-view>
     </div>
+  </nav>
+  <div class="m-10">
+    <router-view></router-view>
   </div>
 </template>
 
@@ -24,22 +28,4 @@ import router from '@/router';
 const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
 </script>
 
-<style scoped lang="scss">
-.title {
-  text-align: center;
-  font-weight: bold;
-}
-.nav {
-  display: flex;
-  margin-top: 10px;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.displayArea {
-  margin-top: 2em;
-}
-.active {
-  border-bottom: 3px solid hsla(160, 100%, 37%, 1);
-}
-</style>
+<style scoped lang="scss"></style>
