@@ -29,6 +29,7 @@ const router = createRouter({
         {
           path: '/components',
           name: 'Components',
+          redirect: '/dialog',
           component: () => import('@/views/Components/index.vue'),
           meta: {
             isShow: true,
@@ -50,7 +51,7 @@ const router = createRouter({
               name: 'Icon',
               component: () => import('@/views/Components/icon/index.vue'),
               meta: {
-                title: $t('dashboard.icon'), // 对话框
+                title: $t('dashboard.icon'), // 图标
                 fontIcon: 'fa-solid fa-gear',
               },
             },

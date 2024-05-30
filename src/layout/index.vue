@@ -14,25 +14,7 @@
         </el-header>
 
         <!-- breadcrumb -->
-        <el-breadcrumb separator="/" class="my-5 mx-15">
-          <el-breadcrumb-item
-            v-for="(item, index) in routerList"
-            :key="item.path"
-            :to="{ path: item.path }"
-          >
-            <span
-              v-if="
-                item.redirect === 'noRedirect' || index == routerList.length - 1
-              "
-              class="no-redirect"
-            >
-              {{ item.meta.title }}
-            </span>
-            <a v-else>
-              {{ item.meta.title }}
-            </a>
-          </el-breadcrumb-item>
-        </el-breadcrumb>
+        <Breadcrumb></Breadcrumb>
 
         <!-- center container -->
         <el-main>
@@ -45,10 +27,8 @@
 
 <script setup lang="ts">
 import { AppMain, Navbar, Sidebar } from './components';
-import router from '@/router';
 import { settingStore } from '@/stores/index';
-
-const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
+import Breadcrumb from './components/Breadcrumb/index.vue';
 
 const store = settingStore();
 </script>
