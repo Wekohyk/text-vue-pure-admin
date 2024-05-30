@@ -19,6 +19,7 @@
           >
             <template #title>
               <font-awesome-icon
+                v-if="store.showSidebar"
                 :style="{
                   color: item.path === $route.path ? '#409EFF' : '#000000',
                 }"
@@ -33,6 +34,35 @@
               >
                 {{ item.meta.title }}
               </span>
+
+              <!-- popover -->
+              <el-popover
+                v-if="!store.showSidebar"
+                placement="right"
+                :width="100"
+                trigger="hover"
+              >
+                <template #reference>
+                  <font-awesome-icon
+                    :style="{
+                      color: item.path === $route.path ? '#409EFF' : '#000000',
+                    }"
+                    :icon="item.meta.fontIcon as string"
+                  />
+                </template>
+                <el-menu-item
+                  v-for="itemChildren in item.children"
+                  :key="itemChildren.path"
+                  :index="itemChildren.path"
+                  class="bg-#f5f7fa b-b-1 b-b-solid b-b-#ffffff"
+                  :style="{
+                    color:
+                      itemChildren.path === $route.path ? '#409EFF' : '#000000',
+                  }"
+                >
+                  {{ itemChildren.meta?.title }}
+                </el-menu-item>
+              </el-popover>
             </template>
 
             <!-- Loop through the children of the page -->
@@ -73,6 +103,7 @@
       </el-menu>
     </el-scrollbar>
 
+    <!-- footer button -->
     <div
       class="absolute bottom-0 text-center w-100% bg-#fff h-40 flex justify-center"
     >
