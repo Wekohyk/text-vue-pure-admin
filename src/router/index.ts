@@ -29,7 +29,7 @@ const router = createRouter({
         {
           path: '/components',
           name: 'Components',
-          redirect: '/dialog',
+          redirect: '/icon',
           component: () => import('@/views/Components/index.vue'),
           meta: {
             isShow: true,
@@ -37,6 +37,33 @@ const router = createRouter({
             fontIcon: 'fa-brands fa-microsoft',
           },
           children: [
+            {
+              path: '/icon',
+              name: 'Icon',
+              component: () => import('@/views/Components/icon/index.vue'),
+              meta: {
+                title: $t('dashboard.icon'), // 图标
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
+            {
+              path: '/button',
+              name: 'Button',
+              component: () => import('@/views/Components/button/index.vue'),
+              meta: {
+                title: $t('dashboard.button'), // 按钮
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
+            {
+              path: '/card',
+              name: 'Card',
+              component: () => import('@/views/Components/card/index.vue'),
+              meta: {
+                title: $t('dashboard.card'), // 卡片
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
             {
               path: '/dialog',
               name: 'Dialog',
@@ -47,11 +74,38 @@ const router = createRouter({
               },
             },
             {
-              path: '/icon',
-              name: 'Icon',
-              component: () => import('@/views/Components/icon/index.vue'),
+              path: '/pager',
+              name: 'Pager',
+              component: () => import('@/views/Components/pager/index.vue'),
               meta: {
-                title: $t('dashboard.icon'), // 图标
+                title: $t('dashboard.pager'), // 分页
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
+            {
+              path: '/collapse',
+              name: 'Collapse',
+              component: () => import('@/views/Components/collapse/index.vue'),
+              meta: {
+                title: $t('dashboard.collapse'), // 手风琴
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
+            {
+              path: '/tooltip',
+              name: 'Tooltip',
+              component: () => import('@/views/Components/tooltip/index.vue'),
+              meta: {
+                title: $t('dashboard.tooltip'), // 提示框
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
+            {
+              path: '/dropdown',
+              name: 'Dropdown',
+              component: () => import('@/views/Components/dropdown/index.vue'),
+              meta: {
+                title: $t('dashboard.dropdown'), // 下拉菜单
                 fontIcon: 'fa-solid fa-gear',
               },
             },

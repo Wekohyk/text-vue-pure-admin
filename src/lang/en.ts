@@ -68,6 +68,12 @@ export default {
     components: 'Components',
     dialog: 'Dialog',
     icon: 'Icon',
+    button: 'Button',
+    card: 'Card',
+    pager: 'Pager',
+    collapse: 'Collapse',
+    tooltip: 'Tooltip',
+    dropdown: 'Dropdown',
   },
   echarts: {
     accessNumber: 'Access Number',

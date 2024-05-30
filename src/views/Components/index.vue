@@ -5,6 +5,7 @@
         v-for="itemChildren in item.children"
         :key="itemChildren.path"
         :to="itemChildren.path"
+        class="hover:text-#5a9cf8"
       >
         <span>
           {{ itemChildren.name }}
@@ -30,7 +31,7 @@ const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
 }
 .nav {
   display: flex;
-  height: 50px;
+  margin-top: 10px;
   justify-content: space-evenly;
   align-items: center;
 }

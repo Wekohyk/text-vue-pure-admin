@@ -66,6 +66,12 @@ export default {
     components: '组件',
     dialog: '对话框',
     icon: '图标',
+    button: '按钮',
+    card: '卡片',
+    pager: '分页',
+    collapse: '手风琴',
+    tooltip: '提示框',
+    dropdown: '下拉菜单',
   },
   echarts: {
     accessNumber: '访问人数',
