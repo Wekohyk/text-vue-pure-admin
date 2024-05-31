@@ -1,5 +1,5 @@
 <template>
-  <nav class="mt-10px b-b-1 b-b-solid b-b-#e5e7ec">
+  <nav class="mt-10px">
     <div
       class="flex justify-evenly items-center"
       v-for="item in routerList"
@@ -9,7 +9,8 @@
         v-for="itemChildren in item.children"
         :key="itemChildren.path"
         :to="itemChildren.path"
-        class="hover:text-#5a9cf8"
+        :class="{ active: $route.path === itemChildren.path }"
+        class="text-#5a9cf8 hover:text-#79bbff cursor-pointer"
       >
         <span>
           {{ itemChildren.name }}
@@ -28,4 +29,9 @@ import router from '@/router';
 const routerList = router.getRoutes().filter(item => item.meta.isShow === true);
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.active {
+  border-bottom: 3px solid hsla(160, 100%, 37%, 1);
+  color: #79bbff;
+}
+</style>
