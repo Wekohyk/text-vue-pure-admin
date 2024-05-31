@@ -103,7 +103,7 @@ export default {
     dangerBtn: '危险按钮',
     firstGroup: '第一组',
     secondGroup: '第二组',
-    cardText1: '一只猫3元, 十只猫10元',
+    cardText1: '一只猫3元, 三只猫10元',
     cardText2: '我是自定义卡片,使用的是插槽',
     cardText3: '这是一个风景照片',
     cardText4: '这是一张猫狗钓鱼的照片',
