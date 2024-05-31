@@ -119,7 +119,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import '@/assets/styles/login.scss';
+import '@/assets/styles/login/login.scss';
 import Motion from '../utils/motion';
 import { reactive, ref } from 'vue';
 import { updateRules } from '../utils/rules';
