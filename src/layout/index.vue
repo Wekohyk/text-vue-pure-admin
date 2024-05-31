@@ -1,7 +1,7 @@
 <template>
   <div class="relative h-100vh w-100vw">
     <el-container>
-      <el-aside :width="store.showSidebar ? '150px' : '50px'">
+      <el-aside :width="store.showSidebar ? '180px' : '50px'">
         <Sidebar></Sidebar>
       </el-aside>
       <el-container>

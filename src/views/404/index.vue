@@ -43,8 +43,8 @@
       </el-header>
       <el-main class="boxContainer">
         <div class="tittle flex flex-col justify-center items-start">
-          <span>Go Home!</span>
-          <span>You're Drunk</span>
+          <span>{{ $t('goHome') }}</span>
+          <span>{{ $t('youDrunk') }}</span>
         </div>
         <Weko-Button type="success" class="button" @click="toHome">
           {{ $t('backHome') }}

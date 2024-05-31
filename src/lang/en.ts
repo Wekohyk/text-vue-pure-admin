@@ -3,6 +3,8 @@ export default {
   useEn: 'English',
   useZh: '简体中文',
   backHome: 'Back To Home',
+  goHome: 'Go Home!',
+  youDrunk: 'You are lost!',
   openControlConsole: 'Please Open Control Console',
   joker: 'Hey, fooled, no verification code',
   exitLogin: 'Exit Login',

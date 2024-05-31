@@ -3,6 +3,8 @@ export default {
   useEn: 'English',
   useZh: '简体中文',
   backHome: '回到首页',
+  goHome: '去首页!',
+  youDrunk: '你迷路啦!',
   openControlConsole: '请打开控制台',
   joker: '嘿嘿, 被骗到了吧, 没有验证码',
   exitLogin: '退出登录',
