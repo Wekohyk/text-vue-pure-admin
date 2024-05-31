@@ -77,6 +77,7 @@ const onLoadErr = () => {
   .name {
     //  用户名称距离右侧距离
     margin-right: 10px;
+    margin-left: 5px;
     font-size: 1rem;
   }
   .el-icon-setting {
