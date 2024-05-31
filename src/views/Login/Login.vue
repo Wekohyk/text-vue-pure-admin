@@ -199,7 +199,7 @@ import DimensionalCode from './components/DimensionalCode.vue';
 import SignIn from './components/SignIn.vue';
 import { useUserStoreHook } from '@/stores/index';
 import Motion from './utils/motion';
-import '@/assets/styles/login.scss';
+import '@/assets/styles/login/login.scss';
 import router from '@/router';
 
 // setting theme

@@ -1,0 +1,17 @@
+.weko-icon {
+  --weko-icon-color: inherit;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--weko-icon-color);
+  font-size: inherit;
+}
+
+@each $var in primary, info, success, warning, danger {
+  // 添加类后，会自动根据主题颜色变化
+  .weko-icon-#{$var} {
+    --weko-icon-color: var(--weko-color-#{$var});
+  }
+}
