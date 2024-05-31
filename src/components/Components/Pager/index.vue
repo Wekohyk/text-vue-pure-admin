@@ -12,7 +12,7 @@
       :class="currentPage === 1 ? 'disabled' : ''"
       @click.prevent="goFirstPage"
     >
-      {{ $t('home') }}
+      {{ $t('components.home') }}
     </a>
     <!-- 上一页 -->
     <a :class="currentPage === 1 ? 'disabled' : ''" @click.prevent="prevClick">
@@ -59,7 +59,7 @@
       :class="currentPage === total ? 'disabled' : ''"
       @click.prevent="goLastPage"
     >
-      {{ $t('trailing') }}
+      {{ $t('components.trailing') }}
     </a>
   </div>
 </template>
