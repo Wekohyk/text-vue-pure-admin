@@ -44,6 +44,7 @@ import Pager from '@/components/Components/Pager/index.vue';
 import Collapse from '@/components/Components/Collapse/index.vue';
 import CollapseItem from '@/components/Components/Collapse/CollapseItem.vue';
 import Tooltip from '@/components/Components/Tooltip/index.vue';
+import Dropdown from './components/Components/Dropdown/index.vue';
 
 // App
 import App from './App.vue';
@@ -60,6 +61,7 @@ app.component('Weko-Pager', Pager);
 app.component('Weko-Collapse', Collapse);
 app.component('Weko-CollapseItem', CollapseItem);
 app.component('Weko-Tooltip', Tooltip);
+app.component('Weko-Dropdown', Dropdown);
 
 app.use(pinia);
 app.use(i18n);
