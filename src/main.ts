@@ -40,6 +40,8 @@ import Icon from '@/components/Components/Icon/index.vue';
 import Button from '@/components/Components/Button/index.vue';
 import Card from '@/components/Components/Card/index.vue';
 import Dialog from '@/components/Components/Dialog/index.vue';
+import Pager from '@/components/Components/Pager/index.vue';
+
 // App
 import App from './App.vue';
 
@@ -51,6 +53,7 @@ app.component('Weko-Icon', Icon);
 app.component('Weko-Button', Button);
 app.component('Weko-Card', Card);
 app.component('Weko-Dialog', Dialog);
+app.component('Weko-Pager', Pager);
 
 app.use(pinia);
 app.use(i18n);
