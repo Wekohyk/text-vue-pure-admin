@@ -116,23 +116,8 @@ const toHome = () => {
   border-radius: 9999px;
 
   background: linear-gradient(270deg, #92e3a9 0%, #92e3a9 100%);
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
   height: 44px;
-  line-height: normal;
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 4px;
-    right: 6px;
-    bottom: 4px;
-    border-radius: 9999px;
-  }
+  width: 100px;
   animation: pulse-alt 1.4s ease-in-out infinite forwards;
 }
 
