@@ -129,6 +129,10 @@ router.beforeEach(to => {
   // 如果没有登录且不在白名单内，去登录
   if (!useUserStoreHook().token && !wihteList.includes(to.path))
     return '/login';
+  // 如果访问的路由不存在
+  if (to.matched.length === 0) {
+    router.push('/404');
+  }
   // 否则不做任何处理
 });
 
