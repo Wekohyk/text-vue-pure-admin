@@ -37,6 +37,7 @@ library.add(fab);
 
 /* Register a custom component */
 import Icon from '@/components/Components/Icon/index.vue';
+import Button from '@/components/Components/Button/index.vue';
 
 // App
 import App from './App.vue';
@@ -46,6 +47,7 @@ const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon);
 /* Register a custom component */
 app.component('Weko-Icon', Icon);
+app.component('Weko-Button', Button);
 app.use(pinia);
 app.use(i18n);
 app.use(MotionPlugin);
