@@ -2,6 +2,7 @@ export default {
   language: '中文',
   useEn: 'English',
   useZh: '简体中文',
+  backHome: '回到首页',
   openControlConsole: '请打开控制台',
   joker: '嘿嘿, 被骗到了吧, 没有验证码',
   exitLogin: '退出登录',

@@ -2,6 +2,7 @@ export default {
   language: 'English',
   useEn: 'English',
   useZh: '简体中文',
+  backHome: 'Back To Home',
   openControlConsole: 'Please Open Control Console',
   joker: 'Hey, fooled, no verification code',
   exitLogin: 'Exit Login',

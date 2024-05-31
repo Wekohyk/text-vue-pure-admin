@@ -47,7 +47,7 @@
           <span>You're Drunk</span>
         </div>
         <Weko-Button type="success" class="button" @click="toHome">
-          Back To Home
+          {{ $t('backHome') }}
         </Weko-Button>
       </el-main>
     </el-container>
