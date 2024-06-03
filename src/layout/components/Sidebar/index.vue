@@ -8,7 +8,7 @@
 
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu router class="el-menu-vertical-demo">
-        <div v-for="item in routerList" :key="item.path">
+        <div v-for="item in routerList" :key="item.path" class="h-50">
           <!-- Use el-sub-menu if the page has children -->
           <el-sub-menu
             v-if="item.children && item.children.length > 0"
@@ -27,7 +27,7 @@
               />
               <span
                 v-if="store.showSidebar"
-                class="pl-10"
+                class="pl-10 w-100 overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible"
                 :style="{
                   color: item.path === $route.path ? '#409EFF' : '#000000',
                 }"
@@ -39,7 +39,7 @@
               <el-popover
                 v-if="!store.showSidebar"
                 placement="right"
-                :width="100"
+                width="250px"
                 trigger="hover"
               >
                 <template #reference>
@@ -54,13 +54,17 @@
                   v-for="itemChildren in item.children"
                   :key="itemChildren.path"
                   :index="itemChildren.path"
-                  class="bg-#f5f7fa b-b-1 b-b-solid b-b-#ffffff"
+                  class="flex justify-center items-center bg-#f5f7fa b-b-1 b-b-solid b-b-#ffffff overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible"
                   :style="{
                     color:
                       itemChildren.path === $route.path ? '#409EFF' : '#000000',
                   }"
                 >
-                  {{ itemChildren.meta?.title }}
+                  <span
+                    class="overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible"
+                  >
+                    {{ itemChildren.meta?.title }}
+                  </span>
                 </el-menu-item>
               </el-popover>
             </template>
@@ -77,7 +81,11 @@
                     itemChildren.path === $route.path ? '#409EFF' : '#000000',
                 }"
               >
-                {{ itemChildren.meta?.title }}
+                <span
+                  class="w-100 overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible"
+                >
+                  {{ itemChildren.meta?.title }}
+                </span>
               </el-menu-item>
             </div>
           </el-sub-menu>
@@ -91,7 +99,7 @@
             />
             <span
               v-if="store.showSidebar"
-              class="pl-10"
+              class="pl-10 w-100 overflow-hidden whitespace-nowrap text-ellipsis hover:overflow-visible"
               :style="{
                 color: item.path === $route.path ? '#409EFF' : '#000000',
               }"

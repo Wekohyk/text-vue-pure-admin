@@ -149,4 +149,9 @@ export default {
     open: 'Open',
     supportsVNode: 'Supports VNode Nodes',
   },
+  element: {
+    name: 'element-components',
+    dialog: 'element-Dialog',
+    message: 'element-Message',
+  },
 };

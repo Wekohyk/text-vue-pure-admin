@@ -146,4 +146,9 @@ export default {
     open: '打开',
     supportsVNode: '支持VNode节点',
   },
+  element: {
+    name: '基于 element-plus 的组件',
+    dialog: '基于 element-plus 的对话框',
+    message: '基于 element-plus 的消息提示',
+  },
 };

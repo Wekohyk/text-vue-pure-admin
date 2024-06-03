@@ -39,6 +39,7 @@ const router = createRouter({
             isShow: true,
             title: $t('dashboard.components'), // 组件
             fontIcon: 'fa-brands fa-microsoft',
+            toast: 'Components',
           },
           children: [
             {
@@ -110,6 +111,29 @@ const router = createRouter({
               component: () => import('@/views/Components/dropdown/index.vue'),
               meta: {
                 title: $t('dashboard.dropdown'), // 下拉菜单
+                fontIcon: 'fa-solid fa-gear',
+              },
+            },
+          ],
+        },
+        {
+          path: '/elementComponents',
+          name: 'ElementComponents',
+          component: () => import('@/views/ElementComponents/index.vue'),
+          meta: {
+            isShow: true,
+            title: $t('element.name'), // 基于element-plus的对话框组件
+            fontIcon: 'fa-solid fa-gear',
+            toast: 'Element-Components',
+          },
+          children: [
+            {
+              path: '/elementDialog',
+              name: 'ElementDialog',
+              component: () =>
+                import('@/views/ElementComponents/elementDialog/index.vue'),
+              meta: {
+                title: $t('element.dialog'), // 基于element-plus的对话框组件
                 fontIcon: 'fa-solid fa-gear',
               },
             },

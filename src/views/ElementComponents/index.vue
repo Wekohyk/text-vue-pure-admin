@@ -13,7 +13,7 @@
         class="text-#5a9cf8 hover:text-#79bbff cursor-pointer"
       >
         <span>
-          {{ itemChildren.meta?.title }}
+          {{ itemChildren.name }}
         </span>
       </router-link>
     </div>
@@ -29,7 +29,8 @@ import router from '@/router';
 const routerList = router
   .getRoutes()
   .filter(
-    item => item.meta.isShow === true && item.meta.toast === 'Components',
+    item =>
+      item.meta.isShow === true && item.meta.toast === 'Element-Components',
   );
 </script>
 
