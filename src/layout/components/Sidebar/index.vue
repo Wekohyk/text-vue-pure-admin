@@ -8,7 +8,11 @@
 
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu router class="el-menu-vertical-demo">
-        <div v-for="item in routerList" :key="item.path" class="h-50">
+        <div
+          v-for="item in routerList"
+          :key="item.path"
+          :class="store.showSidebar ? '' : 'h-56'"
+        >
           <!-- Use el-sub-menu if the page has children -->
           <el-sub-menu
             v-if="item.children && item.children.length > 0"
@@ -120,10 +124,14 @@
         @click="store.toggleShowSidebar"
         class="hover:cursor-pointer"
       >
-        <el-icon size="25" color="#999"><Expand /></el-icon>
+        <el-icon size="25" color="#999">
+          <Expand />
+        </el-icon>
       </div>
       <div v-else @click="store.toggleShowSidebar" class="hover:cursor-pointer">
-        <el-icon size="25" color="#999"><Fold /></el-icon>
+        <el-icon size="25" color="#999">
+          <Fold />
+        </el-icon>
       </div>
     </div>
   </div>
@@ -148,10 +156,12 @@ const store = settingStore();
   height: calc(100vh - 50px);
   overflow-y: scroll;
 }
+
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 100%;
   min-height: 400px;
 }
+
 .scrollbar-wrapper {
   overflow-x: hidden !important;
 }
