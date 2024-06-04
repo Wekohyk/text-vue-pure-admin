@@ -63,4 +63,22 @@ export default {
     type: Boolean,
     default: true,
   },
+
+  // 自定义组件位置
+  top: {
+    type: String,
+    default: '0',
+  },
+  bottom: {
+    type: String,
+    default: '0',
+  },
+  left: {
+    type: String,
+    default: '0',
+  },
+  right: {
+    type: String,
+    default: '0',
+  },
 };
