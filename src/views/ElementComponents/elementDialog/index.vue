@@ -1,7 +1,9 @@
 <template>
   <div class="flex justify-center items-center gap-10">
+    <!-- 基本用法 -->
     <Weko-ElementDialog></Weko-ElementDialog>
 
+    <!-- 可拖拽 -->
     <Weko-ElementDialog
       :btnTitle="$t('element.drag')"
       :title="$t('element.drag_text')"
@@ -9,6 +11,7 @@
       draggable
     ></Weko-ElementDialog>
 
+    <!-- 全屏显示 -->
     <Weko-ElementDialog
       :btnTitle="$t('element.fullscreen')"
       :title="$t('element.fullscreen')"
@@ -16,6 +19,7 @@
       fullscreen
     ></Weko-ElementDialog>
 
+    <!-- 全屏按钮和全屏事件 -->
     <Weko-ElementDialog
       :btnTitle="$t('element.fullscreen_btn')"
       :title="$t('element.fullscreen_btn')"
@@ -27,6 +31,7 @@
       :fullscreen="isShowFullscreen"
     ></Weko-ElementDialog>
 
+    <!-- 隐藏遮罩层 -->
     <Weko-ElementDialog
       :btnTitle="$t('element.mask_hidden')"
       :title="$t('element.mask_hidden')"
