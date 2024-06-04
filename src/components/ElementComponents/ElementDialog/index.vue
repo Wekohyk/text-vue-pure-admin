@@ -62,7 +62,7 @@
   </transition>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import propsObj from './props';
 import { $t } from '@/lang/index';
 
@@ -83,10 +83,25 @@ const handleClose = (done: () => void) => {
     });
 };
 
-const emit = defineEmits(['update:isFullscreen']);
+const emit = defineEmits([
+  'update:isFullscreen',
+  'openFullscreen',
+  'closeFullscreen',
+]);
 
 const toggleFullscreen = (value: boolean) => {
   emit('update:isFullscreen', value);
 };
+
+watch(
+  () => props.fullscreen,
+  value => {
+    if (value) {
+      emit('openFullscreen', () => {});
+    } else {
+      emit('closeFullscreen', () => {});
+    }
+  },
+);
 </script>
 <style scoped lang="scss"></style>

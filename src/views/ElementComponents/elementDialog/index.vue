@@ -22,6 +22,8 @@
       :content="$t('element.fullscreen_btn_content')"
       showFullscreen
       @update:isFullscreen="isFullscreen"
+      @openFullscreen="openFullscreen"
+      @closeFullscreen="closeFullscreen"
       :fullscreen="isShowFullscreen"
     ></Weko-ElementDialog>
 
@@ -35,10 +37,20 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
+import { ElMessage } from 'element-plus';
+import { $t } from '@/lang/index';
 
 const isShowFullscreen = ref(false);
 const isFullscreen = (value: boolean) => {
   isShowFullscreen.value = value;
+};
+
+const openFullscreen = () => {
+  ElMessage($t('element.openFullscreen'));
+};
+
+const closeFullscreen = () => {
+  ElMessage($t('element.closeFullscreen'));
 };
 </script>
 <style scoped lang="scss"></style>

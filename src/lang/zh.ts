@@ -159,6 +159,8 @@ export default {
     fullscreen_content: '这是一个全屏的对话框',
     fullscreen_btn: '全屏按钮和全屏事件',
     fullscreen_btn_content: '这是一个全屏按钮和全屏事件的对话框',
+    openFullscreen: '全屏打开啦',
+    closeFullscreen: '全屏关闭啦',
     mask_hidden: '隐藏遮罩层',
     mask_hidden_content: '这是一个隐藏遮罩层的对话框',
   },

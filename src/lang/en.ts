@@ -163,6 +163,9 @@ export default {
     fullscreen_btn: 'Full screen buttons and full screen events',
     fullscreen_btn_content:
       'This is a full screen button and full screen event dialog',
+    openFullscreen: 'Open Fullscreen',
+    closeFullscreen: 'Close Fullscreen',
     mask_hidden: 'Hidden Mask',
+    mask_hidden_content: 'This is a hidden mask dialog box',
   },
 };
