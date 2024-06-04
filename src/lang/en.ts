@@ -167,5 +167,7 @@ export default {
     closeFullscreen: 'Close Fullscreen',
     mask_hidden: 'Hidden Mask',
     mask_hidden_content: 'This is a hidden mask dialog box',
+    customize_location: 'Customize Location',
+    customize_location_content: 'This is a custom location dialog box',
   },
 };

@@ -40,9 +40,9 @@
     ></Weko-ElementDialog>
 
     <Weko-ElementDialog
-      :btnTitle="$t('element.mask_hidden')"
-      :title="$t('element.mask_hidden')"
-      :content="$t('element.mask_hidden_content')"
+      :btnTitle="$t('element.customize_location')"
+      :title="$t('element.customize_location')"
+      :content="$t('element.customize_location_content')"
       top="300px"
       left="200px"
     ></Weko-ElementDialog>
