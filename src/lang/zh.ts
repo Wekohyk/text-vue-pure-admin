@@ -156,8 +156,10 @@ export default {
     drag_text: '对话框内容可拖拽',
     content: '这是一个对话框',
     fullscreen: '全屏显示',
-    fullscreen_content: '这是一个全屏对话框',
+    fullscreen_content: '这是一个全屏的对话框',
     fullscreen_btn: '全屏按钮和全屏事件',
-    fullscreen_btn_content: '这是一个全屏按钮和全屏事件对话框',
+    fullscreen_btn_content: '这是一个全屏按钮和全屏事件的对话框',
+    mask_hidden: '隐藏遮罩层',
+    mask_hidden_content: '这是一个隐藏遮罩层的对话框',
   },
 };

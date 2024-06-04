@@ -26,9 +26,9 @@
     ></Weko-ElementDialog>
 
     <Weko-ElementDialog
-      :btnTitle="$t('element.fullscreen')"
-      :title="$t('element.fullscreen')"
-      :content="$t('element.fullscreen_content')"
+      :btnTitle="$t('element.mask_hidden')"
+      :title="$t('element.mask_hidden')"
+      :content="$t('element.mask_hidden_content')"
       :modal="false"
     ></Weko-ElementDialog>
   </div>
