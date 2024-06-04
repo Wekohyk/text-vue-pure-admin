@@ -57,4 +57,10 @@ export default {
     type: Boolean,
     default: false,
   },
+
+  // 是否显示遮罩层
+  modal: {
+    type: Boolean,
+    default: true,
+  },
 };

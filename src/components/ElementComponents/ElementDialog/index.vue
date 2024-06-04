@@ -1,7 +1,7 @@
 <template>
   <transition name="dialog-fade">
     <!-- 外层容器 -->
-    <div v-if="visible">
+    <div v-if="visible" :modal="props.modal">
       <!-- 按钮内容 -->
       <el-button plain @click="dialogVisible = true">
         {{ props.btnTitle }}
@@ -15,6 +15,7 @@
         :fullscreen="props.fullscreen"
         :draggable="props.draggable"
         :show-close="props.showClose"
+        :modal="props.modal"
       >
         <template #header>
           <div class="flex justify-between items-center">

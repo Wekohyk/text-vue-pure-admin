@@ -24,6 +24,13 @@
       @update:isFullscreen="isFullscreen"
       :fullscreen="isShowFullscreen"
     ></Weko-ElementDialog>
+
+    <Weko-ElementDialog
+      :btnTitle="$t('element.fullscreen')"
+      :title="$t('element.fullscreen')"
+      :content="$t('element.fullscreen_content')"
+      :modal="false"
+    ></Weko-ElementDialog>
   </div>
 </template>
 <script setup lang="ts">
