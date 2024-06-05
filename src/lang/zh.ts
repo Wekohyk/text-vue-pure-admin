@@ -194,7 +194,7 @@ export default {
     success: 'success类型消息',
     warning: 'warning类型消息',
     error: 'error类型消息',
-    trun_off: '可以关闭',
+    turn_off: '可以关闭',
     message_merging: '分组消息合并',
     customize_icon: '自定义图标',
   },

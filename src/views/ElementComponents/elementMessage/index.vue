@@ -30,8 +30,8 @@
     </Weko-Button>
 
     <!-- 可以关闭的消息通知 -->
-    <Weko-Button @click="message($t('element.trun_off'), { showClose: true })">
-      {{ $t('element.trun_off') }}
+    <Weko-Button @click="message($t('element.turn_off'), { showClose: true })">
+      {{ $t('element.turn_off') }}
     </Weko-Button>
 
     <!-- 分组消息合并 -->
