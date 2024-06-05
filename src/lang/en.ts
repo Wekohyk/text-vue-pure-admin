@@ -176,5 +176,10 @@ export default {
     showClose: 'Do not show Close Button',
     showClose_content:
       'This is a dialog box that does not show the close button',
+    escDisabled: 'Disable the esc key to close',
+    escDisabled_content:
+      'This is a dialog box that disables the esc key to close',
+    modalDisabled: 'Disable closing by clicking modal',
+    modalDisabled_content: 'This is a dialog box that disables modal closing',
   },
 };

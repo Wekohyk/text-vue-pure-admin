@@ -91,4 +91,16 @@ export default {
     type: Number,
     default: 0,
   },
+
+  // 是否禁止通过 ESC 键关闭
+  closeOnPressEscape: {
+    type: Boolean,
+    default: true,
+  },
+
+  // 是否禁止点击遮罩层关闭
+  closeOnClickModal: {
+    type: Boolean,
+    default: true,
+  },
 };

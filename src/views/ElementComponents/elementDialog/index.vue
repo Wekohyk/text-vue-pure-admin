@@ -71,6 +71,22 @@
       :content="$t('element.showClose_content')"
       :showClose="false"
     ></Weko-ElementDialog>
+
+    <!-- 禁止通过esc键关闭对话框 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.escDisabled')"
+      :title="$t('element.escDisabled')"
+      :content="$t('element.escDisabled_content')"
+      :close-on-press-escape="false"
+    ></Weko-ElementDialog>
+
+    <!-- 禁止通过点击modal关闭对话框 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.modalDisabled')"
+      :title="$t('element.modalDisabled')"
+      :content="$t('element.modalDisabled_content')"
+      :close-on-click-modal="false"
+    ></Weko-ElementDialog>
   </div>
 </template>
 <script setup lang="ts">

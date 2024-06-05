@@ -171,5 +171,9 @@ export default {
     close_delay_content: '这是一个延迟两秒关闭弹窗的对话框',
     showClose: '不显示关闭按钮',
     showClose_content: '这是一个不显示关闭按钮的对话框',
+    escDisabled: '禁止通过 ESC 键关闭',
+    escDisabled_content: '这是一个禁止通过 ESC 键关闭的对话框',
+    modalDisabled: '禁止通过点击modal关闭',
+    modalDisabled_content: '这是一个禁止通过点击modal关闭对话框的对话框',
   },
 };
