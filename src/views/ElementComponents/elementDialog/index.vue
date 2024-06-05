@@ -39,12 +39,29 @@
       :modal="false"
     ></Weko-ElementDialog>
 
+    <!-- 自定义弹窗位置 -->
     <Weko-ElementDialog
       :btnTitle="$t('element.customize_location')"
       :title="$t('element.customize_location')"
       :content="$t('element.customize_location_content')"
       top="300px"
       left="200px"
+    ></Weko-ElementDialog>
+
+    <!-- 延迟两秒打开弹窗 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.open_delay')"
+      :title="$t('element.open_delay')"
+      :content="$t('element.open_delay_content')"
+      :open-delay="2000"
+    ></Weko-ElementDialog>
+
+    <!-- 延迟两秒关闭弹窗 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.close_delay')"
+      :title="$t('element.close_delay')"
+      :content="$t('element.close_delay_content')"
+      :close-delay="2000"
     ></Weko-ElementDialog>
   </div>
 </template>

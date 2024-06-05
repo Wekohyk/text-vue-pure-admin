@@ -169,5 +169,9 @@ export default {
     mask_hidden_content: 'This is a hidden mask dialog box',
     customize_location: 'Customize Location',
     customize_location_content: 'This is a custom location dialog box',
+    open_delay: 'Delay the popup for two seconds',
+    open_delay_content: 'This is a dialog box that pops up after two seconds',
+    close_delay: 'Delay the close for two seconds',
+    close_delay_content: 'This is a dialog box that closes after two seconds',
   },
 };

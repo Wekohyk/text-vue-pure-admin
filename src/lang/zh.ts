@@ -165,5 +165,9 @@ export default {
     mask_hidden_content: '这是一个隐藏遮罩层的对话框',
     customize_location: '自定义弹出位置',
     customize_location_content: '这是一个自定义弹出位置的对话框',
+    open_delay: '延迟两秒打开弹窗',
+    open_delay_content: '这是一个延迟两秒打开弹窗的对话框',
+    close_delay: '延迟两秒关闭弹窗',
+    close_delay_content: '这是一个延迟两秒关闭弹窗的对话框',
   },
 };

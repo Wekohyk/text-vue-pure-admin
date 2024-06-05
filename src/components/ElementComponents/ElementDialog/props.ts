@@ -81,4 +81,14 @@ export default {
     type: String,
     default: '0',
   },
+
+  // 延迟打开和关闭
+  openDelay: {
+    type: Number,
+    default: 0,
+  },
+  closeDelay: {
+    type: Number,
+    default: 0,
+  },
 };

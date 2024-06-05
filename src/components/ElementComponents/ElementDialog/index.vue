@@ -17,6 +17,8 @@
         :show-close="props.showClose"
         :modal="props.modal"
         :style="`top: ${props.top}; left: ${props.left}; right: ${props.right}; bottom: ${props.bottom};`"
+        :openDelay="props.openDelay"
+        :closeDelay="props.closeDelay"
       >
         <template #header>
           <div class="flex justify-between items-center">
