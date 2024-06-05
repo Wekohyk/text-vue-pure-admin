@@ -203,5 +203,11 @@ export default {
     turn_off: 'Turn off the message',
     message_merging: 'Packet message merging',
     customize_icon: 'Customize Icon',
+    customize_off:
+      'Customize the shutdown delay and set other operations after shutdown',
+    second_close: 'Close after 2 seconds',
+    been_close: 'Have been closed',
+    customize_message: 'Customize Message',
+    content_html: 'HTML snippets as body content',
   },
 };

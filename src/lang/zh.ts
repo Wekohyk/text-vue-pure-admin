@@ -197,5 +197,10 @@ export default {
     turn_off: '可以关闭',
     message_merging: '分组消息合并',
     customize_icon: '自定义图标',
+    customize_off: '自定义延时关闭并设置关闭后的其他操作',
+    second_close: '两秒后关闭',
+    been_close: '已关闭',
+    customize_message: '自定义消息内容',
+    content_html: 'HTML片段作为正文内容',
   },
 };

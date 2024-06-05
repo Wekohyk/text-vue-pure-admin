@@ -50,10 +50,49 @@
     <Weko-Button @click="message($t('element.customize_icon'), { icon: View })">
       {{ $t('element.customize_icon') }}
     </Weko-Button>
+
+    <!-- 自定义延时关闭并设置关闭后的其他操作 -->
+    <Weko-Button
+      @click="
+        message($t('element.second_close'), {
+          duration: 2000,
+          onClose: () => message($t('element.been_close')),
+        })
+      "
+    >
+      {{ $t('element.customize_off') }}
+    </Weko-Button>
+
+    <!-- 自定义消息内容 -->
+    <Weko-Button
+      @click="
+        message(
+          h('p', null, [
+            h('span', null, 'Message can be '),
+            h('i', { style: 'color: green' }, 'VNode'),
+          ]),
+          { type: 'success' },
+        )
+      "
+    >
+      {{ $t('element.customize_message') }}
+    </Weko-Button>
+
+    <!-- HTML片段作为正文内容 -->
+    <Weko-Button
+      @click="
+        message('<strong>This is <i>HTML</i> string</strong>', {
+          dangerouslyUseHTMLString: true,
+        })
+      "
+    >
+      {{ $t('element.content_html') }}
+    </Weko-Button>
   </div>
 </template>
 <script setup lang="ts">
 import { message } from '@/components/ElementComponents/ElementMessage/index.ts';
 import { View } from '@element-plus/icons-vue';
+import { h } from 'vue';
 </script>
 <style scoped lang="scss"></style>
