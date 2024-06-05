@@ -11,7 +11,8 @@ interface MessageParams {
   /** 消息类型，可选 `info` 、`success` 、`warning` 、`error` ，默认 `info` */
   type?: messageTypes;
   /** 自定义图标，该属性会覆盖 `type` 的图标 */
-  icon?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon?: any;
   /** 是否将 `message` 属性作为 `HTML` 片段处理，默认 `false` */
   dangerouslyUseHTMLString?: boolean;
   /** 消息风格，可选 `el` 、`antd` ，默认 `antd` */
@@ -31,8 +32,6 @@ interface MessageParams {
   /** 关闭时的回调函数, 参数为被关闭的 `message` 实例 */
   onClose?: () => void;
 }
-
-/** 用法非常简单，参考 src/views/components/message/index.vue 文件 */
 
 /**
  * `Message` 消息提示函数

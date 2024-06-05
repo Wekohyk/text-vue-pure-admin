@@ -45,9 +45,15 @@
     >
       {{ $t('element.message_merging') }}
     </Weko-Button>
+
+    <!-- 自定义图标 -->
+    <Weko-Button @click="message($t('element.customize_icon'), { icon: View })">
+      {{ $t('element.customize_icon') }}
+    </Weko-Button>
   </div>
 </template>
 <script setup lang="ts">
 import { message } from '@/components/ElementComponents/ElementMessage/index.ts';
+import { View } from '@element-plus/icons-vue';
 </script>
 <style scoped lang="scss"></style>
