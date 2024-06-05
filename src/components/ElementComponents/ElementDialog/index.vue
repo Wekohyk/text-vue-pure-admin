@@ -23,7 +23,9 @@
         <template #header>
           <div class="flex justify-between items-center">
             <span>{{ props.title }}</span>
-            <div class="flex gap-10 color-#999 cursor-pointer">
+            <div
+              class="flex gap-10 color-#999 cursor-pointer -translate-y-6.5 translate-x-0"
+            >
               <Weko-Icon
                 v-if="props.showFullscreen && props.fullscreen === false"
                 icon="expand"
@@ -33,15 +35,6 @@
                 v-if="props.showFullscreen && props.fullscreen === true"
                 icon="compress"
                 @click="toggleFullscreen(false)"
-              ></Weko-Icon>
-
-              <Weko-Icon
-                icon="xmark"
-                @click="
-                  handleClose(() => {
-                    dialogVisible = false;
-                  })
-                "
               ></Weko-Icon>
             </div>
           </div>

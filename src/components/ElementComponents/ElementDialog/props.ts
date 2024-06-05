@@ -55,7 +55,7 @@ export default {
   // 是否显示右上角关闭按钮
   showClose: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 
   // 是否显示遮罩层

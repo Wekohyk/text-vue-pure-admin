@@ -173,5 +173,8 @@ export default {
     open_delay_content: 'This is a dialog box that pops up after two seconds',
     close_delay: 'Delay the close for two seconds',
     close_delay_content: 'This is a dialog box that closes after two seconds',
+    showClose: 'Do not show Close Button',
+    showClose_content:
+      'This is a dialog box that does not show the close button',
   },
 };

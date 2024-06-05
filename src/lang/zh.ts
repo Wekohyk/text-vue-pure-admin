@@ -169,5 +169,7 @@ export default {
     open_delay_content: '这是一个延迟两秒打开弹窗的对话框',
     close_delay: '延迟两秒关闭弹窗',
     close_delay_content: '这是一个延迟两秒关闭弹窗的对话框',
+    showClose: '不显示关闭按钮',
+    showClose_content: '这是一个不显示关闭按钮的对话框',
   },
 };

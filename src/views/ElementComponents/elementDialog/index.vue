@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center gap-10">
+  <div class="flex justify-center items-center gap-10 flex-wrap">
     <!-- 基本用法 -->
     <Weko-ElementDialog></Weko-ElementDialog>
 
@@ -62,6 +62,14 @@
       :title="$t('element.close_delay')"
       :content="$t('element.close_delay_content')"
       :close-delay="2000"
+    ></Weko-ElementDialog>
+
+    <!-- 不显示右上角关闭按钮图标 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.showClose')"
+      :title="$t('element.showClose')"
+      :content="$t('element.showClose_content')"
+      :showClose="false"
     ></Weko-ElementDialog>
   </div>
 </template>
