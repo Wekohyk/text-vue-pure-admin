@@ -141,6 +141,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/fileUpload',
+            name: 'FileUpload',
+            component: () =>
+              import('@/views/ElementComponents/fileUpload/index.vue'),
+            meta: {
+              title: $t('element.fileUpload'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

@@ -153,6 +153,7 @@ export default {
     name: 'element-components',
     dialog: 'element-Dialog',
     message: 'element-Message',
+    fileUpdate: 'File Upload',
     confirmAgain: 'Are you sure to close this dialog?',
     cancel: 'Cancel',
     drag: 'Towable',

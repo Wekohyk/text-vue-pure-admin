@@ -150,6 +150,7 @@ export default {
     name: '基于 element-plus 的组件',
     dialog: '基于 element-plus 的对话框',
     message: '基于 element-plus 的消息提示',
+    fileUpload: '文件上传',
     confirmAgain: '你确定要关闭对话框吗?',
     cancel: '取消',
     drag: '可拖拽',
