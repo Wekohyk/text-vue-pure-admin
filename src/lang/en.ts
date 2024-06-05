@@ -196,5 +196,12 @@ export default {
     popconfirm: 'Whether there is a confirmation box when closing',
     popconfirm_content:
       'This is a dialog box that asks if there is a confirmation box when closed',
+    info: 'Info type message',
+    success: 'Success type message',
+    warning: 'Warning type message',
+    error: 'Error type message',
+    turn_off: 'Turn off the message',
+    message_merging: 'Packet message merging',
+    customize_icon: 'Customize Icon',
   },
 };

@@ -190,5 +190,12 @@ export default {
     popconfirm: '关闭时是否有确认框',
     popconfirm_content: '这是一个关闭时是否有确认框的对话框',
     form_dialog: '结合From表单使用',
+    info: 'info类型消息',
+    success: 'success类型消息',
+    warning: 'warning类型消息',
+    error: 'error类型消息',
+    trun_off: '可以关闭',
+    message_merging: '分组消息合并',
+    customize_icon: '自定义图标',
   },
 };
