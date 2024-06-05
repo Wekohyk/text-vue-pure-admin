@@ -175,5 +175,13 @@ export default {
     escDisabled_content: '这是一个禁止通过 ESC 键关闭的对话框',
     modalDisabled: '禁止通过点击modal关闭',
     modalDisabled_content: '这是一个禁止通过点击modal关闭对话框的对话框',
+    hiddenFooter: '隐藏底部取消和确认按钮',
+    hiddenFooter_content: '这是一个隐藏底部取消和确认按钮的对话框',
+    customize_header: '自定义头部',
+    customize_header_content: '这是一个自定义头部的对话框',
+    my_customize_header: '我的自定义头部',
+    customize_footer: '自定义底部',
+    customize_footer_content: '这是一个自定义底部的对话框',
+    my_customize_footer: '我的自定义底部',
   },
 };

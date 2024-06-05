@@ -181,5 +181,13 @@ export default {
       'This is a dialog box that disables the esc key to close',
     modalDisabled: 'Disable closing by clicking modal',
     modalDisabled_content: 'This is a dialog box that disables modal closing',
+    hiddenFooter: 'Hidden footer button',
+    hiddenFooter_content: 'This is a dialog box that hides the bottom button',
+    customize_header: 'Customize Header',
+    customize_header_content: 'This is a dialog box with a custom header',
+    my_customize_header: 'My Customize Header',
+    customize_footer: 'Customize Footer',
+    customize_footer_content: 'This is a dialog box with a custom footer',
+    my_customize_footer: 'My Customize Footer',
   },
 };

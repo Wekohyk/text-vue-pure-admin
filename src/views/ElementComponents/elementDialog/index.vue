@@ -87,6 +87,46 @@
       :content="$t('element.modalDisabled_content')"
       :close-on-click-modal="false"
     ></Weko-ElementDialog>
+
+    <!-- 隐藏底部取消和确认按钮 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.hiddenFooter')"
+      :title="$t('element.hiddenFooter')"
+      :content="$t('element.hiddenFooter_content')"
+      :hideFooter="false"
+    ></Weko-ElementDialog>
+
+    <!-- 自定义头部 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.customize_header')"
+      :title="$t('element.customize_header')"
+      :content="$t('element.customize_header_content')"
+      :customize_header="false"
+    >
+      <template #customize_header>
+        <div class="flex justify-between items-center">
+          <span>{{ $t('element.my_customize_header') }}</span>
+          <Weko-Button type="success">Button</Weko-Button>
+        </div>
+      </template>
+    </Weko-ElementDialog>
+
+    <!-- 自定义底部 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.customize_footer')"
+      :title="$t('element.customize_footer')"
+      :content="$t('element.customize_footer_content')"
+      :customize_footer="false"
+    >
+      <template #customize_footer>
+        <div class="flex justify-between items-center">
+          <span>{{ $t('element.my_customize_footer') }}</span>
+          <Weko-Button type="success">
+            {{ $t('components.off') }}
+          </Weko-Button>
+        </div>
+      </template>
+    </Weko-ElementDialog>
   </div>
 </template>
 <script setup lang="ts">

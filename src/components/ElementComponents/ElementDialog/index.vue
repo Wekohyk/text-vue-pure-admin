@@ -23,37 +23,44 @@
         :closeOnClickModal="props.closeOnClickModal"
       >
         <template #header>
-          <div class="flex justify-between items-center">
-            <span>{{ props.title }}</span>
+          <slot name="customize_header">
             <div
-              class="flex gap-10 color-#999 cursor-pointer -translate-y-6.5 translate-x-0"
+              class="flex justify-between items-center"
+              v-if="customize_header"
             >
-              <Weko-Icon
-                v-if="props.showFullscreen && props.fullscreen === false"
-                icon="expand"
-                @click="toggleFullscreen(true)"
-              ></Weko-Icon>
-              <Weko-Icon
-                v-if="props.showFullscreen && props.fullscreen === true"
-                icon="compress"
-                @click="toggleFullscreen(false)"
-              ></Weko-Icon>
+              <span>{{ props.title }}</span>
+              <div
+                class="flex gap-10 color-#999 cursor-pointer -translate-y-6.5 translate-x-0"
+              >
+                <Weko-Icon
+                  v-if="props.showFullscreen && props.fullscreen === false"
+                  icon="expand"
+                  @click="toggleFullscreen(true)"
+                ></Weko-Icon>
+                <Weko-Icon
+                  v-if="props.showFullscreen && props.fullscreen === true"
+                  icon="compress"
+                  @click="toggleFullscreen(false)"
+                ></Weko-Icon>
+              </div>
             </div>
-          </div>
+          </slot>
         </template>
         <!-- 对话框内容 -->
         <span>{{ props.content }}</span>
-        <template #footer>
-          <div class="dialog-footer">
-            <!-- 取消按钮 -->
-            <el-button @click="dialogVisible = false">
-              {{ props.btnSure }}
-            </el-button>
-            <!-- 确认按钮 -->
-            <el-button type="primary" @click="dialogVisible = false">
-              {{ props.btnClose }}
-            </el-button>
-          </div>
+        <template v-if="props.hideFooter" #footer>
+          <slot name="customize_footer">
+            <div class="dialog-footer">
+              <!-- 取消按钮 -->
+              <el-button @click="dialogVisible = false">
+                {{ props.btnSure }}
+              </el-button>
+              <!-- 确认按钮 -->
+              <el-button type="primary" @click="dialogVisible = false">
+                {{ props.btnClose }}
+              </el-button>
+            </div>
+          </slot>
         </template>
       </el-dialog>
     </div>

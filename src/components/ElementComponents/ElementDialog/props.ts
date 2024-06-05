@@ -103,4 +103,21 @@ export default {
     type: Boolean,
     default: true,
   },
+
+  // 是否隐藏底部取消和确认按钮
+  hideFooter: {
+    type: Boolean,
+    default: true,
+  },
+
+  // 自定义头部
+  customize_header: {
+    type: Boolean,
+    default: true,
+  },
+  // 自定义底部
+  customize_footer: {
+    type: Boolean,
+    default: true,
+  },
 };
