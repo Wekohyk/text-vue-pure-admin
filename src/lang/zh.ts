@@ -183,5 +183,9 @@ export default {
     customize_footer: '自定义底部',
     customize_footer_content: '这是一个自定义底部的对话框',
     my_customize_footer: '我的自定义底部',
+    open_callback: '打开对话框的回调',
+    open_callback_content: '这是一个打开对话框的回调的对话框',
+    close_callback: '关闭对话框的回调',
+    close_callback_content: '这是一个关闭对话框的回调的对话框',
   },
 };

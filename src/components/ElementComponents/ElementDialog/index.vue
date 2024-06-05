@@ -21,6 +21,8 @@
         :closeDelay="props.closeDelay"
         :closeOnPressEscape="props.closeOnPressEscape"
         :closeOnClickModal="props.closeOnClickModal"
+        @open="openCallback"
+        @close="closeCallback"
       >
         <template #header>
           <slot name="customize_header">
@@ -92,6 +94,8 @@ const emit = defineEmits([
   'update:isFullscreen',
   'openFullscreen',
   'closeFullscreen',
+  'open',
+  'close',
 ]);
 
 const toggleFullscreen = (value: boolean) => {
@@ -108,5 +112,13 @@ watch(
     }
   },
 );
+
+const openCallback = () => {
+  emit('open', () => {});
+};
+
+const closeCallback = () => {
+  emit('close', () => {});
+};
 </script>
 <style scoped lang="scss"></style>

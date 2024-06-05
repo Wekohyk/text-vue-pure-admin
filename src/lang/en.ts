@@ -189,5 +189,9 @@ export default {
     customize_footer: 'Customize Footer',
     customize_footer_content: 'This is a dialog box with a custom footer',
     my_customize_footer: 'My Customize Footer',
+    open_callback: 'Open the callback',
+    open_callback_content: 'This is a dialog box that opens the callback',
+    close_callback: 'Close the callback',
+    close_callback_content: 'This is a dialog box that closes the callback',
   },
 };

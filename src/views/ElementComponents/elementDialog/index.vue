@@ -127,6 +127,22 @@
         </div>
       </template>
     </Weko-ElementDialog>
+
+    <!-- 打开后的回调 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.open_callback')"
+      :title="$t('element.open_callback')"
+      :content="$t('element.open_callback_content')"
+      @open="openCallback"
+    ></Weko-ElementDialog>
+
+    <!-- 关闭后的回调 -->
+    <Weko-ElementDialog
+      :btnTitle="$t('element.close_callback')"
+      :title="$t('element.close_callback')"
+      :content="$t('element.close_callback_content')"
+      @close="closeCallback"
+    ></Weko-ElementDialog>
   </div>
 </template>
 <script setup lang="ts">
@@ -145,6 +161,14 @@ const openFullscreen = () => {
 
 const closeFullscreen = () => {
   ElMessage($t('element.closeFullscreen'));
+};
+
+const openCallback = () => {
+  ElMessage($t('element.open_callback'));
+};
+
+const closeCallback = () => {
+  ElMessage($t('element.close_callback'));
 };
 </script>
 <style scoped lang="scss"></style>
