@@ -11,7 +11,7 @@
         v-model="dialogVisible"
         :width="props.width"
         :height="props.height"
-        :before-close="handleClose"
+        :before-close="popConfirm ? handleClose : null"
         :fullscreen="props.fullscreen"
         :draggable="props.draggable"
         :show-close="props.showClose"

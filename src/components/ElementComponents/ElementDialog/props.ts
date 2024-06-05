@@ -120,4 +120,10 @@ export default {
     type: Boolean,
     default: true,
   },
+
+  // 关闭时是否有确认框
+  popConfirm: {
+    type: Boolean,
+    default: false,
+  },
 };

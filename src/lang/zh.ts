@@ -187,5 +187,7 @@ export default {
     open_callback_content: '这是一个打开对话框的回调的对话框',
     close_callback: '关闭对话框的回调',
     close_callback_content: '这是一个关闭对话框的回调的对话框',
+    popconfirm: '关闭时是否有确认框',
+    popconfirm_content: '这是一个关闭时是否有确认框的对话框',
   },
 };

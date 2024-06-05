@@ -193,5 +193,8 @@ export default {
     open_callback_content: 'This is a dialog box that opens the callback',
     close_callback: 'Close the callback',
     close_callback_content: 'This is a dialog box that closes the callback',
+    popconfirm: 'Whether there is a confirmation box when closing',
+    popconfirm_content:
+      'This is a dialog box that asks if there is a confirmation box when closed',
   },
 };
