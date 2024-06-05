@@ -189,5 +189,6 @@ export default {
     close_callback_content: '这是一个关闭对话框的回调的对话框',
     popconfirm: '关闭时是否有确认框',
     popconfirm_content: '这是一个关闭时是否有确认框的对话框',
+    form_dialog: '结合From表单使用',
   },
 };

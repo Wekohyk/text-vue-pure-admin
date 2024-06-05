@@ -24,6 +24,7 @@
         @open="openCallback"
         @close="closeCallback"
       >
+        <!-- 头部 -->
         <template #header>
           <slot name="customize_header">
             <div
@@ -48,8 +49,14 @@
             </div>
           </slot>
         </template>
+
         <!-- 对话框内容 -->
-        <span>{{ props.content }}</span>
+        <div>
+          <span v-if="!$slots.customize_body">{{ props.content }}</span>
+          <slot name="customize_body"></slot>
+        </div>
+
+        <!-- 底部内容 -->
         <template v-if="props.hideFooter" #footer>
           <slot name="customize_footer">
             <div class="dialog-footer">
