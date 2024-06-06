@@ -34,7 +34,7 @@
 
               <div @click="toLogin('signIn')">
                 <Weko-Button type="success">
-                  {{ $t('login.signIn') }}
+                  {{ $t('login.sign_in') }}
                 </Weko-Button>
               </div>
             </div>
@@ -43,11 +43,11 @@
       </el-header>
       <el-main class="boxContainer">
         <div class="tittle flex flex-col justify-center items-start">
-          <span>{{ $t('goHome') }}</span>
-          <span>{{ $t('youDrunk') }}</span>
+          <span>{{ $t('go_home') }}</span>
+          <span>{{ $t('you_drunk') }}</span>
         </div>
         <Weko-Button type="success" class="button" @click="toHome">
-          {{ $t('backHome') }}
+          {{ $t('back_home') }}
         </Weko-Button>
       </el-main>
     </el-container>

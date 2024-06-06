@@ -34,7 +34,7 @@
           :rules="[
             {
               required: true,
-              message: $t('login.pleaseVerificationCode'),
+              message: $t('login.please_verification_code'),
               trigger: 'blur',
             },
           ]"
@@ -45,7 +45,7 @@
           >
             <el-input
               v-model="rulesForm.verifyCode"
-              :placeholder="$t('login.verificationCode')"
+              :placeholder="$t('login.verification_code')"
             />
             <el-button
               :disabled="isDisabled"
@@ -112,10 +112,10 @@ const onUpdate = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      message($t('login.loginOk'), { type: 'success' });
+      message($t('login.login_ok'), { type: 'success' });
       router.push('/dashboard');
     } else {
-      message($t('login.loginNo'), { type: 'error' });
+      message($t('login.login_no'), { type: 'error' });
       console.log(fields);
     }
   });

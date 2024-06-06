@@ -51,7 +51,7 @@
             :rules="[
               {
                 required: true,
-                message: $t('login.pleaseEnterAccountNumber'),
+                message: $t('login.please_enter_account_number'),
                 trigger: 'blur',
               },
             ]"
@@ -59,7 +59,7 @@
           >
             <el-input
               v-model="form.accountNumber"
-              :placeholder="$t('login.accountNumber')"
+              :placeholder="$t('login.account_number')"
               clearable
             />
           </el-form-item>
@@ -70,7 +70,7 @@
             :rules="[
               {
                 required: true,
-                message: $t('login.pleaseCipher'),
+                message: $t('login.please_cipher'),
                 trigger: 'blur',
               },
             ]"
@@ -89,12 +89,12 @@
             <div class="w-full h-20 flex justify-between items-center gap-20">
               <el-checkbox v-model="checked">
                 <span class="flex">
-                  {{ $t('login.pureRemember') }}
+                  {{ $t('login.pure_remember') }}
                   <el-popover
                     placement="top"
                     :width="300"
                     trigger="hover"
-                    :content="$t('login.pureRememberInfo')"
+                    :content="$t('login.pure_remember_info')"
                   >
                     <template #reference>
                       <el-icon class="ml-2">
@@ -110,7 +110,7 @@
                 link
                 @click="useUserStoreHook().SET_CURRENTPAGE(4)"
               >
-                {{ $t('login.pureForget') }}
+                {{ $t('login.pure_forget') }}
               </el-button>
             </div>
           </el-form-item>
@@ -221,7 +221,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      message($t('login.loginOk'), { type: 'success' });
+      message($t('login.login_ok'), { type: 'success' });
       useUserStoreHook().SET_TOKEN(Date.now().toString());
       router.push('/dashboard');
     } else {

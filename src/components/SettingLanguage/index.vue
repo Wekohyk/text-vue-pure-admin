@@ -7,10 +7,10 @@
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item @click="selectLanguage('zh')">
-          {{ $t('useZh') }}
+          {{ $t('use_zh') }}
         </el-dropdown-item>
         <el-dropdown-item @click="selectLanguage('en')">
-          {{ $t('useEn') }}
+          {{ $t('use_en') }}
         </el-dropdown-item>
       </el-dropdown-menu>
     </template>

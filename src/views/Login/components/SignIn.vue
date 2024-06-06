@@ -15,7 +15,7 @@
           :rules="[
             {
               required: true,
-              message: $t('login.pleaseEnterAccountNumber'),
+              message: $t('login.please_enter_account_number'),
               trigger: 'blur',
             },
           ]"
@@ -23,7 +23,7 @@
         >
           <el-input
             v-model="rulesForm.accountNumber"
-            :placeholder="$t('login.accountNumber')"
+            :placeholder="$t('login.account_number')"
             clearable
           />
         </el-form-item>
@@ -55,7 +55,7 @@
           :rules="[
             {
               required: true,
-              message: $t('login.pleaseVerificationCode'),
+              message: $t('login.please_verification_code'),
               trigger: 'blur',
             },
           ]"
@@ -66,7 +66,7 @@
           >
             <el-input
               v-model="rulesForm.verifyCode"
-              :placeholder="$t('login.verificationCode')"
+              :placeholder="$t('login.verification_code')"
             />
             <el-button
               :disabled="isDisabled"
@@ -89,7 +89,7 @@
           :rules="[
             {
               required: true,
-              message: $t('login.pleaseCipher'),
+              message: $t('login.please_cipher'),
               trigger: 'blur',
             },
           ]"

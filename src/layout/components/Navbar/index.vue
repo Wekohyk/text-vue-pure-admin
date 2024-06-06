@@ -21,7 +21,7 @@
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item @click="logOut">
-              {{ $t('exitLogin') }}
+              {{ $t('exit_login') }}
             </el-dropdown-item>
           </el-dropdown-menu>
         </template>

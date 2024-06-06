@@ -1,11 +1,11 @@
 export const loginWay = [
   { title: 'login.phoneLogin', value: 'phone' },
   {
-    title: 'login.dimensionalLogin',
+    title: 'login.dimensional_login',
     value: 'dimensional',
   },
   {
-    title: 'login.signIn',
+    title: 'login.sign_in',
     value: 'signIn',
   },
 ];

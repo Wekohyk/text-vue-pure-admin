@@ -22,7 +22,7 @@ export const useVerifyCode = () => {
         isDisabled.value = true;
         text.value = `${time}`;
         // The next two lines can be deleted, pure clown code
-        message($t('openControlConsole'), { type: 'success' });
+        message($t('open_control_console'), { type: 'success' });
         timer.value = window.setInterval(() => {
           if (time > 0) {
             time -= 1;
