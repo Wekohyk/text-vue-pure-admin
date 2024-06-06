@@ -17,7 +17,7 @@
         </span>
       </router-link>
     </div>
-    <div class="w-100vw h-2 bg-#E5E7EC my-15"></div>
+    <div class="h-2 bg-#E5E7EC my-15"></div>
   </nav>
   <div>
     <router-view></router-view>
