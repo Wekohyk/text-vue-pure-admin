@@ -150,7 +150,7 @@ export default {
     name: '基于 element-plus 的组件',
     dialog: '基于 element-plus 的对话框',
     message: '基于 element-plus 的消息提示',
-    fileUpload: '文件上传',
+    file_upload: '文件上传',
     confirmAgain: '你确定要关闭对话框吗?',
     cancel: '取消',
     drag: '可拖拽',
@@ -203,5 +203,15 @@ export default {
     been_close: '已关闭',
     customize_message: '自定义消息内容',
     content_html: 'HTML片段作为正文内容',
+    upload_limit: '最多上传10张图片，请先删除在上传',
+    remove_file: '你确定要删除该文件吗',
+    remove_lose: '删除失败，请重试',
+    most_upload:
+      '最多上传10张图片，并且单个不超过2MB且格式为jpeg/png/gif的图片',
+    basic_upload: '基础上传',
+    upload_conditions:
+      '(支持:自动上传、拖拽上传、拖拽排序、设置请求头、上传进度、大图预览、多选文件、最大文件数量、文件类型限制、文件大小限制、删除文件)',
+    only_img: '只能上传图片',
+    img_size: '单个图片大小不能超过2MB',
   },
 };

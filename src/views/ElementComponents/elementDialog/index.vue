@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-left items-center gap-10 flex-wrap mt-30">
+  <div class="flex justify-left items-center gap-10 flex-wrap mt-30 m-10">
     <!-- 基本用法 -->
     <Weko-ElementDialog></Weko-ElementDialog>
 

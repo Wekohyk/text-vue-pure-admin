@@ -154,6 +154,7 @@ export default {
     dialog: 'element-Dialog',
     message: 'element-Message',
     fileUpdate: 'File Upload',
+    file_upload: 'File Upload',
     confirmAgain: 'Are you sure to close this dialog?',
     cancel: 'Cancel',
     drag: 'Towable',
@@ -210,5 +211,15 @@ export default {
     been_close: 'Have been closed',
     customize_message: 'Customize Message',
     content_html: 'HTML snippets as body content',
+    update_limit: 'Update the limit of 10 files',
+    remove_file: 'Are you sure you want to delete this file',
+    remove_lose: 'Delete files will lose forever',
+    most_upload:
+      'Upload a maximum of 10 images, with a single image no larger than 2MB and formatted as jpeg/png/gif',
+    basic_upload: 'Basic Upload',
+    upload_conditions:
+      '(Support: automatic upload, drag and drop upload, drag and drop sorting, set request header, upload progress, large picture preview, multi-select file, maximum file number, file type limit, file size limit, delete file)',
+    only_img: 'Only upload images',
+    img_size: 'A single image size cannot exceed 2MB',
   },
 };

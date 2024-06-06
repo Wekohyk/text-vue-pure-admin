@@ -13,12 +13,13 @@
         class="text-#5a9cf8 hover:text-#79bbff cursor-pointer"
       >
         <span>
-          {{ itemChildren.name }}
+          {{ itemChildren.meta?.title }}
         </span>
       </router-link>
     </div>
+    <div class="w-100vw h-2 bg-#E5E7EC my-15"></div>
   </nav>
-  <div class="m-10">
+  <div>
     <router-view></router-view>
   </div>
 </template>

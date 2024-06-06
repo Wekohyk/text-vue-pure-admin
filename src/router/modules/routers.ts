@@ -147,7 +147,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/fileUpload/index.vue'),
             meta: {
-              title: $t('element.fileUpload'), // 基于element-plus的对话框组件
+              title: $t('element.file_upload'), // 基于element-plus的对话框组件
               fontIcon: 'fa-solid fa-gear',
             },
           },
