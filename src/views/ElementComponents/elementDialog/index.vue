@@ -146,9 +146,9 @@
 
     <!-- 关闭时是否有确认框 -->
     <Weko-ElementDialog
-      :btnTitle="$t('element.popconfirm')"
-      :title="$t('element.popconfirm')"
-      :content="$t('element.popconfirm_content')"
+      :btnTitle="$t('element.pop_confirm')"
+      :title="$t('element.pop_confirm')"
+      :content="$t('element.pop_confirm_content')"
       popConfirm
     ></Weko-ElementDialog>
 

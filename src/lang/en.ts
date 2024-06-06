@@ -153,6 +153,7 @@ export default {
     name: 'element-components',
     dialog: 'element-Dialog',
     message: 'element-Message',
+    check_card: 'Check Card',
     fileUpdate: 'File Upload',
     file_upload: 'File Upload',
     confirmAgain: 'Are you sure to close this dialog?',
@@ -221,5 +222,7 @@ export default {
       '(Support: automatic upload, drag and drop upload, drag and drop sorting, set request header, upload progress, large picture preview, multi-select file, maximum file number, file type limit, file size limit, delete file)',
     only_img: 'Only upload images',
     img_size: 'A single image size cannot exceed 2MB',
+    single_check: 'Single Check',
+    multiple_check: 'Multiple Check',
   },
 };

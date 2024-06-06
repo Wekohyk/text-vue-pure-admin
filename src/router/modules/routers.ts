@@ -151,6 +151,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/checkCard',
+            name: 'CheckCard',
+            component: () =>
+              import('@/views/ElementComponents/checkCard/index.vue'),
+            meta: {
+              title: $t('element.check_card'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
