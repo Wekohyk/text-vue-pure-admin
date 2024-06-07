@@ -1,5 +1,5 @@
 <template>
-  <h2 class="row-title">{{ $t('components.basicUsage') }}</h2>
+  <h2 class="row-title">{{ $t('components.basic_usage') }}</h2>
   <div class="row">
     <Weko-Dropdown
       placement="bottom"
@@ -10,12 +10,12 @@
       hideAfterClick
     >
       <Weko-Button type="primary">
-        {{ $t('components.clickOpenDropdown') }}
+        {{ $t('components.click_open_dropdown') }}
       </Weko-Button>
     </Weko-Dropdown>
   </div>
 
-  <h2 class="row-title">{{ $t('components.clickOpenClose') }}</h2>
+  <h2 class="row-title">{{ $t('components.click_open_close') }}</h2>
   <div class="row">
     <Weko-Dropdown
       placement="bottom"
@@ -27,7 +27,7 @@
       ref="dropdownRef"
     >
       <Weko-Button type="primary">
-        {{ $t('components.clickOpenMenu') }}
+        {{ $t('components.click_open_menu') }}
       </Weko-Button>
     </Weko-Dropdown>
   </div>
@@ -36,7 +36,7 @@
     <Weko-Button @click="closeClick">{{ $t('components.off') }}</Weko-Button>
   </div>
 
-  <h2 class="row-title">{{ $t('components.supportsVNode') }}</h2>
+  <h2 class="row-title">{{ $t('components.supports_VNode') }}</h2>
   <div class="row">
     <Weko-Dropdown
       placement="bottom"
@@ -46,7 +46,7 @@
       @select="selectHandler"
     >
       <Weko-Button type="primary">
-        {{ $t('components.clickOpenDropdown') }}
+        {{ $t('components.click_open_dropdown') }}
       </Weko-Button>
     </Weko-Dropdown>
   </div>

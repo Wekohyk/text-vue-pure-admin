@@ -68,31 +68,31 @@
     <Weko-ElementDialog
       :btnTitle="$t('element.showClose')"
       :title="$t('element.showClose')"
-      :content="$t('element.showClose_content')"
+      :content="$t('element.show_close_content')"
       :showClose="false"
     ></Weko-ElementDialog>
 
     <!-- 禁止通过esc键关闭对话框 -->
     <Weko-ElementDialog
-      :btnTitle="$t('element.escDisabled')"
-      :title="$t('element.escDisabled')"
-      :content="$t('element.escDisabled_content')"
+      :btnTitle="$t('element.esc_disabled')"
+      :title="$t('element.escDisaesc_disabledbled')"
+      :content="$t('element.esc_disabled_content')"
       :close-on-press-escape="false"
     ></Weko-ElementDialog>
 
     <!-- 禁止通过点击modal关闭对话框 -->
     <Weko-ElementDialog
-      :btnTitle="$t('element.modalDisabled')"
-      :title="$t('element.modalDisabled')"
-      :content="$t('element.modalDisabled_content')"
+      :btnTitle="$t('element.modal_disabled')"
+      :title="$t('element.modal_disabled')"
+      :content="$t('element.modal_disabled_content')"
       :close-on-click-modal="false"
     ></Weko-ElementDialog>
 
     <!-- 隐藏底部取消和确认按钮 -->
     <Weko-ElementDialog
-      :btnTitle="$t('element.hiddenFooter')"
-      :title="$t('element.hiddenFooter')"
-      :content="$t('element.hiddenFooter_content')"
+      :btnTitle="$t('element.hidden_footer')"
+      :title="$t('element.hidden_footer')"
+      :content="$t('element.hidden_footer_content')"
       :hideFooter="false"
     ></Weko-ElementDialog>
 
@@ -197,12 +197,12 @@ const isFullscreen = (value: boolean) => {
 
 // 关闭全屏
 const openFullscreen = () => {
-  ElMessage($t('element.openFullscreen'));
+  ElMessage($t('element.open_fullscreen'));
 };
 
 // 打开全屏
 const closeFullscreen = () => {
-  ElMessage($t('element.closeFullscreen'));
+  ElMessage($t('element.close_fullscreen'));
 };
 
 // 打开后的回调

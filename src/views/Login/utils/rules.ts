@@ -20,7 +20,7 @@ const loginRules = reactive<FormRules>({
         if (value === '') {
           console.log(rule);
 
-          return callback(new Error($t('login.purePassWordReg')));
+          return callback(new Error($t('login.pure_pass_word_reg')));
         }
         if (!REGEXP_PWD.test(value)) {
           return callback(new Error($t('login.pure_pass_word_rule_reg')));
@@ -42,7 +42,7 @@ const updateRules = reactive<FormRules>({
           return callback(new Error($t('login.pleasePhone')));
         }
         if (!REGEXP_PHONE.test(value)) {
-          return callback(new Error($t('login.pleasePhoneCorrectReg')));
+          return callback(new Error($t('login.please_phone_correct_reg')));
         }
         return callback();
       },
@@ -71,7 +71,7 @@ const updateRules = reactive<FormRules>({
         if (value === '') {
           console.log(rule);
 
-          return callback(new Error($t('login.purePassWordReg')));
+          return callback(new Error($t('login.pure_pass_word_reg')));
         }
         if (!REGEXP_PWD.test(value)) {
           return callback(new Error($t('login.pure_pass_word_rule_reg')));

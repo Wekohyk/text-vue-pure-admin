@@ -75,8 +75,8 @@
             >
               {{
                 text.length > 0
-                  ? text + $t('login.pureInfo')
-                  : $t('login.getVisible')
+                  ? text + $t('login.pure_info')
+                  : $t('login.get_visible')
               }}
             </el-button>
           </div>
@@ -108,7 +108,7 @@
         <el-form-item :rules="repeatPasswordRule" prop="repeatPassword">
           <el-input
             v-model="rulesForm.repeatPassword"
-            :placeholder="$t('login.againPassword')"
+            :placeholder="$t('login.again_password')"
             clearable
             show-password
           />
@@ -120,11 +120,11 @@
         <el-form-item>
           <div class="w-full h-20 flex items-center">
             <el-checkbox v-model="checked">
-              {{ $t('login.pureReadAccept') }}
+              {{ $t('login.pure_read_accept') }}
             </el-checkbox>
             <!-- pure forget -->
             <el-button type="primary" link @click="isPurePrivacyPolicy()">
-              {{ $t('login.purePrivacyPolicy') }}
+              {{ $t('login.pure_privacy_policy') }}
             </el-button>
           </div>
         </el-form-item>
@@ -194,7 +194,7 @@ const onUpdate = async (formEl: FormInstance | undefined) => {
   await formEl.validate((valid, fields) => {
     if (valid) {
       if (!checked.value) {
-        return message($t('login.pleaseCheckPurePrivacyPolicy'), {
+        return message($t('login.please_check_pure_privacy_policy'), {
           type: 'error',
         });
       }
@@ -216,10 +216,10 @@ const repeatPasswordRule = [
       if (value === '') {
         console.log(rule);
 
-        return callback(new Error($t('login.purePassWordReg')));
+        return callback(new Error($t('login.pure_pass_word_reg')));
       }
       if (rulesForm.password !== value) {
-        return callback(new Error($t('login.pleaseAgainPasswordReg')));
+        return callback(new Error($t('login.please_again_password_reg')));
       }
       return callback();
     },
@@ -229,7 +229,9 @@ const repeatPasswordRule = [
 
 const isPurePrivacyPolicy = () => {
   isOpenPurePrivacyPolicy.value != isOpenPurePrivacyPolicy.value;
-  debouncedMessage($t('login.isOpenPurePrivacyPolicy'), { type: 'success' });
+  debouncedMessage($t('login.is_open_pure_privacy_policy'), {
+    type: 'success',
+  });
 };
 
 watch(checked, bool => {

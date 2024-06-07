@@ -1,6 +1,6 @@
 <template>
   <h2 class="row-title">
-    {{ $t('components.pagerText1') }}
+    {{ $t('components.pager_text1') }}
   </h2>
   <div class="row">
     <Weko-Pager
@@ -11,7 +11,7 @@
   </div>
 
   <h2 class="row-title">
-    {{ $t('components.pagerText2') }}
+    {{ $t('components.pager_text2') }}
   </h2>
   <div class="row">
     <Weko-Pager
@@ -21,7 +21,7 @@
     ></Weko-Pager>
   </div>
 
-  <h2 class="row-title">{{ $t('components.pagerText3') }}</h2>
+  <h2 class="row-title">{{ $t('components.pager_text3') }}</h2>
   <div class="row">
     <Weko-Pager
       :total="12"
@@ -31,7 +31,7 @@
     ></Weko-Pager>
   </div>
 
-  <h2 class="row-title">{{ $t('components.pagerText4') }}</h2>
+  <h2 class="row-title">{{ $t('components.pager_text4') }}</h2>
   <div class="row">
     <Weko-Pager
       :total="20"
@@ -47,7 +47,7 @@
     ></Weko-Pager>
   </div>
 
-  <h2 class="row-title">{{ $t('components.pagerText5') }}</h2>
+  <h2 class="row-title">{{ $t('components.pager_text5') }}</h2>
   <div class="row">
     <Weko-Pager
       :total="20"

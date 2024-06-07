@@ -54,8 +54,8 @@
             >
               {{
                 text.length > 0
-                  ? text + $t('login.pureInfo')
-                  : $t('login.getVisible')
+                  ? text + $t('login.pure_info')
+                  : $t('login.get_visible')
               }}
             </el-button>
           </div>

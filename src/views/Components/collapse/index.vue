@@ -1,5 +1,5 @@
 <template>
-  <h2 class="row-title">{{ $t('components.foldPanel') }}</h2>
+  <h2 class="row-title">{{ $t('components.fold_panel') }}</h2>
   <div class="row">
     <Weko-Collapse v-model="openedValue" @change="changeHandle">
       <Weko-CollapseItem name="a" title="home">
@@ -16,7 +16,7 @@
       </Weko-CollapseItem>
     </Weko-Collapse>
   </div>
-  <h2 class="row-title">{{ $t('components.accordionMode') }}</h2>
+  <h2 class="row-title">{{ $t('components.accordion_mode') }}</h2>
   <div class="row">
     <Weko-Collapse v-model="openedValue2" @change="changeHandle" accordion>
       <Weko-CollapseItem name="a" title="home">
@@ -33,7 +33,7 @@
       </Weko-CollapseItem>
     </Weko-Collapse>
   </div>
-  <h2 class="row-title">{{ $t('components.customTitle') }}</h2>
+  <h2 class="row-title">{{ $t('components.custom_title') }}</h2>
   <div class="row">
     <Weko-Collapse v-model="openedValue3" accordion>
       <Weko-CollapseItem name="Consistency" title="Consistency">

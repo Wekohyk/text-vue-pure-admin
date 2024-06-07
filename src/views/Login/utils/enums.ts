@@ -12,19 +12,19 @@ export const loginWay = [
 
 export const thirdParty = [
   {
-    title: 'login.pureWeChatLogin',
+    title: 'login.pure_weChat_login',
     icon: 'la:weixin',
   },
   {
-    title: 'login.pureAlipayLogin',
+    title: 'login.pure_alipay_login',
     icon: 'ant-design:alipay-circle-filled',
   },
   {
-    title: 'login.pureQQLogin',
+    title: 'login.pure_qq_login',
     icon: 'icon-park-outline:tencent-qq',
   },
   {
-    title: 'login.pureWeiBoLogin',
+    title: 'login.pure_wei_bo_login',
     icon: 'ri:weibo-fill',
   },
 ];

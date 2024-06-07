@@ -3,17 +3,17 @@ export default {
   // 按钮文本
   btnTitle: {
     type: String,
-    default: $t('components.basicUsage'),
+    default: $t('components.basic_usage'),
   },
   // 对话框的标题
   title: {
     type: String,
-    default: $t('components.basicUsage'),
+    default: $t('components.basic_usage'),
   },
   // 对话框内容
   content: {
     type: String,
-    default: $t('components.basicUsage'),
+    default: $t('components.basic_usage'),
   },
 
   // 对话框的宽度和高度

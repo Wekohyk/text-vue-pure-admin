@@ -53,8 +53,8 @@
             >
               {{
                 text.length > 0
-                  ? text + $t('login.pureInfo')
-                  : $t('login.getVisible')
+                  ? text + $t('login.pure_info')
+                  : $t('login.get_visible')
               }}
             </el-button>
           </div>
@@ -85,7 +85,7 @@
         <el-form-item :rules="repeatPasswordRule" prop="repeatPassword">
           <el-input
             v-model="rulesForm.repeatPassword"
-            :placeholder="$t('login.againPassword')"
+            :placeholder="$t('login.again_password')"
             clearable
             show-password
           />
@@ -153,7 +153,9 @@ const onUpdate = async (formEl: FormInstance | undefined) => {
   await formEl.validate((valid, fields) => {
     if (valid) {
       // Simulate request, need to be modified according to actual development
-      debouncedMessage($t('login.purePassWordUpdateReg'), { type: 'success' });
+      debouncedMessage($t('login.pure_pass_word_update_reg'), {
+        type: 'success',
+      });
     }
     return fields;
   });
@@ -170,10 +172,10 @@ const repeatPasswordRule = [
       if (value === '') {
         console.log(rule);
 
-        return callback(new Error($t('login.purePassWordReg')));
+        return callback(new Error($t('login.pure_pass_word_reg')));
       }
       if (rulesForm.password !== value) {
-        return callback(new Error($t('login.pleaseAgainPasswordReg')));
+        return callback(new Error($t('login.please_again_password_reg')));
       }
       return callback();
     },

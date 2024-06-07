@@ -7,7 +7,7 @@ export default {
       data: {
         option1: {
           title: {
-            text: $t('echarts.accessNumber'),
+            text: $t('echarts.access_number'),
             left: 'center',
           },
           tooltip: {},
@@ -25,7 +25,7 @@ export default {
           yAxis: {},
           series: [
             {
-              name: $t('echarts.everyDay'),
+              name: $t('echarts.every_day'),
               type: 'bar',
               data: [35, 120, 136, 210, 110, 210, 90],
               itemStyle: {
@@ -37,7 +37,7 @@ export default {
         },
         option2: {
           title: {
-            text: $t('echarts.accessNumber'),
+            text: $t('echarts.access_number'),
             left: 'center',
           },
           tooltip: {},
@@ -73,7 +73,7 @@ export default {
         },
         option3: {
           title: {
-            text: $t('echarts.accessNumber'),
+            text: $t('echarts.access_number'),
             left: 'center',
           },
           series: [
@@ -94,7 +94,7 @@ export default {
         },
         option4: {
           title: {
-            text: $t('echarts.accessNumber'),
+            text: $t('echarts.access_number'),
             left: 'center',
           },
           tooltip: {},
@@ -112,7 +112,7 @@ export default {
           yAxis: {},
           series: [
             {
-              name: $t('echarts.everyDay'),
+              name: $t('echarts.every_day'),
               type: 'scatter',
               data: [35, 120, 136, 210, 110, 210, 90],
               itemStyle: {

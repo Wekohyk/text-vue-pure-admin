@@ -1,5 +1,5 @@
 <template>
-  <h2 class="row-title">{{ $t('components.normalImport') }}</h2>
+  <h2 class="row-title">{{ $t('components.normal_import') }}</h2>
   <div class="row">
     <Weko-Icon icon="user-secret"></Weko-Icon>
     <Weko-Icon icon="bars"></Weko-Icon>
@@ -11,7 +11,7 @@
     <Weko-Icon icon="folder"></Weko-Icon>
     <Weko-Icon icon="folder-open"></Weko-Icon>
   </div>
-  <h2 class="row-title">{{ $t('components.selectSize') }}</h2>
+  <h2 class="row-title">{{ $t('components.select_size') }}</h2>
   <div class="row">
     <Weko-Icon icon="user-secret" size="2xs"></Weko-Icon>
     <Weko-Icon icon="bars" size="xs"></Weko-Icon>
@@ -22,7 +22,7 @@
     <Weko-Icon icon="barcode" size="3x"></Weko-Icon>
     <Weko-Icon icon="folder" size="4x"></Weko-Icon>
   </div>
-  <h2 class="row-title">{{ $t('components.rotationAndFlip') }}</h2>
+  <h2 class="row-title">{{ $t('components.rotation_and_flip') }}</h2>
   <div class="row">
     <Weko-Icon icon="user-secret" rotation="90" size="xl"></Weko-Icon>
     <Weko-Icon icon="bars" rotation="270" size="xl"></Weko-Icon>

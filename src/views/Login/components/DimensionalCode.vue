@@ -20,7 +20,7 @@
         <el-form-item class="min-w-290 mt-12">
           <el-divider>
             <p class="text-gray-500 text-xs text-center">
-              {{ $t('login.pureTip') }}
+              {{ $t('login.pure_tip') }}
             </p>
           </el-divider>
         </el-form-item>

@@ -149,7 +149,7 @@
           <el-form-item>
             <el-divider>
               <p class="text-gray-500 text-xs">
-                {{ $t('login.thirdPartyLogin') }}
+                {{ $t('login.third_party_login') }}
               </p>
             </el-divider>
             <div

@@ -1,5 +1,5 @@
 <template>
-  <h2 class="row-title">{{ $t('components.differentDirections') }}</h2>
+  <h2 class="row-title">{{ $t('components.different_directions') }}</h2>
   <div class="row">
     <div class="row">
       <Weko-Tooltip
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <h2 class="row-title">{{ $t('components.switchTrigger') }}</h2>
+  <h2 class="row-title">{{ $t('components.switch_trigger') }}</h2>
   <div class="row">
     <div class="row">
       <Weko-Tooltip content="this is a test" placement="top" trigger="click">
@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <h2 class="row title">{{ $t('components.manualTrigger') }}</h2>
+  <h2 class="row title">{{ $t('components.manual_trigger') }}</h2>
   <div class="row">
     <Weko-Tooltip
       content="this is a test"
@@ -52,14 +52,14 @@
   </div>
   <div class="row">
     <Weko-Button @click="openHandler">
-      {{ $t('components.openPrompt') }}
+      {{ $t('components.open_prompt') }}
     </Weko-Button>
     <Weko-Button @click="closeHandler">
-      {{ $t('components.closePrompt') }}
+      {{ $t('components.close_prompt') }}
     </Weko-Button>
   </div>
 
-  <h2 class="row-title">{{ $t('components.delayedTrigger') }}</h2>
+  <h2 class="row-title">{{ $t('components.delayed_trigger') }}</h2>
   <div class="row">
     <Weko-Tooltip
       content="this is a test"

@@ -1,30 +1,30 @@
 <template>
-  <h2 class="row-title">{{ $t('components.dialogExample') }}</h2>
+  <h2 class="row-title">{{ $t('components.dialog_example') }}</h2>
   <div class="row">
     <Weko-Button type="primary" @click="visible = true">
-      {{ $t('components.firstDialog') }}
+      {{ $t('components.first_dialog') }}
     </Weko-Button>
     <Weko-Button type="success" @click="visible2 = true">
-      {{ $t('components.secondDialog') }}
+      {{ $t('components.second_dialog') }}
     </Weko-Button>
     <Weko-Button type="info" @click="visible3 = true">
-      {{ $t('components.thirdDialog') }}
+      {{ $t('components.third_dialog') }}
     </Weko-Button>
   </div>
   <Weko-Dialog v-model:visible="visible" @close="visible = false">
-    {{ $t('components.dialogText') }}
+    {{ $t('components.dialog_text') }}
   </Weko-Dialog>
   <Weko-Dialog
     v-model:visible="visible2"
     @close="visible2 = false"
-    :title="$t('components.dialogBasicName')"
+    :title="$t('components.dialog_basic_name')"
     top="30vh"
     width="90%"
   >
-    {{ $t('components.dialogText') }}
+    {{ $t('components.dialog_text') }}
   </Weko-Dialog>
   <Weko-Dialog v-model:visible="visible3" @close="visible3 = false">
-    {{ $t('components.dialogText') }}
+    {{ $t('components.dialog_text') }}
     <template #footer>
       <Weko-Button type="danger" @click="visible3 = false">
         {{ $t('components.off') }}
