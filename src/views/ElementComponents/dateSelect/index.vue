@@ -145,33 +145,33 @@ import { ref, shallowRef, h } from 'vue';
 
 const size = ref<'default' | 'large' | 'small'>('default');
 
-const value1 = ref<Date | null>(null);
-const value2 = ref<Date | null>(null);
-const value3 = ref<Date | null>(null);
-const value4 = ref<Date | null>(null);
-const value5 = ref<Date | null>(null);
-const value6 = ref<Date | null>(null);
-const value7 = ref<Date | null>(null);
-const value8 = ref<Date | null>(null);
+const value1 = ref('');
+const value2 = ref('');
+const value3 = ref('');
+const value4 = ref('');
+const value5 = ref('');
+const value6 = ref('');
+const value7 = ref('');
+const value8 = ref('');
 const dateFormat = ref('');
-const value9 = ref<Date | null>(null);
+const value9 = ref('');
 const customPrefix = shallowRef({
   render() {
     return h('p', 'pre');
   },
 });
-const value10 = ref<Date | null>('2024-6-22');
+const value10 = ref('2024-6-1');
 const holidays = [
-  '2024-6-22',
-  '2024-6-23',
-  '2024-6-24',
-  '2024-6-25',
-  '2024-6-26',
-  '2024-6-27',
-  '2024-6-28',
-  '2024-6-29',
-  '2024-6-30',
-  '2024-6-31',
+  '2024-6-1',
+  '2024-6-2',
+  '2024-6-3',
+  '2024-6-4',
+  '2024-6-5',
+  '2024-6-6',
+  '2024-6-7',
+  '2024-6-8',
+  '2024-6-9',
+  '2024-6-10',
 ];
 
 const isHoliday = ({ dayjs }) => {
@@ -208,7 +208,7 @@ const isHoliday = ({ dayjs }) => {
   left: 50%;
   width: 6px;
   height: 6px;
-  background: var(--el-color-danger);
+  background: red;
   border-radius: 50%;
   transform: translateX(-50%);
 }
