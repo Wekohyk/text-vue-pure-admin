@@ -242,5 +242,11 @@ export default {
     pick_month_range: 'Select month range',
     start_month: 'Start month',
     end_month: 'End month',
+    date_format: 'Date format',
+    timestamp: 'Timestamp',
+    year_month_date: 'Year/Month/Date',
+    custom_prefix: 'Custom prefix',
+    please_pick_date: 'Please select a date',
+    custom_content: 'Custom content',
   },
 };

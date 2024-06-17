@@ -234,5 +234,11 @@ export default {
     pick_month_range: '选择月份范围',
     start_month: '开始月份',
     end_month: '结束月份',
+    date_format: '日期格式',
+    timestamp: '时间戳',
+    year_month_date: '年月日',
+    custom_prefix: '自定义前缀',
+    please_pick_date: '请选择日期',
+    custom_content: '自定义内容',
   },
 };
