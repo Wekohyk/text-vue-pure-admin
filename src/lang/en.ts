@@ -248,5 +248,6 @@ export default {
     custom_prefix: 'Custom prefix',
     please_pick_date: 'Please select a date',
     custom_content: 'Custom content',
+    date_time_picker: 'Date Time Picker',
   },
 };

@@ -240,5 +240,6 @@ export default {
     custom_prefix: '自定义前缀',
     please_pick_date: '请选择日期',
     custom_content: '自定义内容',
+    date_time_picker: '日期时间选择器',
   },
 };
