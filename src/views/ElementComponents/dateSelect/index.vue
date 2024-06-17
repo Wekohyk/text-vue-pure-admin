@@ -128,7 +128,6 @@
         type="date"
         :placeholder="$t('element.please_pick_date')"
         format="YYYY/MM/DD"
-        value-format="YYYY-MM-DD"
       >
         <template #default="cell">
           <div class="cell" :class="{ current: cell.isCurrent }">
