@@ -161,6 +161,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/dateSelect',
+            name: 'DateSelect',
+            component: () =>
+              import('@/views/ElementComponents/dateSelect/index.vue'),
+            meta: {
+              title: $t('element.data_select'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
