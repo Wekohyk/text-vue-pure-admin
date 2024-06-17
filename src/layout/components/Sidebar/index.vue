@@ -117,7 +117,7 @@
 
     <!-- footer button -->
     <div
-      class="absolute bottom-0 text-center w-100% bg-#fff h-40 flex justify-center"
+      class="absolute bottom-0 text-center w-100% bg-#fff h-40 flex justify-center items-center"
     >
       <div
         v-if="!store.showSidebar"
@@ -164,6 +164,11 @@ const store = settingStore();
 
 .scrollbar-wrapper {
   overflow-x: hidden !important;
+  .el-scrollbar__view {
+    ul {
+      padding-bottom: 40px !important;
+    }
+  }
 }
 
 ::v-deep #one .el-icon {
