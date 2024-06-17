@@ -249,5 +249,6 @@ export default {
     please_pick_date: 'Please select a date',
     custom_content: 'Custom content',
     date_time_picker: 'Date Time Picker',
+    date_time: 'Date and Time',
   },
 };

@@ -241,5 +241,9 @@ export default {
     please_pick_date: '请选择日期',
     custom_content: '自定义内容',
     date_time_picker: '日期时间选择器',
+    date_time: '日期和时间点',
+    today: '今天',
+    yesterday: '昨天',
+    last_week: '上周',
   },
 };
