@@ -191,6 +191,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/iconSelect',
+            name: 'IconSelect',
+            component: () =>
+              import('@/views/ElementComponents/iconSelect/index.vue'),
+            meta: {
+              title: $t('element.icon_select'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

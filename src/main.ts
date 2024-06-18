@@ -46,11 +46,19 @@ import CollapseItem from '@/components/Components/Collapse/CollapseItem.vue';
 import Tooltip from '@/components/Components/Tooltip/index.vue';
 import Dropdown from '@/components/Components/Dropdown/index.vue';
 import ElementDialog from '@/components/ElementComponents/ElementDialog/index.vue';
-
 // App
 import App from './App.vue';
-
 const app = createApp(App);
+
+// 全局注册@iconify/vue图标库
+import {
+  IconifyIconOffline,
+  IconifyIconOnline,
+  FontIcon,
+} from './components/ReIcon';
+app.component('IconifyIconOffline', IconifyIconOffline);
+app.component('IconifyIconOnline', IconifyIconOnline);
+app.component('FontIcon', FontIcon);
 
 app.component('font-awesome-icon', FontAwesomeIcon);
 /* Register a custom component */

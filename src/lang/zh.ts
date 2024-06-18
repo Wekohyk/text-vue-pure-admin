@@ -261,5 +261,9 @@ export default {
     fixed_time: '固定时间点',
     time_format: '时间格式',
     fixed_time_range: '固定时间范围',
+    icon_select: '图标选择器',
+    search_icon: '搜索图标',
+    icon_not_exist: '图标不存在',
+    clear: '清空',
   },
 };

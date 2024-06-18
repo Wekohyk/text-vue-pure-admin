@@ -266,5 +266,9 @@ export default {
     fixed_time: 'Fixed time point',
     time_format: 'Time format',
     fixed_time_range: 'Fixed time range',
+    icon_select: 'Icon Selector',
+    search_icon: 'Search icon',
+    icon_not_exist: 'The icon does not exist',
+    clear: 'Clear',
   },
 };
