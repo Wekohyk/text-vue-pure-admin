@@ -270,5 +270,8 @@ export default {
     search_icon: 'Search icon',
     icon_not_exist: 'The icon does not exist',
     clear: 'Clear',
+    animate_css: 'Animate.css selector',
+    animation_not_exist: 'The animation does not exist',
+    please_select_animation: 'Please select an animation',
   },
 };

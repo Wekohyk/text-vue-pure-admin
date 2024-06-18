@@ -35,6 +35,9 @@ library.add(fas);
 library.add(far);
 library.add(fab);
 
+/* animate.css */
+import 'animate.css';
+
 /* Register a custom component */
 import Icon from '@/components/Components/Icon/index.vue';
 import Button from '@/components/Components/Button/index.vue';

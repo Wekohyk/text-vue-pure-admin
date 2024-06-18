@@ -201,6 +201,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/animateCss',
+            name: 'animateCss',
+            component: () =>
+              import('@/views/ElementComponents/animateCss/index.vue'),
+            meta: {
+              title: $t('element.animate_css'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

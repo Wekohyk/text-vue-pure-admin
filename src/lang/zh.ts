@@ -265,5 +265,8 @@ export default {
     search_icon: '搜索图标',
     icon_not_exist: '图标不存在',
     clear: '清空',
+    animate_css: 'animate.css 选择器',
+    animation_not_exist: '动画不存在',
+    please_select_animation: '请选择动画',
   },
 };

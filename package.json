@@ -35,6 +35,7 @@
     "@popperjs/core": "^2.11.8",
     "@pureadmin/utils": "^2.4.7",
     "@vueuse/motion": "^2.1.0",
+    "animate.css": "^4.1.1",
     "axios": "^1.6.8",
     "component-library-js": "^1.0.1",
     "echarts": "^5.5.0",
