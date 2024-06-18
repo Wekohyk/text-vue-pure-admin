@@ -203,11 +203,21 @@ export const routers = [
           },
           {
             path: '/animateCss',
-            name: 'animateCss',
+            name: 'AnimateCss',
             component: () =>
               import('@/views/ElementComponents/animateCss/index.vue'),
             meta: {
               title: $t('element.animate_css'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
+          {
+            path: '/pictureCrop',
+            name: 'PictureCrop',
+            component: () =>
+              import('@/views/ElementComponents/pictureCrop/index.vue'),
+            meta: {
+              title: $t('element.picture_crop'), // 基于element-plus的对话框组件
               fontIcon: 'fa-solid fa-gear',
             },
           },

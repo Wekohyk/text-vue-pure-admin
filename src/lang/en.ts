@@ -273,5 +273,6 @@ export default {
     animate_css: 'Animate.css selector',
     animation_not_exist: 'The animation does not exist',
     please_select_animation: 'Please select an animation',
+    picture_crop: 'Picture Crop',
   },
 };

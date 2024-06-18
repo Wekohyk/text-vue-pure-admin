@@ -268,5 +268,6 @@ export default {
     animate_css: 'animate.css 选择器',
     animation_not_exist: '动画不存在',
     please_select_animation: '请选择动画',
+    picture_crop: '图片裁剪',
   },
 };
