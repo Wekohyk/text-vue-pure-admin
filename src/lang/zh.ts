@@ -237,6 +237,7 @@ export default {
     date_format: '日期格式',
     timestamp: '时间戳',
     year_month_date: '年月日',
+    year_month_date_time: '年月日 时分秒',
     custom_prefix: '自定义前缀',
     please_pick_date: '请选择日期',
     custom_content: '自定义内容',
@@ -245,5 +246,11 @@ export default {
     today: '今天',
     yesterday: '昨天',
     last_week: '上周',
+    date_time_format: '日期时间格式',
+    date_time_radius: '日期和时间范围',
+    last_month: '上个月',
+    three_month: '三个月前',
+    pop_controllable:
+      '弹出面板位置可控（如果弹出位置不足以完整展示面板会自动调整位置）',
   },
 };

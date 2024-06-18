@@ -245,10 +245,17 @@ export default {
     date_format: 'Date format',
     timestamp: 'Timestamp',
     year_month_date: 'Year/Month/Date',
+    year_month_date_time: 'Year/Month/Date Hour:min:sec',
     custom_prefix: 'Custom prefix',
     please_pick_date: 'Please select a date',
     custom_content: 'Custom content',
     date_time_picker: 'Date Time Picker',
     date_time: 'Date and Time',
+    date_time_format: 'Date-time format',
+    date_time_radius: 'Date sum',
+    last_month: 'Last month',
+    three_month: 'Three months ago',
+    pop_controllable:
+      'The position of the pop-up panel is controllable (if the pop-up position is not enough to fully display the panel, the position will be automatically adjusted)',
   },
 };
