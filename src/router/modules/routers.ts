@@ -181,6 +181,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/timePicker',
+            name: 'TimePicker',
+            component: () =>
+              import('@/views/ElementComponents/timePicker/index.vue'),
+            meta: {
+              title: $t('element.time_picker'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

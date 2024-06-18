@@ -252,5 +252,14 @@ export default {
     three_month: '三个月前',
     pop_controllable:
       '弹出面板位置可控（如果弹出位置不足以完整展示面板会自动调整位置）',
+    time_picker: '时间选择器',
+    wheel_selection: '鼠标滚轮进行选择',
+    arrow_selection: '箭头进行选择',
+    limit_time: '限制时间选择',
+    arbitrary_time: '任意时间选择',
+    picker_time: '时间选择',
+    fixed_time: '固定时间点',
+    time_format: '时间格式',
+    fixed_time_range: '固定时间范围',
   },
 };

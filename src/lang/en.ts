@@ -257,5 +257,14 @@ export default {
     three_month: 'Three months ago',
     pop_controllable:
       'The position of the pop-up panel is controllable (if the pop-up position is not enough to fully display the panel, the position will be automatically adjusted)',
+    time_picker: 'Time picker',
+    wheel_selection: 'Mouse wheel to selection',
+    arrow_selection: 'Arrow selection',
+    limit_time: 'Limit the time selection range',
+    arbitrary_time: 'Arbitrary time range',
+    picker_time: 'Select time',
+    fixed_time: 'Fixed time point',
+    time_format: 'Time format',
+    fixed_time_range: 'Fixed time range',
   },
 };
