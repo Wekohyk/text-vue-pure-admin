@@ -269,5 +269,7 @@ export default {
     animation_not_exist: '动画不存在',
     please_select_animation: '请选择动画',
     picture_crop: '图片裁剪',
+    picture_crop_text:
+      '图片裁剪，基于开源的 cropperjs 进行二次封装（提示：右键下面左侧裁剪区可开启功能菜单）',
   },
 };

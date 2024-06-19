@@ -274,5 +274,7 @@ export default {
     animation_not_exist: 'The animation does not exist',
     please_select_animation: 'Please select an animation',
     picture_crop: 'Picture Crop',
+    picture_crop_text:
+      'Image cropping, based on open source cropperjs for secondary packaging (Tip: right-click below the left cropping area can open the function menu)',
   },
 };

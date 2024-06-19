@@ -1,7 +1,7 @@
 <template>
   <div class="m-20">
     <!-- 调节大小按钮 -->
-    <div class="flex items-center b-b-1 b-b-solid b-b-#000 pb-20">
+    <div class="flex items-center b-b-1 b-b-solid b-b-#E5E7EB pb-20">
       <div class="font-600 mr-40">{{ $t('element.select_size') }}</div>
       <el-radio-group v-model="size" aria-label="size control">
         <el-radio-button value="large">{{ $t('large') }}</el-radio-button>
@@ -17,8 +17,6 @@
         v-model="value1"
         type="date"
         :placeholder="$t('element.select_day')"
-        :disabled-date="disabledDate"
-        :shortcuts="shortcuts"
         :size="size"
       />
     </div>
@@ -79,12 +77,7 @@
     <!-- 日期格式 -->
     <div class="mt-20">
       <div class="font-600 mb-5">{{ $t('element.date_format') }}</div>
-      <el-radio-group
-        v-model="dateFormat"
-        class="mb-2"
-        :disabled="size === 'disabled'"
-        @change="value8 = ''"
-      >
+      <el-radio-group v-model="dateFormat" class="mb-2" @change="value8 = ''">
         <el-radio value="">Date</el-radio>
         <el-radio value="YYYY/MM/DD">
           {{ $t('element.year_month_date') }}
@@ -101,8 +94,7 @@
             :placeholder="$t('element.please_pick_date')"
             format="YYYY/MM/DD"
             :value-format="dateFormat"
-            :size="dynamicSize"
-            :disabled="size === 'disabled'"
+            :size="size"
           />
           <span class="ml-2">{{ value8 }}</span>
         </el-space>
@@ -173,6 +165,8 @@ const holidays = [
   '2024-6-10',
 ];
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 const isHoliday = ({ dayjs }) => {
   return holidays.includes(dayjs.format('YYYY-MM-DD'));
 };

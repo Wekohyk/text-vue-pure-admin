@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import path from 'path';
 // unocss
 import unocss from 'unocss/vite';
@@ -12,6 +13,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     unocss(),
     AutoImport({
       resolvers: [ElementPlusResolver()],

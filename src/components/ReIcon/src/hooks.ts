@@ -51,6 +51,8 @@ export function useRenderIcon(icon: any, attrs?: iconType): Component {
       render() {
         const IconifyIcon =
           icon && icon.includes(':') ? IconifyIconOnline : IconifyIconOffline;
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         return h(IconifyIcon, {
           icon: icon,
           ...attrs,

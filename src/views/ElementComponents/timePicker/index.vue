@@ -2,7 +2,7 @@
   <div class="bg-#e5e7ec w-100vw h-30"></div>
   <div class="m-20">
     <!-- 调节大小按钮 -->
-    <div class="flex items-center b-b-1 b-b-solid b-b-#000 pb-20">
+    <div class="flex items-center b-b-1 b-b-solid b-b-#E5E7EB pb-20">
       <div class="font-600 mr-40">{{ $t('element.time_picker') }}</div>
       <div class="font-600 mr-40">{{ $t('element.select_size') }}</div>
       <el-radio-group v-model="size" aria-label="size control">
