@@ -221,6 +221,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/segmented',
+            name: 'Segmented',
+            component: () =>
+              import('@/views/ElementComponents/segmented/index.vue'),
+            meta: {
+              title: $t('element.segmented'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

@@ -294,5 +294,6 @@ export default {
     pixel: 'Pixel',
     document: 'File size: ',
     byte: 'Byte',
+    segmented: 'Segmented selector',
   },
 };

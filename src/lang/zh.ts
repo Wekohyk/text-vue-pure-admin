@@ -289,5 +289,6 @@ export default {
     pixel: '像素',
     document: '文件大小: ',
     byte: '字节',
+    segmented: '分段选择器',
   },
 };
