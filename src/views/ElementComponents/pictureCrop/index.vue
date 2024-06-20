@@ -63,11 +63,13 @@ onBeforeUnmount(() => {
         />
         <div v-if="infos" class="mt-1">
           <p>
-            图像大小：{{ parseInt(infos.width) }} ×
-            {{ parseInt(infos.height) }}像素
+            {{ $t('element.image_size') + parseInt(infos.width) }} ×
+            {{ parseInt(infos.height) + ' ' + $t('element.pixel') }}
           </p>
           <p>
-            文件大小：{{ formatBytes(infos.size) }}（{{ infos.size }} 字节）
+            {{ $t('element.document') + formatBytes(infos.size) }}（{{
+              infos.size + ' ' + $t('element.byte')
+            }}）
           </p>
         </div>
       </div>
