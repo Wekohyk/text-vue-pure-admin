@@ -79,6 +79,8 @@ const props = {
   options: { type: Object as PropType<Options>, default: () => ({}) },
 };
 
+console.log('ArrowLeft', ArrowLeft);
+
 export default defineComponent({
   name: 'ReCropper',
   props,
