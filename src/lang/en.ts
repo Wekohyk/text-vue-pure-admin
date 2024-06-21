@@ -328,5 +328,14 @@ export default {
     component_nest:
       'Component nesting: Set truncated to false if you do not need to omit',
     now_time: 'The time is now:',
+    base_button: 'Basic button',
+    load_button: 'Loading status button',
+    stop_loading: 'Stop loading',
+    loading: 'Loading',
+    custom_tags: 'Custom element tags. For example: button, div, link',
+    button_tag: 'button tag',
+    div_tag: 'div tag',
+    a_link: 'a link',
+    custom_color: 'Custom color',
   },
 };

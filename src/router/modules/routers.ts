@@ -241,6 +241,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/button',
+            name: 'Button',
+            component: () =>
+              import('@/views/ElementComponents/button/index.vue'),
+            meta: {
+              title: $t('dashboard.button'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
