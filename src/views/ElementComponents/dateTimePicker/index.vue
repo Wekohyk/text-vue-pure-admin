@@ -222,7 +222,7 @@ interface Tag {
 const datePickerRef = ref();
 const placement = ref('auto');
 const curTagMap = ref<Record<number, { checked: boolean }>>({});
-function onChecked(tag: Tag, index: number) {
+const onChecked = (tag: Tag, index: number) => {
   placement.value = tag.title;
   curTagMap.value[index] = Object.assign({
     ...tag,
@@ -234,7 +234,7 @@ function onChecked(tag: Tag, index: number) {
   curTagMap.value[index].checked
     ? datePickerRef.value.handleOpen()
     : datePickerRef.value.handleClose();
-}
+};
 
 const value1 = ref('');
 const value2 = ref('');

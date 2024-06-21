@@ -51,14 +51,14 @@ const getTippyProps = () => ({
   ...props.tippyProps,
 });
 
-function handleHover(event: MouseEvent) {
+const handleHover = (event: MouseEvent) => {
   if (isTextEllipsis(event.target as HTMLElement)) {
     tippyFunc.value.setProps(getTippyProps());
     tippyFunc.value.enable();
   } else {
     tippyFunc.value.disable();
   }
-}
+};
 
 onMounted(() => {
   tippyFunc.value = useTippy(textRef.value?.$el, getTippyProps());

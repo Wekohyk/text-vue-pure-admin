@@ -250,7 +250,7 @@ interface Tag {
   checked: boolean;
 }
 const curTagMap = ref<Record<number, { title: string; checked: boolean }>>({});
-function onChecked(tag: Tag, index: number) {
+const onChecked = (tag: Tag, index: number) => {
   if (size.value === 'disabled') return;
   curTagMap.value[index] = Object.assign({
     ...tag,
@@ -267,7 +267,7 @@ function onChecked(tag: Tag, index: number) {
       type: 'success',
     },
   );
-}
+};
 
 /** 多选（可控制间距的按钮样式） */
 const checkGroupTag = ref([
@@ -287,19 +287,18 @@ const checkGroupTag = ref([
 const curTagGroupMap = ref<Record<number, { title: string; checked: boolean }>>(
   {},
 );
-function onGroupChecked(tag: Tag, index: number) {
+const onGroupChecked = (tag: Tag, index: number) => {
   if (size.value === 'disabled') return;
   curTagGroupMap.value[index] = Object.assign({
     ...tag,
     checked: !tag.checked,
   });
   checkGroupTag.value[index].checked = curTagGroupMap.value[index].checked;
-}
-
-function onSingleChecked() {
+};
+const onSingleChecked = () => {
   if (size.value === 'disabled') return;
   checked.value = !checked.value;
-}
+};
 
 watch(size, val =>
   val === 'disabled'

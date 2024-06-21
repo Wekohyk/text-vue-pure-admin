@@ -100,34 +100,34 @@ const animateStyle = computed(
       : '',
 );
 
-function onChangeIcon(animate: string) {
+const onChangeIcon = (animate: string) => {
   inputValue.value = animate;
-}
+};
 
-function onClear() {
+const onClear = () => {
   inputValue.value = '';
-}
+};
 
-function filterMethod(value: any) {
+const filterMethod = (value: any) => {
   searchVal.value = value;
   animatesList.value = copyAnimatesList.value.filter((i: string | any[]) =>
     i.includes(value),
   );
-}
+};
 
 const animateMap = ref<Record<string | number, { loading?: boolean }>>({});
-function onMouseEnter(index: string | number) {
-  animateMap.value[index] = animateMap.value[index]?.loading
-    ? Object.assign({}, animateMap.value[index], {
-        loading: false,
-      })
-    : Object.assign({}, animateMap.value[index], {
-        loading: true,
-      });
-}
-function onMouseleave() {
+
+const onMouseEnter = (index: string | number) => {
+  animateMap.value = {
+    [index]: {
+      loading: true,
+    },
+  };
+};
+
+const onMouseleave = () => {
   animateMap.value = {};
-}
+};
 </script>
 
 <style>

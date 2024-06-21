@@ -154,47 +154,46 @@ const iconItemStyle = computed((): ParameterCSSProperties => {
   };
 });
 
-function setVal() {
+const setVal = () => {
   if (!inputValue.value) return;
   currentActiveType.value = inputValue.value.substring(
     0,
     inputValue.value.indexOf(':') + 1,
   );
   icon.value = inputValue.value.substring(inputValue.value.indexOf(':') + 1);
-}
+};
 
-function onBeforeEnter() {
+const onBeforeEnter = () => {
   if (isAllEmpty(icon.value)) return;
   setVal();
-  // 寻找当前图标在第几页
   const curIconIndex = copyIconList[currentActiveType.value].findIndex(
     (i: any) => i === icon.value,
   );
   currentPage.value = Math.ceil((curIconIndex + 1) / pageSize.value);
-}
+};
 
-function onAfterLeave() {
+const onAfterLeave = () => {
   filterValue.value = '';
-}
+};
 
-function handleClick({ props }: { props: { name: string } }) {
+const handleClick = ({ props }: { props: { name: string } }) => {
   currentPage.value = 1;
   currentActiveType.value = props.name;
-}
+};
 
-function onChangeIcon(item: string) {
+const onChangeIcon = (item: string) => {
   icon.value = item;
   inputValue.value = currentActiveType.value + item;
-}
+};
 
-function onCurrentChange(page: number) {
+const onCurrentChange = (page: number) => {
   currentPage.value = page;
-}
+};
 
-function onClear() {
+const onClear = () => {
   icon.value = '';
   inputValue.value = '';
-}
+};
 
 watch(
   () => pageList.value,

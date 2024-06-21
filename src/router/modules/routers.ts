@@ -242,8 +242,8 @@ export const routers = [
             },
           },
           {
-            path: '/button',
-            name: 'Button',
+            path: '/elementButton',
+            name: 'ElementButton',
             component: () =>
               import('@/views/ElementComponents/button/index.vue'),
             meta: {

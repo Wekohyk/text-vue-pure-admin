@@ -4,7 +4,8 @@
 
 type Func<T extends any[]> = (...args: T) => void;
 
-function throttle<T extends any[]>(func: Func<T>, delay: number): Func<T> {
+// 节流
+const throttle = <T extends any[]>(func: Func<T>, delay: number): Func<T> => {
   let lastCall = 0;
   return function (...args: T): void {
     const now = new Date().getTime();
@@ -14,11 +15,11 @@ function throttle<T extends any[]>(func: Func<T>, delay: number): Func<T> {
     lastCall = now;
     func(...args);
   };
-}
+};
 
 // 防抖
 // debounce
-function debounce<T extends any[]>(func: Func<T>, delay: number): Func<T> {
+const debounce = <T extends any[]>(func: Func<T>, delay: number): Func<T> => {
   let timeoutId: NodeJS.Timeout | null = null;
   return function (...args: T): void {
     if (timeoutId) {
@@ -26,6 +27,6 @@ function debounce<T extends any[]>(func: Func<T>, delay: number): Func<T> {
     }
     timeoutId = setTimeout(() => func(...args), delay);
   };
-}
+};
 
 export { throttle, debounce };

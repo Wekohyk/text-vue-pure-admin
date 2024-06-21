@@ -239,7 +239,13 @@ const optionsChange: Array<OptionsType> = [
 ];
 
 /** change 事件 */
-function onChange({ index, option }: { option: OptionsType; index: number }) {
+const onChange = ({
+  index,
+  option,
+}: {
+  option: OptionsType;
+  index: number;
+}) => {
   const { label, value } = option;
   message(
     `${$t('element.now_index')} ${index}, ${$t('element.name_as')} ${label}, ${$t('element.value')} ${value}`,
@@ -247,7 +253,7 @@ function onChange({ index, option }: { option: OptionsType; index: number }) {
       type: 'success',
     },
   );
-}
+};
 
 watch(size, val => {
   dynamicSize.value = size.value;
