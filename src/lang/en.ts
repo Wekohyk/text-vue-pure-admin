@@ -369,5 +369,10 @@ export default {
     hah: 'Hahahahahahaha',
     dynamic_button: 'Dynamic Button',
     iframe_introduced: 'The button page is introduced via iframe',
+    progress: 'Progress',
+    linear_progress: 'Linear Progress',
+    percentage_display:
+      'The percentage identifier is displayed in the progress bar',
+    rate_rise: 'Rate of increase',
   },
 };

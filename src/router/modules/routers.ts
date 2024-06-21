@@ -261,7 +261,6 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
-
           {
             path: '/dynamicButton',
             name: 'DynamicButton',
@@ -269,6 +268,16 @@ export const routers = [
               import('@/views/ElementComponents/dynamicButton/index.vue'),
             meta: {
               title: $t('element.dynamic_button'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
+          {
+            path: '/progress',
+            name: 'Progress',
+            component: () =>
+              import('@/views/ElementComponents/progress/index.vue'),
+            meta: {
+              title: $t('element.progress'), // 基于element-plus的对话框组件
               fontIcon: 'fa-solid fa-gear',
             },
           },

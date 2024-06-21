@@ -361,5 +361,9 @@ export default {
     hah: '哇哈哈哈哈哈哈哈',
     dynamic_button: '动态按钮',
     iframe_introduced: '通过 iframe 引入按钮页面',
+    progress: '进度条',
+    linear_progress: '直线进度条',
+    percentage_display: '进度条内显示百分比标识',
+    rate_rise: '上升率',
   },
 };
