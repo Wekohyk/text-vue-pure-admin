@@ -27,6 +27,9 @@ module.exports = {
      * npm i @typescript-eslint/parser -D
      */
     parser: '@typescript-eslint/parser',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: ['vue', '@typescript-eslint', 'prettier'],
   rules: {
