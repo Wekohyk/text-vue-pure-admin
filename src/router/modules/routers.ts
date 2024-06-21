@@ -231,6 +231,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/textEllipsis',
+            name: 'TextEllipsis',
+            component: () =>
+              import('@/views/ElementComponents/textEllipsis/index.vue'),
+            meta: {
+              title: $t('element.text_ellipsis'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

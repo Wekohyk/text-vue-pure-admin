@@ -314,5 +314,19 @@ export default {
     value: 'Be worth ',
     tooltip: 'tooltip hint',
     change_event: 'change event',
+    text_ellipsis: 'Text ellipsis',
+    text_ellipsis_text: 'Text ellipsis, based on',
+    and: 'and',
+    show_tooltip:
+      'Tooltip prompts are displayed after automatic omitting, supporting multi-line omitting',
+    basic_usage_text: 'Basic usage',
+    custom_tooltip: 'Custom Tooltip content',
+    click_toggle_tooltip: 'Click to toggle the contents of the Tooltip below',
+    slot_notation: 'This is slot notation',
+    custom_el_text: 'Custom el-text configuration',
+    custom_vue_tippy: 'Custom VueTippy configuration',
+    component_nest:
+      'Component nesting: Set truncated to false if you do not need to omit',
+    now_time: 'The time is now:',
   },
 };
