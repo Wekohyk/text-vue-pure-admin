@@ -357,4 +357,3 @@ watch(size, val =>
   }
 }
 </style>
-s: object: string | number: object: string | number
