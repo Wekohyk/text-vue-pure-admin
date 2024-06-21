@@ -359,5 +359,7 @@ export default {
     multiple_choice: '多选',
     single_button: '单个可选按钮',
     hah: '哇哈哈哈哈哈哈哈',
+    dynamic_button: '动态按钮',
+    iframe_introduced: '通过 iframe 引入按钮页面',
   },
 };

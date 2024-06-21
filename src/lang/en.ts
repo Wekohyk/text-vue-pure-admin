@@ -367,5 +367,7 @@ export default {
     multiple_choice: 'Multiple choice',
     single_button: 'Single selectable button',
     hah: 'Hahahahahahaha',
+    dynamic_button: 'Dynamic Button',
+    iframe_introduced: 'The button page is introduced via iframe',
   },
 };

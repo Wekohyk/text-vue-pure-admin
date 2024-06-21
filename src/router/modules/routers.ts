@@ -261,6 +261,17 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+
+          {
+            path: '/dynamicButton',
+            name: 'DynamicButton',
+            component: () =>
+              import('@/views/ElementComponents/dynamicButton/index.vue'),
+            meta: {
+              title: $t('element.dynamic_button'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
