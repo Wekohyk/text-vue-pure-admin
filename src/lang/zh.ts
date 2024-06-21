@@ -372,5 +372,10 @@ export default {
     roundness: '圆形',
     dynamic_edit_tag: '动态编辑标签',
     new_label: '新标签',
+    statistic: '统计组件',
+    need_people: '需求人数',
+    still_finish_questions: '距离答疑结束还剩',
+    vip_expiration: 'VIP到期时间还剩',
+    still_until: '距离下个月还剩',
   },
 };

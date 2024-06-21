@@ -381,5 +381,10 @@ export default {
     roundness: 'Roundness',
     dynamic_edit_tag: 'Dynamic editing tag',
     new_label: 'New label',
+    statistic: 'Statistic',
+    need_people: 'Number of people in need',
+    still_finish_questions: 'We still have time to finish our questions',
+    vip_expiration: 'VIP expiration time is left',
+    still_until: 'We still have until next month',
   },
 };

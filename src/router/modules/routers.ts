@@ -290,6 +290,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/statistic',
+            name: 'Statistic',
+            component: () =>
+              import('@/views/ElementComponents/statistic/index.vue'),
+            meta: {
+              title: $t('element.statistic'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
