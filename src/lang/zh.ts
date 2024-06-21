@@ -377,5 +377,9 @@ export default {
     still_finish_questions: '距离答疑结束还剩',
     vip_expiration: 'VIP到期时间还剩',
     still_until: '距离下个月还剩',
+    collapse: '折叠面板',
+    open_multiple: '可同时展开多个面板',
+    open_only: '每次只能展开一个面板',
+    external_trigger: '外部触发打开、关闭',
   },
 };

@@ -386,5 +386,9 @@ export default {
     still_finish_questions: 'We still have time to finish our questions',
     vip_expiration: 'VIP expiration time is left',
     still_until: 'We still have until next month',
+    collapse: 'Collapse',
+    open_multiple: 'Multiple panels can be expanded simultaneously',
+    open_only: 'You can only expand one panel at a time',
+    external_trigger: 'External triggers open and close',
   },
 };

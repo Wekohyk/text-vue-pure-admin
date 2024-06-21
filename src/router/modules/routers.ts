@@ -300,6 +300,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/collapse',
+            name: 'Collapse',
+            component: () =>
+              import('@/views/ElementComponents/collapse/index.vue'),
+            meta: {
+              title: $t('element.collapse'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
