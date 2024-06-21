@@ -374,5 +374,12 @@ export default {
     percentage_display:
       'The percentage identifier is displayed in the progress bar',
     rate_rise: 'Rate of increase',
+    tag: 'Tag',
+    removable: 'Removable',
+    reset: 'Reset',
+    remove_all: 'Remove all',
+    roundness: 'Roundness',
+    dynamic_edit_tag: 'Dynamic editing tag',
+    new_label: 'New label',
   },
 };

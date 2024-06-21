@@ -365,5 +365,12 @@ export default {
     linear_progress: '直线进度条',
     percentage_display: '进度条内显示百分比标识',
     rate_rise: '上升率',
+    tag: 'Tag 标签',
+    removable: '可移除',
+    reset: '重置',
+    remove_all: '移除全部',
+    roundness: '圆形',
+    dynamic_edit_tag: '动态编辑标签',
+    new_label: '新标签',
   },
 };

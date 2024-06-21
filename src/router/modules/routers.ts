@@ -281,6 +281,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/tag',
+            name: 'Tag',
+            component: () => import('@/views/ElementComponents/tag/index.vue'),
+            meta: {
+              title: $t('element.tag'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
