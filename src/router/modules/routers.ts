@@ -251,6 +251,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/checkButton',
+            name: 'CheckButton',
+            component: () =>
+              import('@/views/ElementComponents/checkButton/index.vue'),
+            meta: {
+              title: $t('element.check_button'), // 基于element-plus的对话框组件
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
