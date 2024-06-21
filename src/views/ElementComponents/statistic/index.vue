@@ -28,10 +28,7 @@
       </re-col>
 
       <re-col :value="6" :xs="24" :sm="24">
-        <el-countdown
-          :format="`DD ${$t('day')}  HH时 mm分 ss秒`"
-          :value="value2"
-        >
+        <el-countdown :format="`DD天  HH时 mm分 ss秒`" :value="value2">
           <template #title>
             <div style="display: inline-flex; align-items: center">
               <IconifyIconOnline icon="ep:calendar" class="mr-2" />
