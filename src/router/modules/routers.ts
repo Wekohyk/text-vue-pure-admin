@@ -310,6 +310,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/cascade',
+            name: 'Cascade',
+            component: () =>
+              import('@/views/ElementComponents/cascade/index.vue'),
+            meta: {
+              title: $t('element.cascade'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

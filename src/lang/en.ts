@@ -390,5 +390,6 @@ export default {
     open_multiple: 'Multiple panels can be expanded simultaneously',
     open_only: 'You can only expand one panel at a time',
     external_trigger: 'External triggers open and close',
+    cascade: 'Zone cascade selector',
   },
 };

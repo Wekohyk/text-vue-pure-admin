@@ -381,5 +381,6 @@ export default {
     open_multiple: '可同时展开多个面板',
     open_only: '每次只能展开一个面板',
     external_trigger: '外部触发打开、关闭',
+    cascade: '区域级联选择器',
   },
 };
