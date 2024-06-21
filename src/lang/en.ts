@@ -391,5 +391,12 @@ export default {
     open_only: 'You can only expand one panel at a time',
     external_trigger: 'External triggers open and close',
     cascade: 'Zone cascade selector',
+    secondary_linkage: 'Secondary linkage (without "All" option)',
+    bind_value: 'Bind value',
+    area_code: 'Area code to Chinese character:',
+    chinese_code: 'Chinese character to area code:',
+    with_all_option: 'Secondary linkage (with "All" option)',
+    three_level_linkage: 'Three-level linkage (without "All" option)',
+    three_level_all: 'Three-level linkage (with "All" option)',
   },
 };

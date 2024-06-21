@@ -7,8 +7,8 @@
     <el-row :gutter="24">
       <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24">
         <div class="flex flex-col items-center justify-center">
-          <span class="text-[var(--el-color-primary)]">
-            1. 二级联动（不带“全部”选项）
+          <span class="text-[var(--el-color-primary)] mt-20">
+            1. {{ $t('element.secondary_linkage') }}
             <el-cascader
               v-model="selectedOptions1"
               :options="provinceAndCityData"
@@ -16,14 +16,14 @@
             />
           </span>
           <div class="leading-10 flex flex-col gap-10 mt-10">
-            <div>绑定值：{{ selectedOptions1 }}</div>
+            <div>{{ $t('element.bind_value') + selectedOptions1 }}</div>
             <div>
-              区域码转汉字：
+              {{ $t('element.area_code') }}
               {{ CodeToText[selectedOptions1[0]] }},
               {{ CodeToText[selectedOptions1[1]] }}
             </div>
             <div>
-              汉字转区域码：
+              {{ $t('element.chinese_code') }}
               {{
                 convertTextToCode(
                   CodeToText[selectedOptions1[0]],
@@ -37,7 +37,7 @@
       <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24">
         <div class="flex flex-col items-center justify-center mt-3">
           <span class="text-[var(--el-color-primary)]">
-            2. 二级联动（带有“全部”选项）
+            2. {{ $t('element.with_all_option') }}
             <el-cascader
               v-model="selectedOptions3"
               :options="provinceAndCityDataPlus"
@@ -45,14 +45,14 @@
             />
           </span>
           <div class="leading-10 flex flex-col gap-10 mt-10">
-            <div>绑定值：{{ selectedOptions3 }}</div>
+            <div>{{ $t('element.bind_value') + selectedOptions3 }}</div>
             <div>
-              区域码转汉字：
+              {{ $t('element.area_code') }}
               {{ CodeToText[selectedOptions3[0]] }},
               {{ CodeToText[selectedOptions3[1]] }}
             </div>
             <div>
-              汉字转区域码：
+              {{ $t('element.chinese_code') }}
               {{
                 convertTextToCode(
                   CodeToText[selectedOptions3[0]],
@@ -66,7 +66,7 @@
       <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24">
         <div class="flex flex-col items-center justify-center mt-3">
           <span class="text-[var(--el-color-primary)]">
-            3. 三级联动（不带“全部”选项）
+            3. {{ $t('element.three_level_linkage') }}
             <el-cascader
               v-model="selectedOptions2"
               :options="regionData"
@@ -74,15 +74,15 @@
             />
           </span>
           <div class="leading-10 flex flex-col gap-10 mt-10">
-            <div>绑定值：{{ selectedOptions2 }}</div>
+            <div>{{ $t('element.bind_value') + selectedOptions2 }}</div>
             <div>
-              区域码转汉字：
+              {{ $t('element.area_code') }}
               {{ CodeToText[selectedOptions2[0]] }},
               {{ CodeToText[selectedOptions2[1]] }},
               {{ CodeToText[selectedOptions2[2]] }}
             </div>
             <div>
-              汉字转区域码：
+              {{ $t('element.chinese_code') }}
               {{
                 convertTextToCode(
                   CodeToText[selectedOptions2[0]],
@@ -97,7 +97,7 @@
       <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24">
         <div class="flex flex-col items-center justify-center mt-3">
           <span class="text-[var(--el-color-primary)]">
-            4. 三级联动（带"全部选项"）
+            4. {{ $t('element.three_level_all') }}
             <el-cascader
               v-model="selectedOptions4"
               :options="regionDataPlus"
@@ -105,15 +105,15 @@
             />
           </span>
           <div class="leading-10 flex flex-col gap-10 mt-10">
-            <div>绑定值：{{ selectedOptions4 }}</div>
+            <div>{{ $t('element.bind_value') + selectedOptions4 }}</div>
             <div>
-              区域码转汉字：
+              {{ $t('element.area_code') }}
               {{ CodeToText[selectedOptions4[0]] }},
               {{ CodeToText[selectedOptions4[1]] }},
               {{ CodeToText[selectedOptions4[2]] }}
             </div>
             <div>
-              汉字转区域码：
+              {{ $t('element.chinese_code') }}
               {{
                 convertTextToCode(
                   CodeToText[selectedOptions4[0]],

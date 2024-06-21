@@ -382,5 +382,12 @@ export default {
     open_only: '每次只能展开一个面板',
     external_trigger: '外部触发打开、关闭',
     cascade: '区域级联选择器',
+    secondary_linkage: '二级联动（不带“全部”选项）',
+    bind_value: '绑定值',
+    area_code: '区域码转汉字：',
+    chinese_code: '汉字转区域码：',
+    with_all_option: '二级联动（带有“全部”选项）',
+    three_level_linkage: '三级联动（不带“全部”选项）',
+    three_level_all: '三级联动（带有“全部”选项）',
   },
 };
