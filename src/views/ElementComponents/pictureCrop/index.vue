@@ -1,38 +1,3 @@
-<script setup lang="tsx">
-import avatar from './avatar.webp';
-import { ref, onBeforeUnmount } from 'vue';
-import ReCropper from '@/components/ReCropper';
-import { formatBytes } from '@pureadmin/utils';
-
-defineOptions({
-  name: 'Cropping',
-});
-
-const infos = ref();
-const popoverRef = ref();
-const refCropper = ref();
-const showPopover = ref(false);
-const cropperImg = ref<string>('');
-
-function onCropper({
-  base64,
-  blob,
-  info,
-}: {
-  base64: string;
-  blob: Blob;
-  info: object;
-}) {
-  console.log(blob);
-  infos.value = info;
-  cropperImg.value = base64;
-}
-
-onBeforeUnmount(() => {
-  popoverRef.value.hide();
-});
-</script>
-
 <template>
   <div class="m-20">
     <div class="flex items-center b-b-1 b-b-solid b-b-#E5E7EB pb-20">
@@ -76,3 +41,38 @@ onBeforeUnmount(() => {
     </el-popover>
   </div>
 </template>
+
+<script setup lang="tsx">
+import avatar from './avatar.webp';
+import { ref, onBeforeUnmount } from 'vue';
+import ReCropper from '@/components/ReCropper';
+import { formatBytes } from '@pureadmin/utils';
+
+defineOptions({
+  name: 'Cropping',
+});
+
+const infos = ref();
+const popoverRef = ref();
+const refCropper = ref();
+const showPopover = ref(false);
+const cropperImg = ref<string>('');
+
+function onCropper({
+  base64,
+  blob,
+  info,
+}: {
+  base64: string;
+  blob: Blob;
+  info: object;
+}) {
+  console.log(blob);
+  infos.value = info;
+  cropperImg.value = base64;
+}
+
+onBeforeUnmount(() => {
+  popoverRef.value.hide();
+});
+</script>

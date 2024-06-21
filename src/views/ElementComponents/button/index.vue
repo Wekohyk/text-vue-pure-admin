@@ -1,57 +1,3 @@
-<script setup lang="ts">
-import { ref, watch } from 'vue';
-import { useDark } from '@pureadmin/utils';
-import { useRenderIcon } from '@/components/ReIcon/src/hooks';
-
-defineOptions({
-  name: 'PureButton',
-});
-
-const { isDark } = useDark();
-const size = ref('default');
-const dynamicSize = ref();
-
-const baseRadio = ref('default');
-const buttonList = [
-  {
-    type: '',
-    text: 'Default',
-    icon: 'ep:search',
-  },
-  {
-    type: 'primary',
-    text: 'Primary',
-    icon: 'ep:edit',
-  },
-  {
-    type: 'success',
-    text: 'Success',
-    icon: 'ep:check',
-  },
-  {
-    type: 'info',
-    text: 'Info',
-    icon: 'ep:message',
-  },
-  {
-    type: 'warning',
-    text: 'Warning',
-    icon: 'ep:star',
-  },
-  {
-    type: 'danger',
-    text: 'Danger',
-    icon: 'ep:delete',
-  },
-];
-
-watch(size, val =>
-  val === 'disabled'
-    ? (dynamicSize.value = 'default')
-    : (dynamicSize.value = size.value),
-);
-</script>
-
 <template>
   <div class="m-20">
     <!-- 调节大小按钮 -->
@@ -205,6 +151,60 @@ watch(size, val =>
     </el-space>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref, watch } from 'vue';
+import { useDark } from '@pureadmin/utils';
+import { useRenderIcon } from '@/components/ReIcon/src/hooks';
+
+defineOptions({
+  name: 'PureButton',
+});
+
+const { isDark } = useDark();
+const size = ref('default');
+const dynamicSize = ref();
+
+const baseRadio = ref('default');
+const buttonList = [
+  {
+    type: '',
+    text: 'Default',
+    icon: 'ep:search',
+  },
+  {
+    type: 'primary',
+    text: 'Primary',
+    icon: 'ep:edit',
+  },
+  {
+    type: 'success',
+    text: 'Success',
+    icon: 'ep:check',
+  },
+  {
+    type: 'info',
+    text: 'Info',
+    icon: 'ep:message',
+  },
+  {
+    type: 'warning',
+    text: 'Warning',
+    icon: 'ep:star',
+  },
+  {
+    type: 'danger',
+    text: 'Danger',
+    icon: 'ep:delete',
+  },
+];
+
+watch(size, val =>
+  val === 'disabled'
+    ? (dynamicSize.value = 'default')
+    : (dynamicSize.value = size.value),
+);
+</script>
 
 <style lang="scss" scoped>
 :deep(.el-divider--horizontal) {

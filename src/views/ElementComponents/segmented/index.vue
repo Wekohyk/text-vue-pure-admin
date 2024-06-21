@@ -1,3 +1,54 @@
+<template>
+  <div class="m-20">
+    <div class="flex items-center b-b-1 b-b-solid b-b-#E5E7EB pb-20">
+      <div class="font-600 mr-40">{{ $t('element.time_picker') }}</div>
+      <div class="font-600 mr-40">{{ $t('element.select_size') }}</div>
+      <el-radio-group v-model="size" aria-label="size control">
+        <el-radio-button value="large">{{ $t('large') }}</el-radio-button>
+        <el-radio-button value="default">{{ $t('default') }}</el-radio-button>
+        <el-radio-button value="small">{{ $t('small') }}</el-radio-button>
+      </el-radio-group>
+    </div>
+    <el-scrollbar class="mt-20">
+      <p class="mb-2">
+        {{ $t('element.basic_usage') }}
+        <span class="text-primary">
+          {{ optionsBasis[value].label }}
+        </span>
+      </p>
+      <Segmented v-model="value" :options="optionsBasis" :size="dynamicSize" />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.tooltip') }}</p>
+      <Segmented :options="optionsTooltip" :size="dynamicSize" />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.change_event') }}</p>
+      <Segmented
+        :options="optionsChange"
+        :size="dynamicSize"
+        @change="onChange"
+      />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.forbidden') }}</p>
+      <Segmented :options="optionsDisabled" :size="dynamicSize" />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.global_disabled') }}</p>
+      <Segmented :options="optionsBasis" :size="dynamicSize" disabled />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.block_property') }}</p>
+      <Segmented :options="optionsBlock" block :size="dynamicSize" />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.configuration_icon') }}</p>
+      <Segmented :options="optionsIcon" :size="dynamicSize" />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.set_icons_only') }}</p>
+      <Segmented :options="optionsOnlyIcon" :size="dynamicSize" />
+      <el-divider />
+      <p class="mb-2">{{ $t('element.custom_render') }}</p>
+      <Segmented :options="optionsLabel" :size="dynamicSize" />
+    </el-scrollbar>
+  </div>
+</template>
+
 <script setup lang="tsx">
 import { h, ref, watch } from 'vue';
 import { message } from '@/utils/message';
@@ -203,57 +254,6 @@ watch(size, val => {
   console.log(val);
 });
 </script>
-
-<template>
-  <div class="m-20">
-    <div class="flex items-center b-b-1 b-b-solid b-b-#E5E7EB pb-20">
-      <div class="font-600 mr-40">{{ $t('element.time_picker') }}</div>
-      <div class="font-600 mr-40">{{ $t('element.select_size') }}</div>
-      <el-radio-group v-model="size" aria-label="size control">
-        <el-radio-button value="large">{{ $t('large') }}</el-radio-button>
-        <el-radio-button value="default">{{ $t('default') }}</el-radio-button>
-        <el-radio-button value="small">{{ $t('small') }}</el-radio-button>
-      </el-radio-group>
-    </div>
-    <el-scrollbar class="mt-20">
-      <p class="mb-2">
-        {{ $t('element.basic_usage') }}
-        <span class="text-primary">
-          {{ optionsBasis[value].label }}
-        </span>
-      </p>
-      <Segmented v-model="value" :options="optionsBasis" :size="dynamicSize" />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.tooltip') }}</p>
-      <Segmented :options="optionsTooltip" :size="dynamicSize" />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.change_event') }}</p>
-      <Segmented
-        :options="optionsChange"
-        :size="dynamicSize"
-        @change="onChange"
-      />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.forbidden') }}</p>
-      <Segmented :options="optionsDisabled" :size="dynamicSize" />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.global_disabled') }}</p>
-      <Segmented :options="optionsBasis" :size="dynamicSize" disabled />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.block_property') }}</p>
-      <Segmented :options="optionsBlock" block :size="dynamicSize" />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.configuration_icon') }}</p>
-      <Segmented :options="optionsIcon" :size="dynamicSize" />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.set_icons_only') }}</p>
-      <Segmented :options="optionsOnlyIcon" :size="dynamicSize" />
-      <el-divider />
-      <p class="mb-2">{{ $t('element.custom_render') }}</p>
-      <Segmented :options="optionsLabel" :size="dynamicSize" />
-    </el-scrollbar>
-  </div>
-</template>
 
 <style scoped>
 :deep(.el-divider--horizontal) {

@@ -1,14 +1,3 @@
-<script setup lang="ts">
-import { useRenderIcon } from '@/components/ReIcon/src/hooks';
-
-defineOptions({
-  name: 'PureProgress',
-});
-
-const format = (percentage: number) =>
-  percentage === 100 ? 'Full' : `${percentage}%`;
-</script>
-
 <template>
   <div class="m-20">
     <div class="flex items-center b-b-1 b-b-solid b-b-#E5E7EB pb-20">
@@ -105,6 +94,17 @@ const format = (percentage: number) =>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useRenderIcon } from '@/components/ReIcon/src/hooks';
+
+defineOptions({
+  name: 'PureProgress',
+});
+
+const format = (percentage: number) =>
+  percentage === 100 ? 'Full' : `${percentage}%`;
+</script>
 
 <style scoped>
 .percentage-value {

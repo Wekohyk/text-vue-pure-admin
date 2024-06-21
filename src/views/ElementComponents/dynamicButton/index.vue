@@ -1,13 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue';
-
-defineOptions({
-  name: 'ButtonPage',
-});
-
-const url = ref(`/html/button.html`);
-</script>
-
 <template>
   <div class="m-20">
     <!-- 调节大小按钮 -->
@@ -18,3 +8,13 @@ const url = ref(`/html/button.html`);
     <iframe :src="url" frameborder="0" class="iframe w-full h-[60vh]" />
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+
+defineOptions({
+  name: 'ButtonPage',
+});
+
+const url = ref(`/html/button.html`);
+</script>

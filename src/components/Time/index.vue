@@ -1,6 +1,7 @@
 <template>
   <div class="w-full text-center">{{ time }}</div>
 </template>
+
 <script setup lang="ts">
 import { $t } from '@/lang/index';
 import { onMounted, onUnmounted, ref } from 'vue';

@@ -54,7 +54,7 @@
 import { ref } from 'vue';
 
 // 单选
-type SingleCheck = 'select1' | 'select2';
+type SingleCheck = 'select1' | 'select2' | '';
 
 const singleCheck = ref<SingleCheck>();
 
@@ -66,8 +66,8 @@ const selectCard = (card: SingleCheck) => {
 };
 
 // 多选
-type MultipleCheck1 = 'multipleCheck1';
-type MultipleCheck2 = 'multipleCheck2';
+type MultipleCheck1 = 'multipleCheck1' | '' | string;
+type MultipleCheck2 = 'multipleCheck2' | '' | string;
 
 const multipleCheck1 = ref<MultipleCheck1>();
 const multipleCheck2 = ref<MultipleCheck2>();

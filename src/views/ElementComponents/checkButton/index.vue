@@ -1,104 +1,3 @@
-<script setup lang="ts">
-import { ref, watch } from 'vue';
-import { message } from '@/utils/message';
-import { getKeyList } from '@pureadmin/utils';
-import { $t } from '@/lang/index';
-
-defineOptions({
-  name: 'CheckButton',
-});
-
-const spaceSize = ref(20);
-const size = ref('default');
-const dynamicSize = ref();
-const checked = ref(true);
-
-const radio = ref('wait');
-const radioBox = ref('complete');
-const radioCustom = ref('progress');
-
-const checkboxGroup = ref(['apple', 'tomato']);
-const checkboxGroupBox = ref(['cucumber', 'onion', 'blueberry']);
-const checkboxGroupCustom = ref(['tomato', 'watermelon', 'strawberry']);
-
-/** 单选（可控制间距的按钮样式） */
-const checkTag = ref([
-  {
-    title: $t('element.waiting'),
-    checked: false,
-  },
-  {
-    title: $t('element.under_way'),
-    checked: true,
-  },
-  {
-    title: $t('element.complete'),
-    checked: false,
-  },
-]);
-interface Tag {
-  title: string;
-  checked: boolean;
-}
-const curTagMap = ref<Record<number, { title: string; checked: boolean }>>({});
-function onChecked(tag: Tag, index: number) {
-  if (size.value === 'disabled') return;
-  curTagMap.value[index] = Object.assign({
-    ...tag,
-    checked: !tag.checked,
-  });
-  checkTag.value.map(item => (item.checked = false));
-  checkTag.value[index].checked = curTagMap.value[index].checked;
-  const { title, checked } = curTagMap.value[index];
-  message(
-    checked
-      ? `${$t('element.selected')}${title}`
-      : `${$t('element.uncheck')}${title}`,
-    {
-      type: 'success',
-    },
-  );
-}
-
-/** 多选（可控制间距的按钮样式） */
-const checkGroupTag = ref([
-  {
-    title: $t('element.apple'),
-    checked: true,
-  },
-  {
-    title: $t('element.tomato'),
-    checked: true,
-  },
-  {
-    title: $t('element.banana'),
-    checked: false,
-  },
-]);
-const curTagGroupMap = ref<Record<number, { title: string; checked: boolean }>>(
-  {},
-);
-function onGroupChecked(tag: Tag, index: number) {
-  if (size.value === 'disabled') return;
-  curTagGroupMap.value[index] = Object.assign({
-    ...tag,
-    checked: !tag.checked,
-  });
-  checkGroupTag.value[index].checked = curTagGroupMap.value[index].checked;
-}
-
-function onSingleChecked() {
-  if (size.value === 'disabled') return;
-  checked.value = !checked.value;
-}
-
-watch(size, val =>
-  val === 'disabled'
-    ? (dynamicSize.value = 'default')
-    : (dynamicSize.value = size.value),
-);
-</script>
-
 <template>
   <div class="m-20">
     <!-- 调节大小按钮 -->
@@ -307,6 +206,107 @@ watch(size, val =>
     </el-check-tag>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref, watch } from 'vue';
+import { message } from '@/utils/message';
+import { getKeyList } from '@pureadmin/utils';
+import { $t } from '@/lang/index';
+
+defineOptions({
+  name: 'CheckButton',
+});
+
+const spaceSize = ref(20);
+const size = ref('default');
+const dynamicSize = ref();
+const checked = ref(true);
+
+const radio = ref('wait');
+const radioBox = ref('complete');
+const radioCustom = ref('progress');
+
+const checkboxGroup = ref(['apple', 'tomato']);
+const checkboxGroupBox = ref(['cucumber', 'onion', 'blueberry']);
+const checkboxGroupCustom = ref(['tomato', 'watermelon', 'strawberry']);
+
+/** 单选（可控制间距的按钮样式） */
+const checkTag = ref([
+  {
+    title: $t('element.waiting'),
+    checked: false,
+  },
+  {
+    title: $t('element.under_way'),
+    checked: true,
+  },
+  {
+    title: $t('element.complete'),
+    checked: false,
+  },
+]);
+interface Tag {
+  title: string;
+  checked: boolean;
+}
+const curTagMap = ref<Record<number, { title: string; checked: boolean }>>({});
+function onChecked(tag: Tag, index: number) {
+  if (size.value === 'disabled') return;
+  curTagMap.value[index] = Object.assign({
+    ...tag,
+    checked: !tag.checked,
+  });
+  checkTag.value.map(item => (item.checked = false));
+  checkTag.value[index].checked = curTagMap.value[index].checked;
+  const { title, checked } = curTagMap.value[index];
+  message(
+    checked
+      ? `${$t('element.selected')}${title}`
+      : `${$t('element.uncheck')}${title}`,
+    {
+      type: 'success',
+    },
+  );
+}
+
+/** 多选（可控制间距的按钮样式） */
+const checkGroupTag = ref([
+  {
+    title: $t('element.apple'),
+    checked: true,
+  },
+  {
+    title: $t('element.tomato'),
+    checked: true,
+  },
+  {
+    title: $t('element.banana'),
+    checked: false,
+  },
+]);
+const curTagGroupMap = ref<Record<number, { title: string; checked: boolean }>>(
+  {},
+);
+function onGroupChecked(tag: Tag, index: number) {
+  if (size.value === 'disabled') return;
+  curTagGroupMap.value[index] = Object.assign({
+    ...tag,
+    checked: !tag.checked,
+  });
+  checkGroupTag.value[index].checked = curTagGroupMap.value[index].checked;
+}
+
+function onSingleChecked() {
+  if (size.value === 'disabled') return;
+  checked.value = !checked.value;
+}
+
+watch(size, val =>
+  val === 'disabled'
+    ? (dynamicSize.value = 'default')
+    : (dynamicSize.value = size.value),
+);
+</script>
 
 <style lang="scss" scoped>
 :deep(.el-divider--horizontal) {

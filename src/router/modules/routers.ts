@@ -116,7 +116,7 @@ export const routers = [
         component: () => import('@/views/ElementComponents/index.vue'),
         meta: {
           isShow: true,
-          title: $t('element.name'), // 基于element-plus的对话框组件
+          title: $t('element.name'),
           fontIcon: 'fa-solid fa-gear',
           toast: 'Element-Components',
         },
@@ -127,7 +127,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/elementDialog/index.vue'),
             meta: {
-              title: $t('element.dialog'), // 基于element-plus的对话框组件
+              title: $t('element.dialog'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -137,7 +137,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/elementMessage/index.vue'),
             meta: {
-              title: $t('element.message'), // 基于element-plus的对话框组件
+              title: $t('element.message'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -147,7 +147,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/fileUpload/index.vue'),
             meta: {
-              title: $t('element.file_upload'), // 基于element-plus的对话框组件
+              title: $t('element.file_upload'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -157,7 +157,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/checkCard/index.vue'),
             meta: {
-              title: $t('element.check_card'), // 基于element-plus的对话框组件
+              title: $t('element.check_card'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -167,7 +167,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/dateSelect/index.vue'),
             meta: {
-              title: $t('element.data_select'), // 基于element-plus的对话框组件
+              title: $t('element.data_select'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -177,7 +177,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/dateTimePicker/index.vue'),
             meta: {
-              title: $t('element.date_time_picker'), // 基于element-plus的对话框组件
+              title: $t('element.date_time_picker'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -187,7 +187,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/timePicker/index.vue'),
             meta: {
-              title: $t('element.time_picker'), // 基于element-plus的对话框组件
+              title: $t('element.time_picker'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -197,7 +197,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/iconSelect/index.vue'),
             meta: {
-              title: $t('element.icon_select'), // 基于element-plus的对话框组件
+              title: $t('element.icon_select'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -207,7 +207,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/animateCss/index.vue'),
             meta: {
-              title: $t('element.animate_css'), // 基于element-plus的对话框组件
+              title: $t('element.animate_css'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -217,7 +217,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/pictureCrop/index.vue'),
             meta: {
-              title: $t('element.picture_crop'), // 基于element-plus的对话框组件
+              title: $t('element.picture_crop'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -227,7 +227,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/segmented/index.vue'),
             meta: {
-              title: $t('element.segmented'), // 基于element-plus的对话框组件
+              title: $t('element.segmented'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -237,7 +237,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/textEllipsis/index.vue'),
             meta: {
-              title: $t('element.text_ellipsis'), // 基于element-plus的对话框组件
+              title: $t('element.text_ellipsis'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -247,7 +247,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/button/index.vue'),
             meta: {
-              title: $t('dashboard.button'), // 基于element-plus的对话框组件
+              title: $t('dashboard.button'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -257,7 +257,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/checkButton/index.vue'),
             meta: {
-              title: $t('element.check_button'), // 基于element-plus的对话框组件
+              title: $t('element.check_button'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -267,7 +267,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/dynamicButton/index.vue'),
             meta: {
-              title: $t('element.dynamic_button'), // 基于element-plus的对话框组件
+              title: $t('element.dynamic_button'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
@@ -277,7 +277,7 @@ export const routers = [
             component: () =>
               import('@/views/ElementComponents/progress/index.vue'),
             meta: {
-              title: $t('element.progress'), // 基于element-plus的对话框组件
+              title: $t('element.progress'),
               fontIcon: 'fa-solid fa-gear',
             },
           },
