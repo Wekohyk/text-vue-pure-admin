@@ -350,6 +350,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/swiper',
+            name: 'Swiper',
+            component: () =>
+              import('@/views/ElementComponents/swiper/index.vue'),
+            meta: {
+              title: $t('element.swiper'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
