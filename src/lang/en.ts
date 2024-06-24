@@ -430,4 +430,8 @@ export default {
       'JSON editor, based on vue-json-pretty, contains a lot of data ',
     seamless_scroll: 'Seamless scroll',
   },
+  feature: {
+    feature: 'Feature',
+    verify: 'Graphic verification code',
+  },
 };

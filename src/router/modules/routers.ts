@@ -402,6 +402,28 @@ export const routers = [
           },
         ],
       },
+      {
+        path: '/feature',
+        name: 'Feature',
+        component: () => import('@/views/Feature/index.vue'),
+        meta: {
+          isShow: true,
+          title: $t('feature.feature'),
+          fontIcon: 'fa-solid fa-gear',
+          toast: 'Feature',
+        },
+        children: [
+          {
+            path: '/verify',
+            name: 'Verify',
+            component: () => import('@/views/Feature/verify/index.vue'),
+            meta: {
+              title: $t('feature.verify'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
+        ],
+      },
     ],
   },
 ];

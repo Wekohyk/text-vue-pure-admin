@@ -419,4 +419,8 @@ export default {
     json_editor_text: 'JSON 编辑器，基于 vue-json-pretty , 包含大量数据',
     seamless_scroll: '无缝滚动',
   },
+  feature: {
+    feature: '功能',
+    verify: '图形验证码',
+  },
 };
