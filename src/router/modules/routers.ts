@@ -320,6 +320,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/colorPicker',
+            name: 'ColorPicker',
+            component: () =>
+              import('@/views/ElementComponents/colorPicker/index.vue'),
+            meta: {
+              title: $t('element.color_picker'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

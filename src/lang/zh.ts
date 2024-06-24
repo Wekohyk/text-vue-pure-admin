@@ -18,6 +18,8 @@ export default {
   large: '大',
   default: '默认',
   small: '小',
+  off: '关闭',
+  on: '开启',
   navbar: {
     message1: '消息1',
     message2: '消息2',
@@ -389,5 +391,8 @@ export default {
     with_all_option: '二级联动（带有“全部”选项）',
     three_level_linkage: '三级联动（不带“全部”选项）',
     three_level_all: '三级联动（带有“全部”选项）',
+    color_picker: '颜色选择器',
+    size_transparency_color: '不同尺寸、选择透明度、预定义颜色',
+    without_trigger: '外部触发器',
   },
 };

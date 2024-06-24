@@ -18,6 +18,8 @@ export default {
   large: 'Large',
   default: 'Default',
   small: 'Small',
+  off: 'Off',
+  on: 'On',
   navbar: {
     message1: 'Message1',
     message2: 'Message2',
@@ -398,5 +400,9 @@ export default {
     with_all_option: 'Secondary linkage (with "All" option)',
     three_level_linkage: 'Three-level linkage (without "All" option)',
     three_level_all: 'Three-level linkage (with "All" option)',
+    color_picker: 'Color Picker',
+    size_transparency_color:
+      'Different sizes, select transparency, predefined colors',
+    without_trigger: 'External trigger',
   },
 };
