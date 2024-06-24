@@ -407,5 +407,6 @@ export default {
     range_selector: 'Range Selector',
     echo_mode: 'Echo mode',
     select_range: 'Select range: ',
+    split_pane: 'Cutting panel',
   },
 };

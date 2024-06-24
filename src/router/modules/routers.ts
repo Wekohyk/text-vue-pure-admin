@@ -340,6 +340,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/splitPane',
+            name: 'SplitPane',
+            component: () =>
+              import('@/views/ElementComponents/splitPane/index.vue'),
+            meta: {
+              title: $t('element.split_pane'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

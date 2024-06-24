@@ -397,5 +397,6 @@ export default {
     range_selector: '范围选择器',
     echo_mode: '回显模式',
     select_range: '选择范围: ',
+    split_pane: '切割面板',
   },
 };
