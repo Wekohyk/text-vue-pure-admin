@@ -330,6 +330,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/rangeSelector',
+            name: 'RangeSelector',
+            component: () =>
+              import('@/views/ElementComponents/rangeSelector/index.vue'),
+            meta: {
+              title: $t('element.range_selector'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

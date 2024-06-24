@@ -394,5 +394,6 @@ export default {
     color_picker: '颜色选择器',
     size_transparency_color: '不同尺寸、选择透明度、预定义颜色',
     without_trigger: '外部触发器',
+    range_selector: '范围选择器',
   },
 };

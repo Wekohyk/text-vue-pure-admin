@@ -404,5 +404,6 @@ export default {
     size_transparency_color:
       'Different sizes, select transparency, predefined colors',
     without_trigger: 'External trigger',
+    range_selector: 'Range Selector',
   },
 };
