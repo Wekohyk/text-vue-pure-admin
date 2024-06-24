@@ -370,6 +370,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/countTo',
+            name: 'CountTo',
+            component: () =>
+              import('@/views/ElementComponents/countTo/index.vue'),
+            meta: {
+              title: $t('element.count_to'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

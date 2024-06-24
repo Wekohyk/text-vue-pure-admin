@@ -424,5 +424,6 @@ export default {
     default_colors_support: 'Default colors are supported',
     support_custom_colors: 'Support custom colors',
     support_custom_icons: 'Support custom icons',
+    count_to: 'Count To',
   },
 };

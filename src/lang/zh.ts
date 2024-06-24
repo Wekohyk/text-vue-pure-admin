@@ -414,5 +414,6 @@ export default {
     default_colors_support: '支持默认颜色',
     support_custom_colors: '支持自定义颜色',
     support_custom_icons: '支持自定义图标',
+    count_to: '数字动画',
   },
 };
