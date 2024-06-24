@@ -417,5 +417,6 @@ export default {
     count_to: '数字动画',
     json_editor: 'JSON 编辑器',
     json_editor_text: 'JSON 编辑器，基于 vue-json-pretty , 包含大量数据',
+    seamless_scroll: '无缝滚动',
   },
 };

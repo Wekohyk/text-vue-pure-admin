@@ -428,5 +428,6 @@ export default {
     json_editor: 'JSON Editor',
     json_editor_text:
       'JSON editor, based on vue-json-pretty, contains a lot of data ',
+    seamless_scroll: 'Seamless scroll',
   },
 };

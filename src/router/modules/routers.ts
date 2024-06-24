@@ -390,6 +390,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/seamlessScroll',
+            name: 'SeamlessScroll',
+            component: () =>
+              import('@/views/ElementComponents/seamlessScroll/index.vue'),
+            meta: {
+              title: $t('element.seamless_scroll'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
