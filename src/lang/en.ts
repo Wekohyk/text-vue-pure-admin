@@ -425,5 +425,8 @@ export default {
     support_custom_colors: 'Support custom colors',
     support_custom_icons: 'Support custom icons',
     count_to: 'Count To',
+    json_editor: 'JSON Editor',
+    json_editor_text:
+      'JSON editor, based on vue-json-pretty, contains a lot of data ',
   },
 };

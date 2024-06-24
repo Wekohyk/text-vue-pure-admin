@@ -415,5 +415,7 @@ export default {
     support_custom_colors: '支持自定义颜色',
     support_custom_icons: '支持自定义图标',
     count_to: '数字动画',
+    json_editor: 'JSON 编辑器',
+    json_editor_text: 'JSON 编辑器，基于 vue-json-pretty , 包含大量数据',
   },
 };

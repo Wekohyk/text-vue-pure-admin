@@ -380,6 +380,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/jsonEditor',
+            name: 'JsonEditor',
+            component: () =>
+              import('@/views/ElementComponents/jsonEditor/index.vue'),
+            meta: {
+              title: $t('element.json_editor'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
