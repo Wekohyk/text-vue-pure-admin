@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Selector from '@/components/ReSelector';
+import { $t } from '@/lang/index';
 
 defineOptions({
   name: 'Selector',
@@ -9,12 +10,12 @@ defineOptions({
 const selectRange = ref<string>('');
 const dataLists = ref([
   {
-    title: '基础用法',
+    title: $t('element.basic_usage_text'),
     echo: [],
     disabled: false,
   },
   {
-    title: '回显模式',
+    title: $t('element.echo_mode'),
     echo: [2, 7],
     disabled: true,
   },
@@ -39,7 +40,9 @@ const selectedVal = (list: { left: number; right: number }): void => {
         :disabled="item.disabled"
         @selectedVal="selectedVal"
       />
-      <h4 v-if="!item.disabled" class="mt-3">选中范围：{{ selectRange }}</h4>
+      <h4 v-if="!item.disabled" class="mt-3">
+        {{ $t('element.select_range') + ' ' + selectRange }}
+      </h4>
     </div>
   </div>
 </template>

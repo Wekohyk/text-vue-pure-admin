@@ -405,5 +405,7 @@ export default {
       'Different sizes, select transparency, predefined colors',
     without_trigger: 'External trigger',
     range_selector: 'Range Selector',
+    echo_mode: 'Echo mode',
+    select_range: 'Select range: ',
   },
 };

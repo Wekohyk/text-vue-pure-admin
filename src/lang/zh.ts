@@ -395,5 +395,7 @@ export default {
     size_transparency_color: '不同尺寸、选择透明度、预定义颜色',
     without_trigger: '外部触发器',
     range_selector: '范围选择器',
+    echo_mode: '回显模式',
+    select_range: '选择范围: ',
   },
 };
