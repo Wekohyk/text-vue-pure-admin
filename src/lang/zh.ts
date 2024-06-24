@@ -407,5 +407,12 @@ export default {
     pager_fraction: '分页器 / 分式',
     multiple_displayed: '一次显示多个Slides',
     infinite_cycle: '无限循环',
+    time_line: '时间线',
+    support_dot_light: '支持圆点发光',
+    support_square_luminous: '支持方块发光',
+    support_gradient_luminous: '支持渐变发光',
+    default_colors_support: '支持默认颜色',
+    support_custom_colors: '支持自定义颜色',
+    support_custom_icons: '支持自定义图标',
   },
 };

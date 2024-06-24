@@ -360,6 +360,16 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/timeLine',
+            name: 'TimeLine',
+            component: () =>
+              import('@/views/ElementComponents/timeLine/index.vue'),
+            meta: {
+              title: $t('element.time_line'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

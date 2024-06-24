@@ -417,5 +417,12 @@ export default {
     pager_fraction: 'Pager/fraction',
     multiple_displayed: 'Multiple Slides are displayed at a time',
     infinite_cycle: 'Infinite cycle',
+    time_line: 'Time Line',
+    support_dot_light: 'Support dot light',
+    support_square_luminous: 'Support square luminous point',
+    support_gradient_luminous: 'Support gradient luminous point',
+    default_colors_support: 'Default colors are supported',
+    support_custom_colors: 'Support custom colors',
+    support_custom_icons: 'Support custom icons',
   },
 };
