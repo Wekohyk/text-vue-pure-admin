@@ -435,5 +435,26 @@ export default {
     verify: 'Graphic verification code',
     puzzle_verify:
       'Puzzle man-machine verification, right slide puzzle verification',
+    water_mark: 'Watermark',
+    enter_value_watermark:
+      'Enter the value you want to create a watermark for:',
+    enter_color_watermark:
+      'Please select the color you want to create a watermark:',
+    create_full_page_watermark: 'Create a full-page watermark',
+    create_full_page_gradient: 'Create a full-page gradient watermark',
+    create_full_page_horizontal:
+      'Create an entire page gradient with a 90-degree horizontal watermark',
+    create_gradients_throughout:
+      'Create a shaded watermark with gradients throughout the page',
+    create_transparent_gradient_watermark:
+      'Create a full-page high transparent gradient watermark',
+    clear_entire_watermark: 'Clear the entire page watermark',
+    local_watermark: 'Local watermarking',
+    create_local_watermark: 'Create a local watermark',
+    create_local_gradient: 'Create a local gradient watermark',
+    create_local_horizontal: 'Create a local gradient watermark horizontally',
+    create_local_gradients: 'Create a shaded watermark with a local gradient',
+    clear_local_watermark: 'Clear local watermark',
+    cannot_watermark: 'The watermark cannot be deleted',
   },
 };

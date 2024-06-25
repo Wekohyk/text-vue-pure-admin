@@ -422,6 +422,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/waterMark',
+            name: 'WaterMark',
+            component: () => import('@/views/Feature/waterMark/index.vue'),
+            meta: {
+              title: $t('feature.water_mark'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
