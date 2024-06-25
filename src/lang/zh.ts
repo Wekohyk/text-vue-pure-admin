@@ -439,5 +439,7 @@ export default {
     create_local_gradients: '创建局部渐变且有阴影的水印',
     clear_local_watermark: '清除局部水印',
     cannot_watermark: '无法删除的水印',
+    print: '打印',
+    print_function: '打印功能（报表、图表、图片）',
   },
 };

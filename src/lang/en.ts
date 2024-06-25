@@ -456,5 +456,7 @@ export default {
     create_local_gradients: 'Create a shaded watermark with a local gradient',
     clear_local_watermark: 'Clear local watermark',
     cannot_watermark: 'The watermark cannot be deleted',
+    print: 'Print',
+    print_function: 'Print function (reports, charts, pictures)',
   },
 };

@@ -431,6 +431,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/print',
+            name: 'Print',
+            component: () => import('@/views/Feature/print/index.vue'),
+            meta: {
+              title: $t('feature.print'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
