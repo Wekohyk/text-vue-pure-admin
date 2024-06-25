@@ -465,5 +465,6 @@ export default {
     download_according: 'Download the file according to the file address',
     download_file_stream:
       'Download the file stream according to the background interface',
+    export_excel: 'Export Excel',
   },
 };

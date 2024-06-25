@@ -55,7 +55,8 @@
     "vue-tippy": "^6.4.1",
     "vue-tsx-support": "^3.2.0",
     "vue-types": "^5.1.2",
-    "vue3-puzzle-vcode": "^1.1.7"
+    "vue3-puzzle-vcode": "^1.1.7",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.2",

@@ -447,5 +447,6 @@ export default {
     download_based: '基于 base64 下载图片',
     download_according: '根据文件地址下载文件',
     download_file_stream: '根据后台接口文件流下载',
+    export_excel: '导出Excel',
   },
 };

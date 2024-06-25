@@ -449,6 +449,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/excel',
+            name: 'Excel',
+            component: () => import('@/views/Feature/excel/index.vue'),
+            meta: {
+              title: $t('feature.export_excel'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
