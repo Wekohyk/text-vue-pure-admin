@@ -422,5 +422,6 @@ export default {
   feature: {
     feature: '功能',
     verify: '图形验证码',
+    puzzle_verify: '拼图人机验证、右滑拼图验证',
   },
 };

@@ -433,5 +433,7 @@ export default {
   feature: {
     feature: 'Feature',
     verify: 'Graphic verification code',
+    puzzle_verify:
+      'Puzzle man-machine verification, right slide puzzle verification',
   },
 };
