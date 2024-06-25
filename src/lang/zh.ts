@@ -441,5 +441,11 @@ export default {
     cannot_watermark: '无法删除的水印',
     print: '打印',
     print_function: '打印功能（报表、图表、图片）',
+    download: '下载',
+    file_download: '文件下载功能',
+    download_online: '下载在线图片',
+    download_based: '基于 base64 下载图片',
+    download_according: '根据文件地址下载文件',
+    download_file_stream: '根据后台接口文件流下载',
   },
 };

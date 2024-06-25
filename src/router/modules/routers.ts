@@ -440,6 +440,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/download',
+            name: 'Download',
+            component: () => import('@/views/Feature/download/index.vue'),
+            meta: {
+              title: $t('feature.download'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

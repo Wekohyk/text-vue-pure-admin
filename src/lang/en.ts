@@ -458,5 +458,12 @@ export default {
     cannot_watermark: 'The watermark cannot be deleted',
     print: 'Print',
     print_function: 'Print function (reports, charts, pictures)',
+    download: 'Download',
+    file_download: 'File download',
+    download_online: 'Download online pictures',
+    download_based: 'Download images based on base64',
+    download_according: 'Download the file according to the file address',
+    download_file_stream:
+      'Download the file stream according to the background interface',
   },
 };
