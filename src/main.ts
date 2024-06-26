@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, type Directive } from 'vue';
 // pinia and pinia-plugin-persistedstate
 import pinia from './stores';
 // vue-router
@@ -65,6 +65,12 @@ import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
 import VueTippy from 'vue-tippy';
 app.use(VueTippy);
+
+// 自定义指令
+import * as directives from '@/directives';
+Object.keys(directives).forEach(key => {
+  app.directive(key, (directives as { [key: string]: Directive })[key]);
+});
 
 app.component('IconifyIconOffline', IconifyIconOffline);
 app.component('IconifyIconOnline', IconifyIconOnline);

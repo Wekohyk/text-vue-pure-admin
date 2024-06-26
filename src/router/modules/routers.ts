@@ -458,6 +458,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/ripple',
+            name: 'Ripple',
+            component: () => import('@/views/Feature/ripple/index.vue'),
+            meta: {
+              title: $t('feature.ripple'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

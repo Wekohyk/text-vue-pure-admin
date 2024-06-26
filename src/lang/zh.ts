@@ -448,5 +448,20 @@ export default {
     download_according: '根据文件地址下载文件',
     download_file_stream: '根据后台接口文件流下载',
     export_excel: '导出Excel',
+    ripple: '波纹',
+    ripple_assembly: '组件中的波纹',
+    ripple_text:
+      'v-ripple在某些组件中使用波纹特效会异常，这是因为v-ripple指令只能作用于当前元素，某些组件有多层元素嵌套，且目标元素没在顶层，所以会导致特效异常',
+    ripple_functionality:
+      '只要在组件或HTML元素上使用v-ripple指令，就可以启用基本的ripple功能',
+    html_element: 'HTML元素',
+    ripple_display:
+      '行内元素需要添加display: block或display: inline-block才能生效',
+    ripple_center: '当使用v-ripple.center时，将始终从目标的中心处产生波纹',
+    ripple_trigger: '始终从中心触发波纹',
+    ripple_use: '使用',
+    ripple_tailwindCss: `添加类来自定义波纹颜色，支持tailwindcss`,
+    ripple_color: '自定义波纹颜色',
+    ripple_custom: `自定义样式生效为文字颜色，例如：color: 'red'`,
   },
 };

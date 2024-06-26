@@ -466,5 +466,21 @@ export default {
     download_file_stream:
       'Download the file stream according to the background interface',
     export_excel: 'Export Excel',
+    ripple: 'Ripple',
+    ripple_assembly: 'Ripple in assembly',
+    ripple_text:
+      'The use of ripple effects in some components will be abnormal, because the v-ripple instruction can only act on the current element, and some components have multiple layers of elements nested, and the target element is not on the top layer, so the effect will be abnormal',
+    ripple_functionality:
+      'By simply using the v-ripple directive on a component or HTML element, you can enable basic ripple functionality',
+    html_element: 'HTML element',
+    ripple_display:
+      'display: block or display: inline-block are required for inline elements to take effect',
+    ripple_center:
+      'When using v-ripple.center, ripples will always be generated from the center of the target',
+    ripple_trigger: 'Always trigger the ripple from the center',
+    ripple_use: 'Use',
+    ripple_tailwindCss: `to add the class to define the ripple color and support tailwindcss`,
+    ripple_color: 'Custom ripple colors',
+    ripple_custom: `Custom styles take effect as text colors, for example: color: 'red'`,
   },
 };

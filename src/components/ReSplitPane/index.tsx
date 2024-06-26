@@ -123,6 +123,8 @@ export default defineComponent({
           ></resizer>
           <div
             class={unref(rightClass)}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             style={{ [unref(type)]: 100 - unref(percent) + '%' }}
           >
             {ctx.slots.paneR?.()}
