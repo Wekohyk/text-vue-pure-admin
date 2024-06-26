@@ -482,5 +482,17 @@ export default {
     ripple_tailwindCss: `to add the class to define the ripple color and support tailwindcss`,
     ripple_color: 'Custom ripple colors',
     ripple_custom: `Custom styles take effect as text colors, for example: color: 'red'`,
+    debounce: 'Debounce and Throttle',
+    debounce_text:
+      'The so-called buffeting means that the function can only be executed once in n seconds after the event is triggered If another event is triggered within seconds, the function execution time is recalculated.',
+    debounce_first_only:
+      'Click me continuously, only the first click event will be executed, immediately executed',
+    debounce_end_only:
+      'Click me continuously, only the last click event will be executed, delayed execution',
+    throttle_text:
+      'Throttling means firing events continuously but executing the function only once in n seconds. Throttling dilutes the execution frequency of the function.',
+    throttle_only:
+      'Click me continuously, and only one click event will be executed per second',
+    congratulation: 'Congratulations, this is a success story',
   },
 };

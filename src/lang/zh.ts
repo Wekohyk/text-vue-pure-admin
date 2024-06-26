@@ -463,5 +463,14 @@ export default {
     ripple_tailwindCss: `添加类来自定义波纹颜色，支持tailwindcss`,
     ripple_color: '自定义波纹颜色',
     ripple_custom: `自定义样式生效为文字颜色，例如：color: 'red'`,
+    debounce: '防抖节流',
+    debounce_text:
+      '所谓防抖，就是指触发事件后在 n 秒内函数只能执行一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。',
+    debounce_first_only: '连续点击我，只会执行第一次点击事件，立即执行',
+    debounce_end_only: '连续点击我，只会执行最后一次点击事件，延后执行',
+    throttle_text:
+      '所谓节流，就是指连续触发事件但是在 n 秒中只执行一次函数。节流会稀释函数的执行频率。',
+    throttle_only: '连续点击我，每一秒只会执行一次点击事件',
+    congratulation: '恭喜你，这是一条成功消息',
   },
 };

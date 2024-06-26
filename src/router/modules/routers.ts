@@ -467,6 +467,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/debounce',
+            name: 'Debounce',
+            component: () => import('@/views/Feature/debounce/index.vue'),
+            meta: {
+              title: $t('feature.debounce'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
