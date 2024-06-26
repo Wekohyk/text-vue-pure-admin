@@ -494,5 +494,20 @@ export default {
     throttle_only:
       'Click me continuously, and only one click event will be executed per second',
     congratulation: 'Congratulations, this is a success story',
+    directives: 'Custom shake prevention, interception, text copy',
+    anti_shake_instruction:
+      'Anti-shake instruction (continuous input, only the first click event will be executed, immediately executed)',
+    instruction_end:
+      'Anti-shake instruction (continuous input, only the last event will be executed, delayed execution)',
+    instruction_only_end:
+      'Anti-shake instruction (continuous input, only the last event will be executed, delayed execution, parameter usage)',
+    throttling_first:
+      'Throttling instruction (continuous input, only one event per second is executed)',
+    throttling_end:
+      'Throttling instruction (continuous input, only one event will be executed per second, parameter usage)',
+    copy_instruction:
+      'Text copy instruction (double click input box content can be copied)',
+    copy_click: 'Text copy instruction (Customize trigger event, click Copy)',
+    replicable_text: 'Replicable text',
   },
 };

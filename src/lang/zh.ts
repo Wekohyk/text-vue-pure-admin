@@ -472,5 +472,16 @@ export default {
       '所谓节流，就是指连续触发事件但是在 n 秒中只执行一次函数。节流会稀释函数的执行频率。',
     throttle_only: '连续点击我，每一秒只会执行一次点击事件',
     congratulation: '恭喜你，这是一条成功消息',
+    directives: '自定义防抖、截流、文本复制',
+    anti_shake_instruction:
+      '防抖指令(连续输入，只会执行第一次点击事件，立即执行)',
+    instruction_end: '防抖指令（连续输入，只会执行最后一次事件，延后执行）',
+    instruction_only_end:
+      '防抖指令（连续输入，只会执行最后一次事件，延后执行，传参用法）',
+    throttling_first: '节流指令（连续输入，每一秒只会执行一次事件）',
+    throttling_end: '节流指令（连续输入，每一秒只会执行一次事件，传参用法）',
+    copy_instruction: '文本复制指令（双击输入框内容即可复制）',
+    copy_click: '文本复制指令（自定义触发事件，单击复制）',
+    replicable_text: '可复制的文本',
   },
 };

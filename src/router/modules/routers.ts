@@ -476,6 +476,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/directives',
+            name: 'directives',
+            component: () => import('@/views/Feature/directives/index.vue'),
+            meta: {
+              title: $t('feature.directives'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
