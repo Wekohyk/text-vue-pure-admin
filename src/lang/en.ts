@@ -532,5 +532,11 @@ export default {
     logo_config: 'Logo configuration',
     logo_style: 'Logo style',
     size_allocation: 'Size allocation',
+    wave_surfer: 'Wave Surfer',
+    wave_surfer_text: 'Waveform display (based on wavesurfer.js)',
+    fast_rewind: 'Fast rewind (long press)',
+    fast_forward: 'Fast forward (long press)',
+    pause: 'Pause',
+    play_back: 'Play back',
   },
 };

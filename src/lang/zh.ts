@@ -506,5 +506,11 @@ export default {
     logo_config: 'logo配置',
     logo_style: 'logo样式',
     size_allocation: '大小配置',
+    wave_surfer: '音频播放',
+    wave_surfer_text: '音频播放（基于 wavesurfer.js）',
+    fast_rewind: '快退（可长按）',
+    fast_forward: '快进（可长按）',
+    pause: '暂停',
+    play_back: '播放',
   },
 };

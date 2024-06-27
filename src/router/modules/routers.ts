@@ -521,6 +521,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/waveSurfer',
+            name: 'WaveSurfer',
+            component: () => import('@/views/Feature/waveSurfer/index.vue'),
+            meta: {
+              title: $t('feature.wave_surfer'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
