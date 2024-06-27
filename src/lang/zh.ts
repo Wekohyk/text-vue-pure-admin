@@ -494,5 +494,7 @@ export default {
     show_all_page: '显示所有页面',
     flip_current: '翻转(当前角度',
     degrees: '度)',
+    bar_code: '条形码',
+    bar_code_text: '条形码（基于 JsBarcode 生成）',
   },
 };

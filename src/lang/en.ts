@@ -520,5 +520,7 @@ export default {
     show_all_page: 'Show all pages',
     flip_current: 'Flip (current Angle ',
     degrees: 'degrees)',
+    bar_code: 'barCode',
+    bar_code_text: 'Barcode (generated based on JsBarcode)',
   },
 };

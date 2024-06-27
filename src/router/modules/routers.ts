@@ -503,6 +503,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/barCode',
+            name: 'BarCode',
+            component: () => import('@/views/Feature/barCode/index.vue'),
+            meta: {
+              title: $t('feature.bar_code'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
