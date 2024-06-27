@@ -514,5 +514,11 @@ export default {
     grid_drop: 'grid list drag and drop',
     drag_single: 'Drag in a single row',
     drag_element: 'Drag and drop implements element position swapping',
+    pdf: 'PDF Preview',
+    page: 'total',
+    in: '',
+    show_all_page: 'Show all pages',
+    flip_current: 'Flip (current Angle ',
+    degrees: 'degrees)',
   },
 };

@@ -488,5 +488,11 @@ export default {
     grid_drop: 'grid列表拖拽',
     drag_single: '单列拖拽',
     drag_element: '拖拽实现元素位置交换',
+    pdf: 'PDF预览',
+    page: '页',
+    in: '共',
+    show_all_page: '显示所有页面',
+    flip_current: '翻转(当前角度',
+    degrees: '度)',
   },
 };

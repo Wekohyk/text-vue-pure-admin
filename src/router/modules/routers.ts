@@ -494,6 +494,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/pdf',
+            name: 'Pdf',
+            component: () => import('@/views/Feature/pdf/index.vue'),
+            meta: {
+              title: $t('feature.pdf'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
