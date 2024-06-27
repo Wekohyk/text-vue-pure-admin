@@ -512,6 +512,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/dimensional',
+            name: 'Dimensional',
+            component: () => import('@/views/Feature/dimensional/index.vue'),
+            meta: {
+              title: $t('feature.dimensional'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
