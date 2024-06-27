@@ -1,6 +1,10 @@
 <template>
   <div class="m-20">
-    <div class="mb-2">
+    <div class="flex items-center b-b-1 b-b-solid b-b-#E5E7EB pb-20">
+      <div class="font-600 mr-40">{{ $t('feature.debounce_name') }}</div>
+    </div>
+
+    <div class="mb-2 mt-20">
       {{ $t('feature.anti_shake_instruction') }}
       <el-input
         v-model="search"

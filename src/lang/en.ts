@@ -483,6 +483,7 @@ export default {
     ripple_color: 'Custom ripple colors',
     ripple_custom: `Custom styles take effect as text colors, for example: color: 'red'`,
     debounce: 'Debounce and Throttle',
+    debounce_name: 'Custom shake prevention, interception, text copy',
     debounce_text:
       'The so-called buffeting means that the function can only be executed once in n seconds after the event is triggered If another event is triggered within seconds, the function execution time is recalculated.',
     debounce_first_only:

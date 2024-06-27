@@ -464,6 +464,7 @@ export default {
     ripple_color: '自定义波纹颜色',
     ripple_custom: `自定义样式生效为文字颜色，例如：color: 'red'`,
     debounce: '防抖节流',
+    debounce_name: '自定义防抖、截流、文本复制',
     debounce_text:
       '所谓防抖，就是指触发事件后在 n 秒内函数只能执行一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。',
     debounce_first_only: '连续点击我，只会执行第一次点击事件，立即执行',
