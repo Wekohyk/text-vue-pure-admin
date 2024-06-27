@@ -538,5 +538,6 @@ export default {
     fast_forward: 'Fast forward (long press)',
     pause: 'Pause',
     play_back: 'Play back',
+    video: 'Video',
   },
 };

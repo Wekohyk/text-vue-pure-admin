@@ -512,5 +512,7 @@ export default {
     fast_forward: '快进（可长按）',
     pause: '暂停',
     play_back: '播放',
+    video: '视频',
+    video_text: '视频组件—基于西瓜播放器',
   },
 };

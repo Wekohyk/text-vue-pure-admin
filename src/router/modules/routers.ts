@@ -530,6 +530,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/video',
+            name: 'video',
+            component: () => import('@/views/Feature/video/index.vue'),
+            meta: {
+              title: $t('feature.video'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
