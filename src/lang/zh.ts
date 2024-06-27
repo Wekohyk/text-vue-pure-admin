@@ -484,5 +484,9 @@ export default {
     copy_instruction: '文本复制指令（双击输入框内容即可复制）',
     copy_click: '文本复制指令（自定义触发事件，单击复制）',
     replicable_text: '可复制的文本',
+    draggable: '拖拽',
+    grid_drop: 'grid列表拖拽',
+    drag_single: '单列拖拽',
+    drag_element: '拖拽实现元素位置交换',
   },
 };

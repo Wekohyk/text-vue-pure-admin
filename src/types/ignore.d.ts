@@ -13,6 +13,7 @@ declare module '*.webp' {
 
 declare module 'china-area-data';
 declare module 'vue3-puzzle-vcode';
+declare module 'sortablejs';
 
 declare namespace JSX {
   interface Element extends VNode {}

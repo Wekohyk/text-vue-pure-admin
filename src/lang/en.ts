@@ -510,5 +510,9 @@ export default {
       'Text copy instruction (double click input box content can be copied)',
     copy_click: 'Text copy instruction (Customize trigger event, click Copy)',
     replicable_text: 'Replicable text',
+    draggable: 'Draggable',
+    grid_drop: 'grid list drag and drop',
+    drag_single: 'Drag in a single row',
+    drag_element: 'Drag and drop implements element position swapping',
   },
 };

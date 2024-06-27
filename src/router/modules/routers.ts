@@ -485,6 +485,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/draggable',
+            name: 'Draggable',
+            component: () => import('@/views/Feature/draggable/index.vue'),
+            meta: {
+              title: $t('feature.draggable'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
