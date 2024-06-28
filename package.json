@@ -42,6 +42,7 @@
     "component-library-js": "^1.0.1",
     "cropperjs": "^1.6.2",
     "echarts": "^5.5.0",
+    "el-table-infinite-scroll": "^2.0.2",
     "element-plus": "^2.7.0",
     "ffmpeg": "^0.0.4",
     "jsbarcode": "^3.11.6",

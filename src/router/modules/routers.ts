@@ -557,6 +557,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/infiniteScroll',
+            name: 'InfiniteScroll',
+            component: () => import('@/views/Feature/infiniteScroll/index.vue'),
+            meta: {
+              title: $t('feature.infinite_scroll'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

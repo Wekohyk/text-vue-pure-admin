@@ -540,5 +540,13 @@ export default {
     custom_ffmpeg: '基于自定义编译 FFmpeg 的截帧工具',
     drag_and_drop: '可拖拽上传视频（默认截取16张帧图片，可在代码中自行修改）',
     drag_picture: '温馨提示：可左右拖拽图片并单击选取所需的帧图片',
+    infinite_scroll: '表格无限滚动',
+    pages_loaded: '已加载全部页',
+    load_into: '加载到第',
+    page_load: '页',
+    serial_number: '序号',
+    date: '日期',
+    name: '名称',
+    age: '年龄',
   },
 };

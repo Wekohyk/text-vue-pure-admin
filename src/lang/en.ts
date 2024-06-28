@@ -569,5 +569,13 @@ export default {
       'Drag-and-drop upload video (default capture 16 frames, can be modified in the code)',
     drag_picture:
       'Tip: You can drag the picture left and right and click to select the desired frame picture',
+    infinite_scroll: 'Table infinite scrolling',
+    pages_loaded: 'All pages have loaded',
+    load_into: 'Load into control',
+    page_load: 'Page',
+    serial_number: 'Serial number',
+    date: 'Date',
+    name: 'Name',
+    age: 'Age',
   },
 };
