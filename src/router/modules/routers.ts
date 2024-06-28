@@ -548,6 +548,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/danmaku',
+            name: 'danmaku',
+            component: () => import('@/views/Feature/danmaku/index.vue'),
+            meta: {
+              title: $t('feature.danmaku'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],
