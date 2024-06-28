@@ -539,6 +539,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/videoFrame',
+            name: 'videoFrame',
+            component: () => import('@/views/Feature/videoFrame/index.vue'),
+            meta: {
+              title: $t('feature.video_frame_capture'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

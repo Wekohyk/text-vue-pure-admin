@@ -539,5 +539,6 @@ export default {
     pause: 'Pause',
     play_back: 'Play back',
     video: 'Video',
+    video_frame_capture: 'Video frame capture',
   },
 };

@@ -514,5 +514,6 @@ export default {
     play_back: '播放',
     video: '视频',
     video_text: '视频组件—基于西瓜播放器',
+    video_frame_capture: '视频帧截取',
   },
 };
