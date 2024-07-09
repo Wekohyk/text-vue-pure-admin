@@ -548,5 +548,6 @@ export default {
     date: '日期',
     name: '名称',
     age: '年龄',
+    type_it: '打字机组件',
   },
 };

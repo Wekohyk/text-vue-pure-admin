@@ -558,11 +558,11 @@ export const routers = [
             },
           },
           {
-            path: '/infiniteScroll',
-            name: 'InfiniteScroll',
-            component: () => import('@/views/Feature/infiniteScroll/index.vue'),
+            path: '/typeit',
+            name: 'typeit',
+            component: () => import('@/views/Feature/typeit/index.vue'),
             meta: {
-              title: $t('feature.infinite_scroll'),
+              title: $t('feature.type_it'),
               fontIcon: 'fa-solid fa-gear',
             },
           },

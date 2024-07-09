@@ -577,5 +577,6 @@ export default {
     date: 'Date',
     name: 'Name',
     age: 'Age',
+    type_it: 'TypeIt',
   },
 };
