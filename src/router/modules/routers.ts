@@ -586,6 +586,28 @@ export const routers = [
           },
         ],
       },
+      {
+        path: '/table',
+        name: 'Table',
+        component: () => import('@/views/Table/index.vue'),
+        meta: {
+          isShow: true,
+          title: $t('table.table'),
+          fontIcon: 'fa-solid fa-gear',
+          toast: 'Table',
+        },
+        children: [
+          {
+            path: '/basic',
+            name: 'basic',
+            component: () => import('@/views/Table/basic/index.vue'),
+            meta: {
+              title: $t('table.basic_usage'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
+        ],
+      },
     ],
   },
 ];

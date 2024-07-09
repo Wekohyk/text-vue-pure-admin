@@ -553,4 +553,8 @@ export default {
     custom_sensitive: '自定义敏感词',
     pin_yin: '汉语拼音',
   },
+  table: {
+    table: '表格',
+    basic_usage: '基础用法',
+  },
 };

@@ -582,4 +582,8 @@ export default {
     custom_sensitive: 'Custom sensitive word blocking',
     pin_yin: 'Chinese Pinyin',
   },
+  table: {
+    table: 'Table',
+    basic_usage: 'Basic usage',
+  },
 };
