@@ -1,9 +1,10 @@
 <template>
-  <nav class="mt-10px">
+  <nav class="mt-10px mx-10">
     <div
       class="flex justify-evenly items-center"
       v-for="item in routerList"
       :key="item.path"
+      :class="{ 'multi-row': item.children.length > 6 }"
     >
       <router-link
         v-for="itemChildren in item.children"
@@ -36,5 +37,14 @@ const routerList = router
 .active {
   border-bottom: 3px solid hsla(160, 100%, 37%, 1);
   color: #79bbff;
+}
+
+.multi-row {
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 20px;
+  .router-link {
+    margin: 5px;
+  }
 }
 </style>
