@@ -580,5 +580,6 @@ export default {
     type_it: 'TypeIt',
     sensitive: 'Sensitive word blocking',
     custom_sensitive: 'Custom sensitive word blocking',
+    pin_yin: 'Chinese Pinyin',
   },
 };

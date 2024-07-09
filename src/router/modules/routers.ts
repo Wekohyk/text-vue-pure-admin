@@ -575,6 +575,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/pinYin',
+            name: 'pinYin',
+            component: () => import('@/views/Feature/pinYin/index.vue'),
+            meta: {
+              title: $t('feature.pin_yin'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

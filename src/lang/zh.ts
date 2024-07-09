@@ -551,5 +551,6 @@ export default {
     type_it: '打字机组件',
     sensitive: '敏感词屏蔽',
     custom_sensitive: '自定义敏感词',
+    pin_yin: '汉语拼音',
   },
 };
