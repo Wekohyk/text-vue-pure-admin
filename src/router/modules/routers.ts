@@ -566,6 +566,15 @@ export const routers = [
               fontIcon: 'fa-solid fa-gear',
             },
           },
+          {
+            path: '/sensitive',
+            name: 'sensitive',
+            component: () => import('@/views/Feature/sensitive/index.vue'),
+            meta: {
+              title: $t('feature.sensitive'),
+              fontIcon: 'fa-solid fa-gear',
+            },
+          },
         ],
       },
     ],

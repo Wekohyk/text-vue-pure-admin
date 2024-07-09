@@ -549,5 +549,7 @@ export default {
     name: '名称',
     age: '年龄',
     type_it: '打字机组件',
+    sensitive: '敏感词屏蔽',
+    custom_sensitive: '自定义敏感词',
   },
 };

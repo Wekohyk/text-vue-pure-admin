@@ -578,5 +578,7 @@ export default {
     name: 'Name',
     age: 'Age',
     type_it: 'TypeIt',
+    sensitive: 'Sensitive word blocking',
+    custom_sensitive: 'Custom sensitive word blocking',
   },
 };
